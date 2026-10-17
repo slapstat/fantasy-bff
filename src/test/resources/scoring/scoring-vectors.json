@@ -15,16 +15,7 @@
             "sho": 3,
             "ga": -1
           },
-          "activeScoringColumns": [
-            "goals",
-            "assists",
-            "sog",
-            "hits",
-            "blocks",
-            "w",
-            "sho",
-            "ga"
-          ],
+          "activeScoringColumns": ["goals", "assists", "sog", "hits", "blocks", "w", "sho", "ga"],
           "rosterSlots": {
             "c": 1,
             "lw": 1,
@@ -44,9 +35,7 @@
             "playerId": 1,
             "type": "skater",
             "name": "Skater 1",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 2.26,
@@ -85,9 +74,7 @@
             "playerId": 2,
             "type": "skater",
             "name": "Skater 2",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 38.53,
@@ -126,9 +113,7 @@
             "playerId": 3,
             "type": "skater",
             "name": "Skater 3",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 45.76,
@@ -167,9 +152,7 @@
             "playerId": 4,
             "type": "skater",
             "name": "Skater 4",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 6.17,
@@ -208,10 +191,7 @@
             "playerId": 5,
             "type": "skater",
             "name": "Skater 5",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 45.81,
@@ -250,10 +230,7 @@
             "playerId": 6,
             "type": "skater",
             "name": "Skater 6",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 45.58,
@@ -292,10 +269,7 @@
             "playerId": 7,
             "type": "skater",
             "name": "Skater 7",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 22.17,
@@ -334,9 +308,7 @@
             "playerId": 8,
             "type": "skater",
             "name": "Skater 8",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 38.06,
@@ -375,9 +347,7 @@
             "playerId": 9,
             "type": "skater",
             "name": "Skater 9",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 43.75,
@@ -416,9 +386,7 @@
             "playerId": 10,
             "type": "skater",
             "name": "Skater 10",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 19.9,
@@ -457,9 +425,7 @@
             "playerId": 11,
             "type": "skater",
             "name": "Skater 11",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 21.37,
@@ -498,10 +464,7 @@
             "playerId": 12,
             "type": "skater",
             "name": "Skater 12",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 29.85,
@@ -540,10 +503,7 @@
             "playerId": 13,
             "type": "skater",
             "name": "Skater 13",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 6.67,
@@ -582,10 +542,7 @@
             "playerId": 14,
             "type": "skater",
             "name": "Skater 14",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 32.81,
@@ -624,9 +581,7 @@
             "playerId": 15,
             "type": "skater",
             "name": "Skater 15",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 15.78,
@@ -665,9 +620,7 @@
             "playerId": 16,
             "type": "skater",
             "name": "Skater 16",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 41.64,
@@ -706,9 +659,7 @@
             "playerId": 17,
             "type": "skater",
             "name": "Skater 17",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 35.46,
@@ -747,9 +698,7 @@
             "playerId": 18,
             "type": "skater",
             "name": "Skater 18",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 3.87,
@@ -788,10 +737,7 @@
             "playerId": 19,
             "type": "skater",
             "name": "Skater 19",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 40.26,
@@ -830,10 +776,7 @@
             "playerId": 20,
             "type": "skater",
             "name": "Skater 20",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 26.38,
@@ -872,10 +815,7 @@
             "playerId": 21,
             "type": "skater",
             "name": "Skater 21",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 20.13,
@@ -914,9 +854,7 @@
             "playerId": 22,
             "type": "skater",
             "name": "Skater 22",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 6.22,
@@ -955,9 +893,7 @@
             "playerId": 23,
             "type": "skater",
             "name": "Skater 23",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.16,
@@ -996,9 +932,7 @@
             "playerId": 24,
             "type": "skater",
             "name": "Skater 24",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 15.94,
@@ -1037,9 +971,7 @@
             "playerId": 25,
             "type": "skater",
             "name": "Skater 25",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 36.22,
@@ -1078,10 +1010,7 @@
             "playerId": 26,
             "type": "skater",
             "name": "Skater 26",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 27.16,
@@ -1120,10 +1049,7 @@
             "playerId": 27,
             "type": "skater",
             "name": "Skater 27",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 5.92,
@@ -1162,10 +1088,7 @@
             "playerId": 28,
             "type": "skater",
             "name": "Skater 28",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 24.61,
@@ -1204,9 +1127,7 @@
             "playerId": 29,
             "type": "skater",
             "name": "Skater 29",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 35.41,
@@ -1245,9 +1166,7 @@
             "playerId": 30,
             "type": "skater",
             "name": "Skater 30",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 35.13,
@@ -1286,9 +1205,7 @@
             "playerId": 31,
             "type": "skater",
             "name": "Skater 31",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 42.64,
@@ -1327,9 +1244,7 @@
             "playerId": 32,
             "type": "skater",
             "name": "Skater 32",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 35.66,
@@ -1368,10 +1283,7 @@
             "playerId": 33,
             "type": "skater",
             "name": "Skater 33",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 38.16,
@@ -1410,10 +1322,7 @@
             "playerId": 34,
             "type": "skater",
             "name": "Skater 34",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 9.83,
@@ -1452,10 +1361,7 @@
             "playerId": 35,
             "type": "skater",
             "name": "Skater 35",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 38.79,
@@ -1494,9 +1400,7 @@
             "playerId": 36,
             "type": "skater",
             "name": "Skater 36",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 20.2,
@@ -1535,9 +1439,7 @@
             "playerId": 37,
             "type": "skater",
             "name": "Skater 37",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.03,
@@ -1576,9 +1478,7 @@
             "playerId": 38,
             "type": "skater",
             "name": "Skater 38",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 36.15,
@@ -1617,9 +1517,7 @@
             "playerId": 39,
             "type": "skater",
             "name": "Skater 39",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 26.83,
@@ -1658,10 +1556,7 @@
             "playerId": 40,
             "type": "skater",
             "name": "Skater 40",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 22.5,
@@ -1700,10 +1595,7 @@
             "playerId": 41,
             "type": "skater",
             "name": "Skater 41",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 19.78,
@@ -1742,10 +1634,7 @@
             "playerId": 42,
             "type": "skater",
             "name": "Skater 42",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 25.4,
@@ -1784,9 +1673,7 @@
             "playerId": 43,
             "type": "skater",
             "name": "Skater 43",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 5.74,
@@ -1825,9 +1712,7 @@
             "playerId": 44,
             "type": "skater",
             "name": "Skater 44",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.92,
@@ -1866,9 +1751,7 @@
             "playerId": 45,
             "type": "skater",
             "name": "Skater 45",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 43.31,
@@ -1907,9 +1790,7 @@
             "playerId": 46,
             "type": "skater",
             "name": "Skater 46",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 2.42,
@@ -1948,10 +1829,7 @@
             "playerId": 47,
             "type": "skater",
             "name": "Skater 47",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 18.41,
@@ -1990,10 +1868,7 @@
             "playerId": 48,
             "type": "skater",
             "name": "Skater 48",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 35.76,
@@ -2032,10 +1907,7 @@
             "playerId": 49,
             "type": "skater",
             "name": "Skater 49",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 8.07,
@@ -2074,9 +1946,7 @@
             "playerId": 50,
             "type": "skater",
             "name": "Skater 50",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 34.86,
@@ -2115,9 +1985,7 @@
             "playerId": 51,
             "type": "skater",
             "name": "Skater 51",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 45.59,
@@ -2156,9 +2024,7 @@
             "playerId": 52,
             "type": "skater",
             "name": "Skater 52",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 7.66,
@@ -2197,9 +2063,7 @@
             "playerId": 53,
             "type": "skater",
             "name": "Skater 53",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 31.23,
@@ -2238,10 +2102,7 @@
             "playerId": 54,
             "type": "skater",
             "name": "Skater 54",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 41.19,
@@ -2280,10 +2141,7 @@
             "playerId": 55,
             "type": "skater",
             "name": "Skater 55",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 28.72,
@@ -2322,10 +2180,7 @@
             "playerId": 56,
             "type": "skater",
             "name": "Skater 56",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 3.41,
@@ -2364,9 +2219,7 @@
             "playerId": 57,
             "type": "skater",
             "name": "Skater 57",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 28.48,
@@ -2405,9 +2258,7 @@
             "playerId": 58,
             "type": "skater",
             "name": "Skater 58",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.03,
@@ -2446,9 +2297,7 @@
             "playerId": 59,
             "type": "skater",
             "name": "Skater 59",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 5.65,
@@ -2487,9 +2336,7 @@
             "playerId": 60,
             "type": "skater",
             "name": "Skater 60",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 28.15,
@@ -2528,9 +2375,7 @@
             "playerId": 100,
             "type": "goalie",
             "name": "Goalie 100",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 14,
@@ -2555,9 +2400,7 @@
             "playerId": 101,
             "type": "goalie",
             "name": "Goalie 101",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 15,
@@ -2582,9 +2425,7 @@
             "playerId": 102,
             "type": "goalie",
             "name": "Goalie 102",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 38,
@@ -2609,9 +2450,7 @@
             "playerId": 103,
             "type": "goalie",
             "name": "Goalie 103",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 29,
@@ -2636,9 +2475,7 @@
             "playerId": 104,
             "type": "goalie",
             "name": "Goalie 104",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 47,
@@ -2663,9 +2500,7 @@
             "playerId": 105,
             "type": "goalie",
             "name": "Goalie 105",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 53,
@@ -2690,9 +2525,7 @@
             "playerId": 106,
             "type": "goalie",
             "name": "Goalie 106",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 54,
@@ -2717,9 +2550,7 @@
             "playerId": 107,
             "type": "goalie",
             "name": "Goalie 107",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 30,
@@ -2744,9 +2575,7 @@
             "playerId": 108,
             "type": "goalie",
             "name": "Goalie 108",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 45,
@@ -2771,9 +2600,7 @@
             "playerId": 109,
             "type": "goalie",
             "name": "Goalie 109",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 48,
@@ -2798,9 +2625,7 @@
             "playerId": 110,
             "type": "goalie",
             "name": "Goalie 110",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 41,
@@ -2825,9 +2650,7 @@
             "playerId": 111,
             "type": "goalie",
             "name": "Goalie 111",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 52,
@@ -2854,76 +2677,31 @@
             "teamId": "team-1",
             "name": "Team 1",
             "mine": true,
-            "playerIds": [
-              1,
-              8,
-              9,
-              16,
-              17,
-              111
-            ]
+            "playerIds": [1, 8, 9, 16, 17, 111]
           },
           {
             "teamId": "team-2",
             "name": "Team 2",
             "mine": false,
-            "playerIds": [
-              2,
-              7,
-              10,
-              15,
-              18,
-              110
-            ]
+            "playerIds": [2, 7, 10, 15, 18, 110]
           },
           {
             "teamId": "team-3",
             "name": "Team 3",
             "mine": false,
-            "playerIds": [
-              3,
-              6,
-              11,
-              14,
-              19,
-              109
-            ]
+            "playerIds": [3, 6, 11, 14, 19, 109]
           },
           {
             "teamId": "team-4",
             "name": "Team 4",
             "mine": false,
-            "playerIds": [
-              4,
-              5,
-              12,
-              13,
-              20,
-              108
-            ]
+            "playerIds": [4, 5, 12, 13, 20, 108]
           }
         ]
       },
       "expected": {
-        "categoryKeys": [
-          "goals",
-          "assists",
-          "sog",
-          "hits",
-          "blocks",
-          "w",
-          "sho",
-          "ga"
-        ],
-        "positionKeys": [
-          "LW",
-          "C",
-          "RW",
-          "D",
-          "UTIL",
-          "G",
-          "BN"
-        ],
+        "categoryKeys": ["goals", "assists", "sog", "hits", "blocks", "w", "sho", "ga"],
+        "positionKeys": ["LW", "C", "RW", "D", "UTIL", "G", "BN"],
         "teams": [
           {
             "teamId": "team-3",
@@ -3798,9 +3576,7 @@
             "playerId": 1,
             "type": "skater",
             "name": "Skater 1",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 2.26,
@@ -3839,9 +3615,7 @@
             "playerId": 2,
             "type": "skater",
             "name": "Skater 2",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 38.53,
@@ -3880,9 +3654,7 @@
             "playerId": 3,
             "type": "skater",
             "name": "Skater 3",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 45.76,
@@ -3921,9 +3693,7 @@
             "playerId": 4,
             "type": "skater",
             "name": "Skater 4",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 6.17,
@@ -3962,10 +3732,7 @@
             "playerId": 5,
             "type": "skater",
             "name": "Skater 5",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 45.81,
@@ -4004,10 +3771,7 @@
             "playerId": 6,
             "type": "skater",
             "name": "Skater 6",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 45.58,
@@ -4046,10 +3810,7 @@
             "playerId": 7,
             "type": "skater",
             "name": "Skater 7",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 22.17,
@@ -4088,9 +3849,7 @@
             "playerId": 8,
             "type": "skater",
             "name": "Skater 8",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 38.06,
@@ -4129,9 +3888,7 @@
             "playerId": 9,
             "type": "skater",
             "name": "Skater 9",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 43.75,
@@ -4170,9 +3927,7 @@
             "playerId": 10,
             "type": "skater",
             "name": "Skater 10",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 19.9,
@@ -4211,9 +3966,7 @@
             "playerId": 11,
             "type": "skater",
             "name": "Skater 11",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 21.37,
@@ -4252,10 +4005,7 @@
             "playerId": 12,
             "type": "skater",
             "name": "Skater 12",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 29.85,
@@ -4294,10 +4044,7 @@
             "playerId": 13,
             "type": "skater",
             "name": "Skater 13",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 6.67,
@@ -4336,10 +4083,7 @@
             "playerId": 14,
             "type": "skater",
             "name": "Skater 14",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 32.81,
@@ -4378,9 +4122,7 @@
             "playerId": 15,
             "type": "skater",
             "name": "Skater 15",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 15.78,
@@ -4419,9 +4161,7 @@
             "playerId": 16,
             "type": "skater",
             "name": "Skater 16",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 41.64,
@@ -4460,9 +4200,7 @@
             "playerId": 17,
             "type": "skater",
             "name": "Skater 17",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 35.46,
@@ -4501,9 +4239,7 @@
             "playerId": 18,
             "type": "skater",
             "name": "Skater 18",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 3.87,
@@ -4542,10 +4278,7 @@
             "playerId": 19,
             "type": "skater",
             "name": "Skater 19",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 40.26,
@@ -4584,10 +4317,7 @@
             "playerId": 20,
             "type": "skater",
             "name": "Skater 20",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 26.38,
@@ -4626,10 +4356,7 @@
             "playerId": 21,
             "type": "skater",
             "name": "Skater 21",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 20.13,
@@ -4668,9 +4395,7 @@
             "playerId": 22,
             "type": "skater",
             "name": "Skater 22",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 6.22,
@@ -4709,9 +4434,7 @@
             "playerId": 23,
             "type": "skater",
             "name": "Skater 23",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.16,
@@ -4750,9 +4473,7 @@
             "playerId": 24,
             "type": "skater",
             "name": "Skater 24",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 15.94,
@@ -4791,9 +4512,7 @@
             "playerId": 25,
             "type": "skater",
             "name": "Skater 25",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 36.22,
@@ -4832,10 +4551,7 @@
             "playerId": 26,
             "type": "skater",
             "name": "Skater 26",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 27.16,
@@ -4874,10 +4590,7 @@
             "playerId": 27,
             "type": "skater",
             "name": "Skater 27",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 5.92,
@@ -4916,10 +4629,7 @@
             "playerId": 28,
             "type": "skater",
             "name": "Skater 28",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 24.61,
@@ -4958,9 +4668,7 @@
             "playerId": 29,
             "type": "skater",
             "name": "Skater 29",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 35.41,
@@ -4999,9 +4707,7 @@
             "playerId": 30,
             "type": "skater",
             "name": "Skater 30",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 35.13,
@@ -5040,9 +4746,7 @@
             "playerId": 31,
             "type": "skater",
             "name": "Skater 31",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 42.64,
@@ -5081,9 +4785,7 @@
             "playerId": 32,
             "type": "skater",
             "name": "Skater 32",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 35.66,
@@ -5122,10 +4824,7 @@
             "playerId": 33,
             "type": "skater",
             "name": "Skater 33",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 38.16,
@@ -5164,10 +4863,7 @@
             "playerId": 34,
             "type": "skater",
             "name": "Skater 34",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 9.83,
@@ -5206,10 +4902,7 @@
             "playerId": 35,
             "type": "skater",
             "name": "Skater 35",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 38.79,
@@ -5248,9 +4941,7 @@
             "playerId": 36,
             "type": "skater",
             "name": "Skater 36",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 20.2,
@@ -5289,9 +4980,7 @@
             "playerId": 37,
             "type": "skater",
             "name": "Skater 37",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.03,
@@ -5330,9 +5019,7 @@
             "playerId": 38,
             "type": "skater",
             "name": "Skater 38",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 36.15,
@@ -5371,9 +5058,7 @@
             "playerId": 39,
             "type": "skater",
             "name": "Skater 39",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 26.83,
@@ -5412,10 +5097,7 @@
             "playerId": 40,
             "type": "skater",
             "name": "Skater 40",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 22.5,
@@ -5454,10 +5136,7 @@
             "playerId": 41,
             "type": "skater",
             "name": "Skater 41",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 19.78,
@@ -5496,10 +5175,7 @@
             "playerId": 42,
             "type": "skater",
             "name": "Skater 42",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 25.4,
@@ -5538,9 +5214,7 @@
             "playerId": 43,
             "type": "skater",
             "name": "Skater 43",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 5.74,
@@ -5579,9 +5253,7 @@
             "playerId": 44,
             "type": "skater",
             "name": "Skater 44",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.92,
@@ -5620,9 +5292,7 @@
             "playerId": 45,
             "type": "skater",
             "name": "Skater 45",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 43.31,
@@ -5661,9 +5331,7 @@
             "playerId": 46,
             "type": "skater",
             "name": "Skater 46",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 2.42,
@@ -5702,10 +5370,7 @@
             "playerId": 47,
             "type": "skater",
             "name": "Skater 47",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 18.41,
@@ -5744,10 +5409,7 @@
             "playerId": 48,
             "type": "skater",
             "name": "Skater 48",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 35.76,
@@ -5786,10 +5448,7 @@
             "playerId": 49,
             "type": "skater",
             "name": "Skater 49",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 8.07,
@@ -5828,9 +5487,7 @@
             "playerId": 50,
             "type": "skater",
             "name": "Skater 50",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 34.86,
@@ -5869,9 +5526,7 @@
             "playerId": 51,
             "type": "skater",
             "name": "Skater 51",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 45.59,
@@ -5910,9 +5565,7 @@
             "playerId": 52,
             "type": "skater",
             "name": "Skater 52",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 7.66,
@@ -5951,9 +5604,7 @@
             "playerId": 53,
             "type": "skater",
             "name": "Skater 53",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 31.23,
@@ -5992,10 +5643,7 @@
             "playerId": 54,
             "type": "skater",
             "name": "Skater 54",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 41.19,
@@ -6034,10 +5682,7 @@
             "playerId": 55,
             "type": "skater",
             "name": "Skater 55",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 28.72,
@@ -6076,10 +5721,7 @@
             "playerId": 56,
             "type": "skater",
             "name": "Skater 56",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 3.41,
@@ -6118,9 +5760,7 @@
             "playerId": 57,
             "type": "skater",
             "name": "Skater 57",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 28.48,
@@ -6159,9 +5799,7 @@
             "playerId": 58,
             "type": "skater",
             "name": "Skater 58",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.03,
@@ -6200,9 +5838,7 @@
             "playerId": 59,
             "type": "skater",
             "name": "Skater 59",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 5.65,
@@ -6241,9 +5877,7 @@
             "playerId": 60,
             "type": "skater",
             "name": "Skater 60",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 28.15,
@@ -6282,9 +5916,7 @@
             "playerId": 100,
             "type": "goalie",
             "name": "Goalie 100",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 14,
@@ -6309,9 +5941,7 @@
             "playerId": 101,
             "type": "goalie",
             "name": "Goalie 101",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 15,
@@ -6336,9 +5966,7 @@
             "playerId": 102,
             "type": "goalie",
             "name": "Goalie 102",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 38,
@@ -6363,9 +5991,7 @@
             "playerId": 103,
             "type": "goalie",
             "name": "Goalie 103",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 29,
@@ -6390,9 +6016,7 @@
             "playerId": 104,
             "type": "goalie",
             "name": "Goalie 104",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 47,
@@ -6417,9 +6041,7 @@
             "playerId": 105,
             "type": "goalie",
             "name": "Goalie 105",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 53,
@@ -6444,9 +6066,7 @@
             "playerId": 106,
             "type": "goalie",
             "name": "Goalie 106",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 54,
@@ -6471,9 +6091,7 @@
             "playerId": 107,
             "type": "goalie",
             "name": "Goalie 107",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 30,
@@ -6498,9 +6116,7 @@
             "playerId": 108,
             "type": "goalie",
             "name": "Goalie 108",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 45,
@@ -6525,9 +6141,7 @@
             "playerId": 109,
             "type": "goalie",
             "name": "Goalie 109",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 48,
@@ -6552,9 +6166,7 @@
             "playerId": 110,
             "type": "goalie",
             "name": "Goalie 110",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 41,
@@ -6579,9 +6191,7 @@
             "playerId": 111,
             "type": "goalie",
             "name": "Goalie 111",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 52,
@@ -6608,77 +6218,31 @@
             "teamId": "team-1",
             "name": "Team 1",
             "mine": true,
-            "playerIds": [
-              1,
-              8,
-              9,
-              16,
-              17,
-              111
-            ]
+            "playerIds": [1, 8, 9, 16, 17, 111]
           },
           {
             "teamId": "team-2",
             "name": "Team 2",
             "mine": false,
-            "playerIds": [
-              2,
-              7,
-              10,
-              15,
-              18,
-              110
-            ]
+            "playerIds": [2, 7, 10, 15, 18, 110]
           },
           {
             "teamId": "team-3",
             "name": "Team 3",
             "mine": false,
-            "playerIds": [
-              3,
-              6,
-              11,
-              14,
-              19,
-              109
-            ]
+            "playerIds": [3, 6, 11, 14, 19, 109]
           },
           {
             "teamId": "team-4",
             "name": "Team 4",
             "mine": false,
-            "playerIds": [
-              4,
-              5,
-              12,
-              13,
-              20,
-              108
-            ]
+            "playerIds": [4, 5, 12, 13, 20, 108]
           }
         ]
       },
       "expected": {
-        "categoryKeys": [
-          "goals",
-          "assists",
-          "ppp",
-          "sog",
-          "hits",
-          "blocks",
-          "w",
-          "gaa",
-          "svPct"
-        ],
-        "positionKeys": [
-          "LW",
-          "C",
-          "RW",
-          "D",
-          "UTIL",
-          "G",
-          "BN"
-        ],
+        "categoryKeys": ["goals", "assists", "ppp", "sog", "hits", "blocks", "w", "gaa", "svPct"],
+        "positionKeys": ["LW", "C", "RW", "D", "UTIL", "G", "BN"],
         "teams": [
           {
             "teamId": "team-3",
@@ -7572,14 +7136,7 @@
             "w": 4,
             "ga": -1
           },
-          "activeScoringColumns": [
-            "goals",
-            "assists",
-            "sog",
-            "hits",
-            "w",
-            "ga"
-          ],
+          "activeScoringColumns": ["goals", "assists", "sog", "hits", "w", "ga"],
           "rosterSlots": {
             "c": 1,
             "lw": 1,
@@ -7599,9 +7156,7 @@
             "playerId": 1,
             "type": "skater",
             "name": "Skater 1",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 2.26,
@@ -7640,9 +7195,7 @@
             "playerId": 2,
             "type": "skater",
             "name": "Skater 2",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 38.53,
@@ -7681,9 +7234,7 @@
             "playerId": 3,
             "type": "skater",
             "name": "Skater 3",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 45.76,
@@ -7722,9 +7273,7 @@
             "playerId": 4,
             "type": "skater",
             "name": "Skater 4",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 6.17,
@@ -7763,10 +7312,7 @@
             "playerId": 5,
             "type": "skater",
             "name": "Skater 5",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 45.81,
@@ -7805,10 +7351,7 @@
             "playerId": 6,
             "type": "skater",
             "name": "Skater 6",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 45.58,
@@ -7847,10 +7390,7 @@
             "playerId": 7,
             "type": "skater",
             "name": "Skater 7",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 22.17,
@@ -7889,9 +7429,7 @@
             "playerId": 8,
             "type": "skater",
             "name": "Skater 8",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 38.06,
@@ -7930,9 +7468,7 @@
             "playerId": 9,
             "type": "skater",
             "name": "Skater 9",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 43.75,
@@ -7971,9 +7507,7 @@
             "playerId": 10,
             "type": "skater",
             "name": "Skater 10",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 19.9,
@@ -8012,9 +7546,7 @@
             "playerId": 11,
             "type": "skater",
             "name": "Skater 11",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 21.37,
@@ -8053,10 +7585,7 @@
             "playerId": 12,
             "type": "skater",
             "name": "Skater 12",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 29.85,
@@ -8095,10 +7624,7 @@
             "playerId": 13,
             "type": "skater",
             "name": "Skater 13",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 6.67,
@@ -8137,10 +7663,7 @@
             "playerId": 14,
             "type": "skater",
             "name": "Skater 14",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 32.81,
@@ -8179,9 +7702,7 @@
             "playerId": 15,
             "type": "skater",
             "name": "Skater 15",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 15.78,
@@ -8220,9 +7741,7 @@
             "playerId": 16,
             "type": "skater",
             "name": "Skater 16",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 41.64,
@@ -8261,9 +7780,7 @@
             "playerId": 17,
             "type": "skater",
             "name": "Skater 17",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 35.46,
@@ -8302,9 +7819,7 @@
             "playerId": 18,
             "type": "skater",
             "name": "Skater 18",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 3.87,
@@ -8343,10 +7858,7 @@
             "playerId": 19,
             "type": "skater",
             "name": "Skater 19",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 40.26,
@@ -8385,10 +7897,7 @@
             "playerId": 20,
             "type": "skater",
             "name": "Skater 20",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 26.38,
@@ -8427,10 +7936,7 @@
             "playerId": 21,
             "type": "skater",
             "name": "Skater 21",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 20.13,
@@ -8469,9 +7975,7 @@
             "playerId": 22,
             "type": "skater",
             "name": "Skater 22",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 6.22,
@@ -8510,9 +8014,7 @@
             "playerId": 23,
             "type": "skater",
             "name": "Skater 23",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.16,
@@ -8551,9 +8053,7 @@
             "playerId": 24,
             "type": "skater",
             "name": "Skater 24",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 15.94,
@@ -8592,9 +8092,7 @@
             "playerId": 25,
             "type": "skater",
             "name": "Skater 25",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 36.22,
@@ -8633,10 +8131,7 @@
             "playerId": 26,
             "type": "skater",
             "name": "Skater 26",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 27.16,
@@ -8675,10 +8170,7 @@
             "playerId": 27,
             "type": "skater",
             "name": "Skater 27",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 5.92,
@@ -8717,10 +8209,7 @@
             "playerId": 28,
             "type": "skater",
             "name": "Skater 28",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 24.61,
@@ -8759,9 +8248,7 @@
             "playerId": 29,
             "type": "skater",
             "name": "Skater 29",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 35.41,
@@ -8800,9 +8287,7 @@
             "playerId": 30,
             "type": "skater",
             "name": "Skater 30",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 35.13,
@@ -8841,9 +8326,7 @@
             "playerId": 31,
             "type": "skater",
             "name": "Skater 31",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 42.64,
@@ -8882,9 +8365,7 @@
             "playerId": 32,
             "type": "skater",
             "name": "Skater 32",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 35.66,
@@ -8923,10 +8404,7 @@
             "playerId": 33,
             "type": "skater",
             "name": "Skater 33",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 38.16,
@@ -8965,10 +8443,7 @@
             "playerId": 34,
             "type": "skater",
             "name": "Skater 34",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 9.83,
@@ -9007,10 +8482,7 @@
             "playerId": 35,
             "type": "skater",
             "name": "Skater 35",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 38.79,
@@ -9049,9 +8521,7 @@
             "playerId": 36,
             "type": "skater",
             "name": "Skater 36",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 20.2,
@@ -9090,9 +8560,7 @@
             "playerId": 37,
             "type": "skater",
             "name": "Skater 37",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.03,
@@ -9131,9 +8599,7 @@
             "playerId": 38,
             "type": "skater",
             "name": "Skater 38",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 36.15,
@@ -9172,9 +8638,7 @@
             "playerId": 39,
             "type": "skater",
             "name": "Skater 39",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 26.83,
@@ -9213,10 +8677,7 @@
             "playerId": 40,
             "type": "skater",
             "name": "Skater 40",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 22.5,
@@ -9255,10 +8716,7 @@
             "playerId": 41,
             "type": "skater",
             "name": "Skater 41",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 19.78,
@@ -9297,10 +8755,7 @@
             "playerId": 42,
             "type": "skater",
             "name": "Skater 42",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 25.4,
@@ -9339,9 +8794,7 @@
             "playerId": 43,
             "type": "skater",
             "name": "Skater 43",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 5.74,
@@ -9380,9 +8833,7 @@
             "playerId": 44,
             "type": "skater",
             "name": "Skater 44",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.92,
@@ -9421,9 +8872,7 @@
             "playerId": 45,
             "type": "skater",
             "name": "Skater 45",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 43.31,
@@ -9462,9 +8911,7 @@
             "playerId": 46,
             "type": "skater",
             "name": "Skater 46",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 2.42,
@@ -9503,10 +8950,7 @@
             "playerId": 47,
             "type": "skater",
             "name": "Skater 47",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 18.41,
@@ -9545,10 +8989,7 @@
             "playerId": 48,
             "type": "skater",
             "name": "Skater 48",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 35.76,
@@ -9587,10 +9028,7 @@
             "playerId": 49,
             "type": "skater",
             "name": "Skater 49",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 8.07,
@@ -9629,9 +9067,7 @@
             "playerId": 50,
             "type": "skater",
             "name": "Skater 50",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 34.86,
@@ -9670,9 +9106,7 @@
             "playerId": 51,
             "type": "skater",
             "name": "Skater 51",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 45.59,
@@ -9711,9 +9145,7 @@
             "playerId": 52,
             "type": "skater",
             "name": "Skater 52",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 7.66,
@@ -9752,9 +9184,7 @@
             "playerId": 53,
             "type": "skater",
             "name": "Skater 53",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 31.23,
@@ -9793,10 +9223,7 @@
             "playerId": 54,
             "type": "skater",
             "name": "Skater 54",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 41.19,
@@ -9835,10 +9262,7 @@
             "playerId": 55,
             "type": "skater",
             "name": "Skater 55",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 28.72,
@@ -9877,10 +9301,7 @@
             "playerId": 56,
             "type": "skater",
             "name": "Skater 56",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 3.41,
@@ -9919,9 +9340,7 @@
             "playerId": 57,
             "type": "skater",
             "name": "Skater 57",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 28.48,
@@ -9960,9 +9379,7 @@
             "playerId": 58,
             "type": "skater",
             "name": "Skater 58",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.03,
@@ -10001,9 +9418,7 @@
             "playerId": 59,
             "type": "skater",
             "name": "Skater 59",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 5.65,
@@ -10042,9 +9457,7 @@
             "playerId": 60,
             "type": "skater",
             "name": "Skater 60",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 28.15,
@@ -10083,9 +9496,7 @@
             "playerId": 100,
             "type": "goalie",
             "name": "Goalie 100",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 14,
@@ -10110,9 +9521,7 @@
             "playerId": 101,
             "type": "goalie",
             "name": "Goalie 101",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 15,
@@ -10137,9 +9546,7 @@
             "playerId": 102,
             "type": "goalie",
             "name": "Goalie 102",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 38,
@@ -10164,9 +9571,7 @@
             "playerId": 103,
             "type": "goalie",
             "name": "Goalie 103",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 29,
@@ -10191,9 +9596,7 @@
             "playerId": 104,
             "type": "goalie",
             "name": "Goalie 104",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 47,
@@ -10218,9 +9621,7 @@
             "playerId": 105,
             "type": "goalie",
             "name": "Goalie 105",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 53,
@@ -10245,9 +9646,7 @@
             "playerId": 106,
             "type": "goalie",
             "name": "Goalie 106",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 54,
@@ -10272,9 +9671,7 @@
             "playerId": 107,
             "type": "goalie",
             "name": "Goalie 107",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 30,
@@ -10299,9 +9696,7 @@
             "playerId": 108,
             "type": "goalie",
             "name": "Goalie 108",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 45,
@@ -10326,9 +9721,7 @@
             "playerId": 109,
             "type": "goalie",
             "name": "Goalie 109",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 48,
@@ -10353,9 +9746,7 @@
             "playerId": 110,
             "type": "goalie",
             "name": "Goalie 110",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 41,
@@ -10380,9 +9771,7 @@
             "playerId": 111,
             "type": "goalie",
             "name": "Goalie 111",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 52,
@@ -10409,74 +9798,31 @@
             "teamId": "team-1",
             "name": "Team 1",
             "mine": true,
-            "playerIds": [
-              1,
-              8,
-              9,
-              16,
-              17,
-              111
-            ]
+            "playerIds": [1, 8, 9, 16, 17, 111]
           },
           {
             "teamId": "team-2",
             "name": "Team 2",
             "mine": false,
-            "playerIds": [
-              2,
-              7,
-              10,
-              15,
-              18,
-              110
-            ]
+            "playerIds": [2, 7, 10, 15, 18, 110]
           },
           {
             "teamId": "team-3",
             "name": "Team 3",
             "mine": false,
-            "playerIds": [
-              3,
-              6,
-              11,
-              14,
-              19,
-              109
-            ]
+            "playerIds": [3, 6, 11, 14, 19, 109]
           },
           {
             "teamId": "team-4",
             "name": "Team 4",
             "mine": false,
-            "playerIds": [
-              4,
-              5,
-              12,
-              13,
-              20,
-              108
-            ]
+            "playerIds": [4, 5, 12, 13, 20, 108]
           }
         ]
       },
       "expected": {
-        "categoryKeys": [
-          "goals",
-          "assists",
-          "sog",
-          "hits",
-          "w",
-          "ga"
-        ],
-        "positionKeys": [
-          "LW",
-          "C",
-          "W",
-          "F",
-          "D",
-          "G",
-          "BN"
-        ],
+        "categoryKeys": ["goals", "assists", "sog", "hits", "w", "ga"],
+        "positionKeys": ["LW", "C", "W", "F", "D", "G", "BN"],
         "teams": [
           {
             "teamId": "team-3",
@@ -11214,14 +10560,7 @@
             "w": 1,
             "svPct": 1
           },
-          "activeScoringColumns": [
-            "goals",
-            "assists",
-            "hits",
-            "blocks",
-            "w",
-            "svPct"
-          ],
+          "activeScoringColumns": ["goals", "assists", "hits", "blocks", "w", "svPct"],
           "rosterSlots": {
             "c": 0,
             "lw": 0,
@@ -11241,9 +10580,7 @@
             "playerId": 1,
             "type": "skater",
             "name": "Skater 1",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 2.26,
@@ -11282,9 +10619,7 @@
             "playerId": 2,
             "type": "skater",
             "name": "Skater 2",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 38.53,
@@ -11323,9 +10658,7 @@
             "playerId": 3,
             "type": "skater",
             "name": "Skater 3",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 45.76,
@@ -11364,9 +10697,7 @@
             "playerId": 4,
             "type": "skater",
             "name": "Skater 4",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 6.17,
@@ -11405,10 +10736,7 @@
             "playerId": 5,
             "type": "skater",
             "name": "Skater 5",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 45.81,
@@ -11447,10 +10775,7 @@
             "playerId": 6,
             "type": "skater",
             "name": "Skater 6",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 45.58,
@@ -11489,10 +10814,7 @@
             "playerId": 7,
             "type": "skater",
             "name": "Skater 7",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 22.17,
@@ -11531,9 +10853,7 @@
             "playerId": 8,
             "type": "skater",
             "name": "Skater 8",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 38.06,
@@ -11572,9 +10892,7 @@
             "playerId": 9,
             "type": "skater",
             "name": "Skater 9",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 43.75,
@@ -11613,9 +10931,7 @@
             "playerId": 10,
             "type": "skater",
             "name": "Skater 10",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 19.9,
@@ -11654,9 +10970,7 @@
             "playerId": 11,
             "type": "skater",
             "name": "Skater 11",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 21.37,
@@ -11695,10 +11009,7 @@
             "playerId": 12,
             "type": "skater",
             "name": "Skater 12",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 29.85,
@@ -11737,10 +11048,7 @@
             "playerId": 13,
             "type": "skater",
             "name": "Skater 13",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 6.67,
@@ -11779,10 +11087,7 @@
             "playerId": 14,
             "type": "skater",
             "name": "Skater 14",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 32.81,
@@ -11821,9 +11126,7 @@
             "playerId": 15,
             "type": "skater",
             "name": "Skater 15",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 15.78,
@@ -11862,9 +11165,7 @@
             "playerId": 16,
             "type": "skater",
             "name": "Skater 16",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 41.64,
@@ -11903,9 +11204,7 @@
             "playerId": 17,
             "type": "skater",
             "name": "Skater 17",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 35.46,
@@ -11944,9 +11243,7 @@
             "playerId": 18,
             "type": "skater",
             "name": "Skater 18",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 3.87,
@@ -11985,10 +11282,7 @@
             "playerId": 19,
             "type": "skater",
             "name": "Skater 19",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 40.26,
@@ -12027,10 +11321,7 @@
             "playerId": 20,
             "type": "skater",
             "name": "Skater 20",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 26.38,
@@ -12069,10 +11360,7 @@
             "playerId": 21,
             "type": "skater",
             "name": "Skater 21",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 20.13,
@@ -12111,9 +11399,7 @@
             "playerId": 22,
             "type": "skater",
             "name": "Skater 22",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 6.22,
@@ -12152,9 +11438,7 @@
             "playerId": 23,
             "type": "skater",
             "name": "Skater 23",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.16,
@@ -12193,9 +11477,7 @@
             "playerId": 24,
             "type": "skater",
             "name": "Skater 24",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 15.94,
@@ -12234,9 +11516,7 @@
             "playerId": 25,
             "type": "skater",
             "name": "Skater 25",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 36.22,
@@ -12275,10 +11555,7 @@
             "playerId": 26,
             "type": "skater",
             "name": "Skater 26",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 27.16,
@@ -12317,10 +11594,7 @@
             "playerId": 27,
             "type": "skater",
             "name": "Skater 27",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 5.92,
@@ -12359,10 +11633,7 @@
             "playerId": 28,
             "type": "skater",
             "name": "Skater 28",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 24.61,
@@ -12401,9 +11672,7 @@
             "playerId": 29,
             "type": "skater",
             "name": "Skater 29",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 35.41,
@@ -12442,9 +11711,7 @@
             "playerId": 30,
             "type": "skater",
             "name": "Skater 30",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 35.13,
@@ -12483,9 +11750,7 @@
             "playerId": 31,
             "type": "skater",
             "name": "Skater 31",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 42.64,
@@ -12524,9 +11789,7 @@
             "playerId": 32,
             "type": "skater",
             "name": "Skater 32",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 35.66,
@@ -12565,10 +11828,7 @@
             "playerId": 33,
             "type": "skater",
             "name": "Skater 33",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 38.16,
@@ -12607,10 +11867,7 @@
             "playerId": 34,
             "type": "skater",
             "name": "Skater 34",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 9.83,
@@ -12649,10 +11906,7 @@
             "playerId": 35,
             "type": "skater",
             "name": "Skater 35",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 38.79,
@@ -12691,9 +11945,7 @@
             "playerId": 36,
             "type": "skater",
             "name": "Skater 36",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 20.2,
@@ -12732,9 +11984,7 @@
             "playerId": 37,
             "type": "skater",
             "name": "Skater 37",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.03,
@@ -12773,9 +12023,7 @@
             "playerId": 38,
             "type": "skater",
             "name": "Skater 38",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 36.15,
@@ -12814,9 +12062,7 @@
             "playerId": 39,
             "type": "skater",
             "name": "Skater 39",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 26.83,
@@ -12855,10 +12101,7 @@
             "playerId": 40,
             "type": "skater",
             "name": "Skater 40",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 22.5,
@@ -12897,10 +12140,7 @@
             "playerId": 41,
             "type": "skater",
             "name": "Skater 41",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 19.78,
@@ -12939,10 +12179,7 @@
             "playerId": 42,
             "type": "skater",
             "name": "Skater 42",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 25.4,
@@ -12981,9 +12218,7 @@
             "playerId": 43,
             "type": "skater",
             "name": "Skater 43",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 5.74,
@@ -13022,9 +12257,7 @@
             "playerId": 44,
             "type": "skater",
             "name": "Skater 44",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 22.92,
@@ -13063,9 +12296,7 @@
             "playerId": 45,
             "type": "skater",
             "name": "Skater 45",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 43.31,
@@ -13104,9 +12335,7 @@
             "playerId": 46,
             "type": "skater",
             "name": "Skater 46",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 2.42,
@@ -13145,10 +12374,7 @@
             "playerId": 47,
             "type": "skater",
             "name": "Skater 47",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 18.41,
@@ -13187,10 +12413,7 @@
             "playerId": 48,
             "type": "skater",
             "name": "Skater 48",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 35.76,
@@ -13229,10 +12452,7 @@
             "playerId": 49,
             "type": "skater",
             "name": "Skater 49",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 8.07,
@@ -13271,9 +12491,7 @@
             "playerId": 50,
             "type": "skater",
             "name": "Skater 50",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 34.86,
@@ -13312,9 +12530,7 @@
             "playerId": 51,
             "type": "skater",
             "name": "Skater 51",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 45.59,
@@ -13353,9 +12569,7 @@
             "playerId": 52,
             "type": "skater",
             "name": "Skater 52",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 7.66,
@@ -13394,9 +12608,7 @@
             "playerId": 53,
             "type": "skater",
             "name": "Skater 53",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 31.23,
@@ -13435,10 +12647,7 @@
             "playerId": 54,
             "type": "skater",
             "name": "Skater 54",
-            "positions": [
-              "C",
-              "LW"
-            ],
+            "positions": ["C", "LW"],
             "stats": {
               "scoring": {
                 "goals": 41.19,
@@ -13477,10 +12686,7 @@
             "playerId": 55,
             "type": "skater",
             "name": "Skater 55",
-            "positions": [
-              "LW",
-              "RW"
-            ],
+            "positions": ["LW", "RW"],
             "stats": {
               "scoring": {
                 "goals": 28.72,
@@ -13519,10 +12725,7 @@
             "playerId": 56,
             "type": "skater",
             "name": "Skater 56",
-            "positions": [
-              "C",
-              "RW"
-            ],
+            "positions": ["C", "RW"],
             "stats": {
               "scoring": {
                 "goals": 3.41,
@@ -13561,9 +12764,7 @@
             "playerId": 57,
             "type": "skater",
             "name": "Skater 57",
-            "positions": [
-              "C"
-            ],
+            "positions": ["C"],
             "stats": {
               "scoring": {
                 "goals": 28.48,
@@ -13602,9 +12803,7 @@
             "playerId": 58,
             "type": "skater",
             "name": "Skater 58",
-            "positions": [
-              "LW"
-            ],
+            "positions": ["LW"],
             "stats": {
               "scoring": {
                 "goals": 46.03,
@@ -13643,9 +12842,7 @@
             "playerId": 59,
             "type": "skater",
             "name": "Skater 59",
-            "positions": [
-              "RW"
-            ],
+            "positions": ["RW"],
             "stats": {
               "scoring": {
                 "goals": 5.65,
@@ -13684,9 +12881,7 @@
             "playerId": 60,
             "type": "skater",
             "name": "Skater 60",
-            "positions": [
-              "D"
-            ],
+            "positions": ["D"],
             "stats": {
               "scoring": {
                 "goals": 28.15,
@@ -13725,9 +12920,7 @@
             "playerId": 100,
             "type": "goalie",
             "name": "Goalie 100",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 14,
@@ -13752,9 +12945,7 @@
             "playerId": 101,
             "type": "goalie",
             "name": "Goalie 101",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 15,
@@ -13779,9 +12970,7 @@
             "playerId": 102,
             "type": "goalie",
             "name": "Goalie 102",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 38,
@@ -13806,9 +12995,7 @@
             "playerId": 103,
             "type": "goalie",
             "name": "Goalie 103",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 29,
@@ -13833,9 +13020,7 @@
             "playerId": 104,
             "type": "goalie",
             "name": "Goalie 104",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 47,
@@ -13860,9 +13045,7 @@
             "playerId": 105,
             "type": "goalie",
             "name": "Goalie 105",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 53,
@@ -13887,9 +13070,7 @@
             "playerId": 106,
             "type": "goalie",
             "name": "Goalie 106",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 54,
@@ -13914,9 +13095,7 @@
             "playerId": 107,
             "type": "goalie",
             "name": "Goalie 107",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 30,
@@ -13941,9 +13120,7 @@
             "playerId": 108,
             "type": "goalie",
             "name": "Goalie 108",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 45,
@@ -13968,9 +13145,7 @@
             "playerId": 109,
             "type": "goalie",
             "name": "Goalie 109",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 48,
@@ -13995,9 +13170,7 @@
             "playerId": 110,
             "type": "goalie",
             "name": "Goalie 110",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 41,
@@ -14022,9 +13195,7 @@
             "playerId": 111,
             "type": "goalie",
             "name": "Goalie 111",
-            "positions": [
-              "G"
-            ],
+            "positions": ["G"],
             "stats": {
               "scoring": {
                 "gs": 52,
@@ -14051,72 +13222,31 @@
             "teamId": "team-1",
             "name": "Team 1",
             "mine": true,
-            "playerIds": [
-              1,
-              8,
-              9,
-              16,
-              17,
-              111
-            ]
+            "playerIds": [1, 8, 9, 16, 17, 111]
           },
           {
             "teamId": "team-2",
             "name": "Team 2",
             "mine": false,
-            "playerIds": [
-              2,
-              7,
-              10,
-              15,
-              18,
-              110
-            ]
+            "playerIds": [2, 7, 10, 15, 18, 110]
           },
           {
             "teamId": "team-3",
             "name": "Team 3",
             "mine": false,
-            "playerIds": [
-              3,
-              6,
-              11,
-              14,
-              19,
-              109
-            ]
+            "playerIds": [3, 6, 11, 14, 19, 109]
           },
           {
             "teamId": "team-4",
             "name": "Team 4",
             "mine": false,
-            "playerIds": [
-              4,
-              5,
-              12,
-              13,
-              20,
-              108
-            ]
+            "playerIds": [4, 5, 12, 13, 20, 108]
           }
         ]
       },
       "expected": {
-        "categoryKeys": [
-          "goals",
-          "assists",
-          "hits",
-          "blocks",
-          "w",
-          "svPct"
-        ],
-        "positionKeys": [
-          "F",
-          "D",
-          "UTIL",
-          "G",
-          "BN"
-        ],
+        "categoryKeys": ["goals", "assists", "hits", "blocks", "w", "svPct"],
+        "positionKeys": ["F", "D", "UTIL", "G", "BN"],
         "teams": [
           {
             "teamId": "team-3",
