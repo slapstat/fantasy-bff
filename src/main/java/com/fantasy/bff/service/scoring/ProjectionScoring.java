@@ -177,6 +177,7 @@ public final class ProjectionScoring {
             poolPositions = next;
             scores = poolZScores(categories, poolPositions, players.size());
         }
+        shiftToReplacement(scores, poolPositions);
 
         for (int position = 0; position < players.size(); position++) {
             int playerId = players.get(position).playerId();
@@ -213,6 +214,39 @@ public final class ProjectionScoring {
                 }
             }
             return new Category(values, volumes, ScoringStatKeys.LOWER_IS_BETTER.contains(key) ? -1 : 1);
+        }
+    }
+
+    /**
+     * Moves nought from the pool's average to its worst member, the replacement player, category
+     * by category so the breakdown still sums to the total. The spread is measured from the mean,
+     * but half the pool sits under it, and a rostered player reading as less than nothing says his
+     * team would be better off without him. One constant per pool, so no order and no difference
+     * moves.
+     */
+    private static void shiftToReplacement(PoolZScores scores, List<Integer> poolPositions) {
+        if (poolPositions.isEmpty()) {
+            return;
+        }
+        double[] totals = scores.totals();
+        int replacement = poolPositions.get(0);
+        for (int position : poolPositions) {
+            if (totals[position] < totals[replacement]) {
+                replacement = position;
+            }
+        }
+        double offset = totals[replacement];
+        for (int position = 0; position < totals.length; position++) {
+            totals[position] -= offset;
+        }
+        for (double[] categoryScores : scores.byCategory()) {
+            if (categoryScores == null) {
+                continue;
+            }
+            double categoryOffset = categoryScores[replacement];
+            for (int position = 0; position < categoryScores.length; position++) {
+                categoryScores[position] -= categoryOffset;
+            }
         }
     }
 
