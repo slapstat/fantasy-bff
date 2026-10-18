@@ -23,7 +23,7 @@ public class RestClientConfig {
             @Value("${services.yahoo-fantasy.base-url}") String baseUrl,
             @Value("${services.yahoo-fantasy.timeout-ms}") int timeoutMs,
             InternalApiKeyProperties keys) {
-        return buildRestClientBuilder(baseUrl, timeoutMs)
+        return buildRestClientBuilder("yahoo-service", baseUrl, timeoutMs)
                 .defaultHeader(INTERNAL_API_KEY_HEADER, keys.yahooFantasy().apiKey())
                 .build();
     }
@@ -33,7 +33,7 @@ public class RestClientConfig {
             @Value("${services.espn-fantasy.base-url}") String baseUrl,
             @Value("${services.espn-fantasy.timeout-ms}") int timeoutMs,
             InternalApiKeyProperties keys) {
-        return buildRestClientBuilder(baseUrl, timeoutMs)
+        return buildRestClientBuilder("espn-service", baseUrl, timeoutMs)
                 .defaultHeader(INTERNAL_API_KEY_HEADER, keys.espnFantasy().apiKey())
                 .build();
     }
@@ -43,7 +43,7 @@ public class RestClientConfig {
             @Value("${services.database.base-url}") String baseUrl,
             @Value("${services.database.timeout-ms}") int timeoutMs,
             InternalApiKeyProperties keys) {
-        return buildRestClientBuilder(baseUrl, timeoutMs)
+        return buildRestClientBuilder("db-service", baseUrl, timeoutMs)
                 .defaultHeader(INTERNAL_API_KEY_HEADER, keys.database().apiKey())
                 .build();
     }
@@ -59,7 +59,7 @@ public class RestClientConfig {
             @Value("${services.database.base-url}") String baseUrl,
             @Value("${services.database.migration-timeout-ms}") int timeoutMs,
             InternalApiKeyProperties keys) {
-        return buildRestClientBuilder(baseUrl, timeoutMs)
+        return buildRestClientBuilder("db-service", baseUrl, timeoutMs)
                 .defaultHeader(INTERNAL_API_KEY_HEADER, keys.database().apiKey())
                 .build();
     }
@@ -79,7 +79,7 @@ public class RestClientConfig {
             @Value("${services.database.base-url}") String baseUrl,
             @Value("${services.database.projection-timeout-ms}") int timeoutMs,
             InternalApiKeyProperties keys) {
-        return buildRestClientBuilder(baseUrl, timeoutMs)
+        return buildRestClientBuilder("db-service", baseUrl, timeoutMs)
                 .defaultHeader(INTERNAL_API_KEY_HEADER, keys.database().apiKey())
                 .build();
     }
@@ -89,7 +89,7 @@ public class RestClientConfig {
             @Value("${services.projection.base-url}") String baseUrl,
             @Value("${services.projection.timeout-ms}") int timeoutMs,
             InternalApiKeyProperties keys) {
-        return buildRestClientBuilder(baseUrl, timeoutMs)
+        return buildRestClientBuilder("projection-service", baseUrl, timeoutMs)
                 .defaultHeader(INTERNAL_API_KEY_HEADER, keys.projection().apiKey())
                 .build();
     }
@@ -104,7 +104,7 @@ public class RestClientConfig {
     public RestClient espnImageClient(
             @Value("${services.espn-images.base-url}") String baseUrl,
             @Value("${services.espn-images.timeout-ms}") int timeoutMs) {
-        return buildRestClientBuilder(baseUrl, timeoutMs).build();
+        return buildRestClientBuilder("the ESPN image CDN", baseUrl, timeoutMs).build();
     }
 
     /**
@@ -122,6 +122,7 @@ public class RestClientConfig {
         RestClient.Builder builder = RestClient.builder()
                 .baseUrl(baseUrl)
                 .requestFactory(requestFactory(timeoutMs))
+                .requestInterceptor(new TransportFailureDescriber("Stripe", Duration.ofMillis(timeoutMs)))
                 .defaultHeader("Stripe-Version", StripePaymentProvider.API_VERSION);
         if (StringUtils.hasText(apiKey)) {
             builder.defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + apiKey);
@@ -129,10 +130,11 @@ public class RestClientConfig {
         return builder.build();
     }
 
-    private RestClient.Builder buildRestClientBuilder(String baseUrl, int timeoutMs) {
+    private RestClient.Builder buildRestClientBuilder(String service, String baseUrl, int timeoutMs) {
         return RestClient.builder()
                 .baseUrl(baseUrl)
                 .requestFactory(requestFactory(timeoutMs))
+                .requestInterceptor(new TransportFailureDescriber(service, Duration.ofMillis(timeoutMs)))
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
     }
 
