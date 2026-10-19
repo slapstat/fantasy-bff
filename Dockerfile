@@ -52,4 +52,11 @@ COPY --from=build /app/extracted/ ./
 # Render injects PORT; the app reads it via server.port=${PORT:8080}
 EXPOSE 8080
 USER 10001:10001
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Eight virtual-thread carriers, not one per core. A carrier is never taken back from a virtual
+# thread that is computing rather than blocking, so on staging's two cores two CPU-heavy requests
+# (a cold JVM building the player pool) held both carriers, and a third request whose db-service
+# answer had already arrived could not be scheduled to read it: the three-second read deadline
+# cancelled it underneath, twice (JAVA-SPRING-BOOT-3N, and the "Request cancelled" issues before
+# it). Carriers beyond the core count are platform threads the OS time-slices, so a waiting
+# request gets back on within a scheduler tick instead of waiting for a computation to finish.
+ENTRYPOINT ["java", "-Djdk.virtualThreadScheduler.parallelism=8", "-jar", "app.jar"]

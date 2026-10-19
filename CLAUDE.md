@@ -19,6 +19,8 @@ model). The **player pool** comes from whichever platform `players.source` names
   `RestClient` calls. Never write `Mono`, `Flux` or `.subscribe()`, and never reach for
   `WebClient` or the deprecated `RestTemplate`. Blocking a virtual thread is the point:
   it keeps the whole stack free to block (JDBC, any library) without starving a carrier pool.
+  Computing is what starves one: a carrier is never taken back mid-computation, which is why
+  the Dockerfile runs eight carriers rather than one per core.
 - **Fail gracefully.** A downstream being unavailable should not fail the whole response when
   a partial one is meaningful — `/players` serves the Yahoo line without the ESPN-only stats
   when espn-service is unreachable.
