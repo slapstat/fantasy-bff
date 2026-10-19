@@ -6246,7 +6246,7 @@
         "teams": [
           {
             "teamId": "team-3",
-            "total": 4.577191998395571,
+            "total": 3.0746121377055333,
             "values": {
               "goals": 1.1119653907296254,
               "assists": 0.22225379900430625,
@@ -6254,15 +6254,15 @@
               "sog": 0.5025019281528504,
               "hits": 1.6886024603118637,
               "blocks": -0.053367374126636946,
-              "w": -0.43450035727485475,
-              "gaa": 2.5786074536825665,
-              "svPct": -1.0388713020841487,
+              "w": -0.312347523777212,
+              "gaa": 0.29985228831204236,
+              "svPct": -0.38484883090130506,
               "LW": 1.1284233885450714,
               "C": 1.939965615331693,
               "RW": 2.614915403719494,
               "D": 0.4662961644678769,
               "UTIL": -2.6776443679921273,
-              "G": 1.1052357943235631,
+              "G": -0.3973440663664747,
               "BN": 0
             },
             "roster": [
@@ -6345,32 +6345,6 @@
                 }
               },
               {
-                "name": "Goalie 109",
-                "total": 1.1052357943235631,
-                "values": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": 14,
-                  "gaa": 2.247,
-                  "svPct": 0.916
-                },
-                "contributions": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": -0.43450035727485475,
-                  "gaa": 2.5786074536825665,
-                  "svPct": -1.0388713020841487
-                }
-              },
-              {
                 "name": "Skater 11",
                 "total": 0.4662961644678769,
                 "values": {
@@ -6394,6 +6368,32 @@
                   "w": null,
                   "gaa": null,
                   "svPct": null
+                }
+              },
+              {
+                "name": "Goalie 109",
+                "total": -0.3973440663664747,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": 14,
+                  "gaa": 2.247,
+                  "svPct": 0.916
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": -0.312347523777212,
+                  "gaa": 0.29985228831204236,
+                  "svPct": -0.38484883090130506
                 }
               },
               {
@@ -6457,7 +6457,7 @@
               "G": [
                 {
                   "name": "Goalie 109",
-                  "value": 1.1052357943235631
+                  "value": -0.3973440663664747
                 }
               ],
               "BN": []
@@ -6465,7 +6465,7 @@
           },
           {
             "teamId": "team-1",
-            "total": -22.356750746910883,
+            "total": -5.6538011385598566,
             "values": {
               "goals": -2.144504682121423,
               "assists": 1.675913781681122,
@@ -6473,15 +6473,15 @@
               "sog": -1.0992229678343612,
               "hits": 3.259395446648481,
               "blocks": -3.815767250054538,
-              "w": 4.127753394111121,
-              "gaa": -10.243124905809225,
-              "svPct": -14.117193563532062,
+              "w": 1.8740851426632728,
+              "gaa": -2.3906687097572856,
+              "svPct": -3.0130318997851253,
               "LW": 1.013021297202272,
               "C": 2.766554974040178,
               "RW": 0,
               "D": 0,
               "UTIL": 0.5332705653418526,
-              "G": -20.232565075230166,
+              "G": -3.529615466879138,
               "BN": -6.4370325082650215
             },
             "roster": [
@@ -6590,6 +6590,32 @@
                 }
               },
               {
+                "name": "Goalie 111",
+                "total": -3.529615466879138,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": 35,
+                  "gaa": 3.215,
+                  "svPct": 0.892
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": 1.8740851426632728,
+                  "gaa": -2.3906687097572856,
+                  "svPct": -3.0130318997851253
+                }
+              },
+              {
                 "name": "Skater 1",
                 "total": -6.4370325082650215,
                 "values": {
@@ -6613,32 +6639,6 @@
                   "w": null,
                   "gaa": null,
                   "svPct": null
-                }
-              },
-              {
-                "name": "Goalie 111",
-                "total": -20.232565075230166,
-                "values": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": 35,
-                  "gaa": 3.215,
-                  "svPct": 0.892
-                },
-                "contributions": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": 4.127753394111121,
-                  "gaa": -10.243124905809225,
-                  "svPct": -14.117193563532062
                 }
               }
             ],
@@ -6671,7 +6671,7 @@
               "G": [
                 {
                   "name": "Goalie 111",
-                  "value": -20.232565075230166
+                  "value": -3.529615466879138
                 }
               ],
               "BN": [
@@ -6684,7 +6684,7 @@
           },
           {
             "teamId": "team-2",
-            "total": -27.187502408420375,
+            "total": -16.081876466091266,
             "values": {
               "goals": -10.219491448134184,
               "assists": 5.646447866595895,
@@ -6692,15 +6692,15 @@
               "sog": -9.139253818279972,
               "hits": 2.4936338658093797,
               "blocks": -0.5069900542030505,
-              "w": -0.43450035727485475,
-              "gaa": -4.328460568442106,
-              "svPct": -10.698887894491484,
+              "w": -0.312347523777212,
+              "gaa": -1.3107626069307348,
+              "svPct": -2.733112747171389,
               "LW": 2.497873085375638,
               "C": -3.3232526756073586,
               "RW": 0.10320497635363046,
               "D": -4.7401879480248486,
               "UTIL": -6.263291026308991,
-              "G": -15.461848820208445,
+              "G": -4.356222877879335,
               "BN": 0
             },
             "roster": [
@@ -6783,6 +6783,32 @@
                 }
               },
               {
+                "name": "Goalie 110",
+                "total": -4.356222877879335,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": 14,
+                  "gaa": 2.886,
+                  "svPct": 0.889
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": -0.312347523777212,
+                  "gaa": -1.3107626069307348,
+                  "svPct": -2.733112747171389
+                }
+              },
+              {
                 "name": "Skater 18",
                 "total": -4.7401879480248486,
                 "values": {
@@ -6833,32 +6859,6 @@
                   "gaa": null,
                   "svPct": null
                 }
-              },
-              {
-                "name": "Goalie 110",
-                "total": -15.461848820208445,
-                "values": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": 14,
-                  "gaa": 2.886,
-                  "svPct": 0.889
-                },
-                "contributions": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": -0.43450035727485475,
-                  "gaa": -4.328460568442106,
-                  "svPct": -10.698887894491484
-                }
               }
             ],
             "positionPlayers": {
@@ -6895,7 +6895,7 @@
               "G": [
                 {
                   "name": "Goalie 110",
-                  "value": -15.461848820208445
+                  "value": -4.356222877879335
                 }
               ],
               "BN": []
@@ -6903,7 +6903,7 @@
           },
           {
             "teamId": "team-4",
-            "total": -38.175448906168945,
+            "total": -19.45865775162861,
             "values": {
               "goals": -8.273552014357339,
               "assists": 2.697079885214423,
@@ -6911,15 +6911,15 @@
               "sog": -6.804713610403187,
               "hits": -0.35342842192573887,
               "blocks": -0.7204595507095979,
-              "w": -0.2172501786374274,
-              "gaa": -9.914926447651117,
-              "svPct": -14.588198567698958,
+              "w": -0.2082316825181414,
+              "gaa": -2.443530175014154,
+              "svPct": -3.351822181914873,
               "LW": -0.7947348966550836,
               "C": 1.108962193503837,
               "RW": 1.5932036195047772,
               "D": -9.843875899287637,
               "UTIL": -5.518628729247334,
-              "G": -24.720375193987504,
+              "G": -6.003584039447168,
               "BN": 0
             },
             "roster": [
@@ -7028,6 +7028,32 @@
                 }
               },
               {
+                "name": "Goalie 108",
+                "total": -6.003584039447168,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": 15,
+                  "gaa": 3.319,
+                  "svPct": 0.886
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "ppp": null,
+                  "sog": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": -0.2082316825181414,
+                  "gaa": -2.443530175014154,
+                  "svPct": -3.351822181914873
+                }
+              },
+              {
                 "name": "Skater 4",
                 "total": -9.843875899287637,
                 "values": {
@@ -7051,32 +7077,6 @@
                   "w": null,
                   "gaa": null,
                   "svPct": null
-                }
-              },
-              {
-                "name": "Goalie 108",
-                "total": -24.720375193987504,
-                "values": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": 15,
-                  "gaa": 3.319,
-                  "svPct": 0.886
-                },
-                "contributions": {
-                  "goals": null,
-                  "assists": null,
-                  "ppp": null,
-                  "sog": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": -0.2172501786374274,
-                  "gaa": -9.914926447651117,
-                  "svPct": -14.588198567698958
                 }
               }
             ],
@@ -7114,7 +7114,7 @@
               "G": [
                 {
                   "name": "Goalie 108",
-                  "value": -24.720375193987504
+                  "value": -6.003584039447168
                 }
               ],
               "BN": []
@@ -13250,18 +13250,18 @@
         "teams": [
           {
             "teamId": "team-3",
-            "total": -3.602384070204381,
+            "total": -3.131077638072448,
             "values": {
               "goals": -4.451597532620538,
               "assists": 5.5593700393953025,
               "hits": 1.6701925269542937,
               "blocks": -5.21184631712299,
-              "w": -0.3651483716701107,
-              "svPct": -0.803354415140339,
+              "w": -0.312347523777212,
+              "svPct": -0.38484883090130506,
               "F": 1.6522889959132476,
               "D": 1.0789672172880937,
               "UTIL": -2.377246519284162,
-              "G": -1.1685027868104498,
+              "G": -0.697196354678517,
               "BN": -2.7878909773111102
             },
             "roster": [
@@ -13327,7 +13327,7 @@
               },
               {
                 "name": "Goalie 109",
-                "total": -1.1685027868104498,
+                "total": -0.697196354678517,
                 "values": {
                   "goals": null,
                   "assists": null,
@@ -13341,8 +13341,8 @@
                   "assists": null,
                   "hits": null,
                   "blocks": null,
-                  "w": -0.3651483716701107,
-                  "svPct": -0.803354415140339
+                  "w": -0.312347523777212,
+                  "svPct": -0.38484883090130506
                 }
               },
               {
@@ -13412,7 +13412,7 @@
               "G": [
                 {
                   "name": "Goalie 109",
-                  "value": -1.1685027868104498
+                  "value": -0.697196354678517
                 }
               ],
               "BN": [
@@ -13425,18 +13425,18 @@
           },
           {
             "teamId": "team-1",
-            "total": -8.63330762943999,
+            "total": -6.61191139965002,
             "values": {
               "goals": -6.879741641322648,
               "assists": 7.120121256951757,
               "hits": 3.4282899237482862,
               "blocks": -9.141634181905562,
-              "w": 2.1908902300206647,
-              "svPct": -5.351233216932487,
+              "w": 1.8740851426632728,
+              "svPct": -3.0130318997851253,
               "F": 0.8050599718108241,
               "D": 0,
               "UTIL": -1.0671687887917642,
-              "G": -3.160342986911822,
+              "G": -1.1389467571218521,
               "BN": -5.210855825547228
             },
             "roster": [
@@ -13501,6 +13501,26 @@
                 }
               },
               {
+                "name": "Goalie 111",
+                "total": -1.1389467571218521,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": 35,
+                  "svPct": 0.892
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "hits": null,
+                  "blocks": null,
+                  "w": 1.8740851426632728,
+                  "svPct": -3.0130318997851253
+                }
+              },
+              {
                 "name": "Skater 9",
                 "total": -2.4591867407855004,
                 "values": {
@@ -13539,26 +13559,6 @@
                   "w": null,
                   "svPct": null
                 }
-              },
-              {
-                "name": "Goalie 111",
-                "total": -3.160342986911822,
-                "values": {
-                  "goals": null,
-                  "assists": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": 35,
-                  "svPct": 0.892
-                },
-                "contributions": {
-                  "goals": null,
-                  "assists": null,
-                  "hits": null,
-                  "blocks": null,
-                  "w": 2.1908902300206647,
-                  "svPct": -5.351233216932487
-                }
               }
             ],
             "positionPlayers": {
@@ -13582,7 +13582,7 @@
               "G": [
                 {
                   "name": "Goalie 111",
-                  "value": -3.160342986911822
+                  "value": -1.1389467571218521
                 }
               ],
               "BN": [
@@ -13599,18 +13599,18 @@
           },
           {
             "teamId": "team-2",
-            "total": -9.382244620685888,
+            "total": -7.67747787460356,
             "values": {
               "goals": -12.900749390543329,
               "assists": 11.38316487184769,
               "hits": 2.5712174428112147,
               "blocks": -5.685650527770534,
-              "w": -0.3651483716701107,
-              "svPct": -4.385078645360819,
+              "w": -0.312347523777212,
+              "svPct": -2.733112747171389,
               "F": 3.440036619773861,
               "D": -1.074566585618707,
               "UTIL": -2.2453273351129486,
-              "G": -4.750227017030929,
+              "G": -3.0454602709486007,
               "BN": -4.752160302697165
             },
             "roster": [
@@ -13696,7 +13696,7 @@
               },
               {
                 "name": "Goalie 110",
-                "total": -4.750227017030929,
+                "total": -3.0454602709486007,
                 "values": {
                   "goals": null,
                   "assists": null,
@@ -13710,8 +13710,8 @@
                   "assists": null,
                   "hits": null,
                   "blocks": null,
-                  "w": -0.3651483716701107,
-                  "svPct": -4.385078645360819
+                  "w": -0.312347523777212,
+                  "svPct": -2.733112747171389
                 }
               },
               {
@@ -13761,7 +13761,7 @@
               "G": [
                 {
                   "name": "Goalie 110",
-                  "value": -4.750227017030929
+                  "value": -3.0454602709486007
                 }
               ],
               "BN": [
@@ -13774,18 +13774,18 @@
           },
           {
             "teamId": "team-4",
-            "total": -15.649154948120195,
+            "total": -13.317273656112027,
             "values": {
               "goals": -11.449785228026213,
               "assists": 8.216516740359182,
               "hits": -0.6153340888778978,
               "blocks": -5.9086172151340834,
-              "w": -0.24343224778007388,
-              "svPct": -5.648502908661108,
+              "w": -0.2082316825181414,
+              "svPct": -3.351822181914873,
               "F": 2.5544525616799127,
               "D": -7.386556394527704,
               "UTIL": -2.350965146270787,
-              "G": -5.891935156441181,
+              "G": -3.5600538644330144,
               "BN": -2.5741508125604344
             },
             "roster": [
@@ -13871,7 +13871,7 @@
               },
               {
                 "name": "Goalie 108",
-                "total": -5.891935156441181,
+                "total": -3.5600538644330144,
                 "values": {
                   "goals": null,
                   "assists": null,
@@ -13885,8 +13885,8 @@
                   "assists": null,
                   "hits": null,
                   "blocks": null,
-                  "w": -0.24343224778007388,
-                  "svPct": -5.648502908661108
+                  "w": -0.2082316825181414,
+                  "svPct": -3.351822181914873
                 }
               },
               {
@@ -13936,7 +13936,7 @@
               "G": [
                 {
                   "name": "Goalie 108",
-                  "value": -5.891935156441181
+                  "value": -3.5600538644330144
                 }
               ],
               "BN": [
@@ -13945,6 +13945,3683 @@
                   "value": -2.5741508125604344
                 }
               ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "name": "category league with idle goalies",
+        "league": {
+          "scoringType": "category",
+          "statWeights": {
+            "goals": 1,
+            "assists": 1,
+            "sog": 1,
+            "hits": 1,
+            "w": 1,
+            "gaa": 1,
+            "svPct": 1
+          },
+          "activeScoringColumns": ["goals", "assists", "sog", "hits", "w", "gaa", "svPct"],
+          "rosterSlots": {
+            "c": 1,
+            "lw": 1,
+            "rw": 1,
+            "w": 0,
+            "f": 0,
+            "d": 1,
+            "util": 1,
+            "bn": 1,
+            "g": 1
+          },
+          "leagueSize": 4,
+          "minGoalieGames": 0
+        },
+        "pool": [
+          {
+            "playerId": 1,
+            "type": "skater",
+            "name": "Skater 1",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 2.26,
+                "assists": 36.22,
+                "points": 0,
+                "plusMinus": 3.9,
+                "pim": 12,
+                "ppg": 9.68,
+                "ppa": 14.64,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 3,
+                "hatTricks": 0.38,
+                "sog": 0,
+                "shPct": 11.19,
+                "fw": 450,
+                "fl": 389,
+                "hits": 182,
+                "blocks": 28,
+                "defPoints": 0,
+                "shifts": 1194,
+                "toi": 86605
+              },
+              "utility": {
+                "gp": 64,
+                "toiPerGame": 868.9
+              }
+            }
+          },
+          {
+            "playerId": 2,
+            "type": "skater",
+            "name": "Skater 2",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 38.53,
+                "assists": 57.82,
+                "points": 0,
+                "plusMinus": 10,
+                "pim": 28,
+                "ppg": 1.08,
+                "ppa": 12.37,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 8,
+                "hatTricks": 0.17,
+                "sog": 312,
+                "shPct": 12.35,
+                "fw": 4,
+                "fl": 155,
+                "hits": 113,
+                "blocks": 63,
+                "defPoints": 0,
+                "shifts": 17,
+                "toi": 64989
+              },
+              "utility": {
+                "gp": 75,
+                "toiPerGame": 141.1
+              }
+            }
+          },
+          {
+            "playerId": 3,
+            "type": "skater",
+            "name": "Skater 3",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 45.76,
+                "assists": 12.47,
+                "points": 0,
+                "plusMinus": 4.6,
+                "pim": 34,
+                "ppg": 8.91,
+                "ppa": 19.98,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 0.12,
+                "sog": 366,
+                "shPct": 12.5,
+                "fw": 312,
+                "fl": 47,
+                "hits": 151,
+                "blocks": 84,
+                "defPoints": 0,
+                "shifts": 168,
+                "toi": 21456
+              },
+              "utility": {
+                "gp": 69,
+                "toiPerGame": 174.5
+              }
+            }
+          },
+          {
+            "playerId": 4,
+            "type": "skater",
+            "name": "Skater 4",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 6.17,
+                "assists": 16.56,
+                "points": 0,
+                "plusMinus": 7.4,
+                "pim": 35,
+                "ppg": 11.85,
+                "ppa": 9.87,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 6,
+                "hatTricks": 1.65,
+                "sog": 62,
+                "shPct": 9.95,
+                "fw": 270,
+                "fl": 238,
+                "hits": 39,
+                "blocks": 6,
+                "defPoints": 0,
+                "shifts": 982,
+                "toi": 39045
+              },
+              "utility": {
+                "gp": 69,
+                "toiPerGame": 277.2
+              }
+            }
+          },
+          {
+            "playerId": 5,
+            "type": "skater",
+            "name": "Skater 5",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 45.81,
+                "assists": 24.34,
+                "points": 0,
+                "plusMinus": 7.4,
+                "pim": 66,
+                "ppg": 7.96,
+                "ppa": 2.85,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 0,
+                "hatTricks": 0.87,
+                "sog": 319,
+                "shPct": 14.36,
+                "fw": 412,
+                "fl": 427,
+                "hits": 3,
+                "blocks": 57,
+                "defPoints": 0,
+                "shifts": 991,
+                "toi": 8635
+              },
+              "utility": {
+                "gp": 74,
+                "toiPerGame": 542.3
+              }
+            }
+          },
+          {
+            "playerId": 6,
+            "type": "skater",
+            "name": "Skater 6",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 45.58,
+                "assists": 14.34,
+                "points": 0,
+                "plusMinus": -16.6,
+                "pim": 50,
+                "ppg": 4.2,
+                "ppa": 4.78,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 0,
+                "hatTricks": 0.4,
+                "sog": 510,
+                "shPct": 8.94,
+                "fw": 41,
+                "fl": 487,
+                "hits": 46,
+                "blocks": 46,
+                "defPoints": 0,
+                "shifts": 1139,
+                "toi": 55599
+              },
+              "utility": {
+                "gp": 74,
+                "toiPerGame": 433.4
+              }
+            }
+          },
+          {
+            "playerId": 7,
+            "type": "skater",
+            "name": "Skater 7",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 22.17,
+                "assists": 48.98,
+                "points": 0,
+                "plusMinus": -11.3,
+                "pim": 7,
+                "ppg": 6.27,
+                "ppa": 14.78,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 0.65,
+                "sog": 164,
+                "shPct": 13.52,
+                "fw": 500,
+                "fl": 160,
+                "hits": 54,
+                "blocks": 47,
+                "defPoints": 0,
+                "shifts": 402,
+                "toi": 85633
+              },
+              "utility": {
+                "gp": 65,
+                "toiPerGame": 634.6
+              }
+            }
+          },
+          {
+            "playerId": 8,
+            "type": "skater",
+            "name": "Skater 8",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 38.06,
+                "assists": 11.34,
+                "points": 0,
+                "plusMinus": -6.6,
+                "pim": 68,
+                "ppg": 11.84,
+                "ppa": 17.91,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 0,
+                "sog": 434,
+                "shPct": 8.77,
+                "fw": 427,
+                "fl": 69,
+                "hits": 193,
+                "blocks": 73,
+                "defPoints": 0,
+                "shifts": 1299,
+                "toi": 25904
+              },
+              "utility": {
+                "gp": 80,
+                "toiPerGame": 198.9
+              }
+            }
+          },
+          {
+            "playerId": 9,
+            "type": "skater",
+            "name": "Skater 9",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 43.75,
+                "assists": 28.36,
+                "points": 0,
+                "plusMinus": 7.8,
+                "pim": 8,
+                "ppg": 3.45,
+                "ppa": 12.96,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 1,
+                "hatTricks": 0.56,
+                "sog": 467,
+                "shPct": 9.37,
+                "fw": 82,
+                "fl": 366,
+                "hits": 28,
+                "blocks": 31,
+                "defPoints": 0,
+                "shifts": 879,
+                "toi": 20349
+              },
+              "utility": {
+                "gp": 73,
+                "toiPerGame": 581.2
+              }
+            }
+          },
+          {
+            "playerId": 10,
+            "type": "skater",
+            "name": "Skater 10",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 19.9,
+                "assists": 49.48,
+                "points": 0,
+                "plusMinus": -12.9,
+                "pim": 23,
+                "ppg": 3.37,
+                "ppa": 14.37,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 0.34,
+                "sog": 150,
+                "shPct": 13.27,
+                "fw": 0,
+                "fl": 388,
+                "hits": 182,
+                "blocks": 97,
+                "defPoints": 0,
+                "shifts": 1591,
+                "toi": 46817
+              },
+              "utility": {
+                "gp": 67,
+                "toiPerGame": 696.9
+              }
+            }
+          },
+          {
+            "playerId": 11,
+            "type": "skater",
+            "name": "Skater 11",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 21.37,
+                "assists": 56.61,
+                "points": 0,
+                "plusMinus": -16.4,
+                "pim": 37,
+                "ppg": 1.6,
+                "ppa": 12.42,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 0.71,
+                "sog": 234,
+                "shPct": 9.13,
+                "fw": 448,
+                "fl": 467,
+                "hits": 113,
+                "blocks": 105,
+                "defPoints": 0,
+                "shifts": 192,
+                "toi": 17464
+              },
+              "utility": {
+                "gp": 74,
+                "toiPerGame": 877
+              }
+            }
+          },
+          {
+            "playerId": 12,
+            "type": "skater",
+            "name": "Skater 12",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 29.85,
+                "assists": 47.04,
+                "points": 0,
+                "plusMinus": -11,
+                "pim": 59,
+                "ppg": 8.07,
+                "ppa": 8.83,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 1.87,
+                "sog": 244,
+                "shPct": 12.23,
+                "fw": 17,
+                "fl": 36,
+                "hits": 88,
+                "blocks": 123,
+                "defPoints": 0,
+                "shifts": 1588,
+                "toi": 30275
+              },
+              "utility": {
+                "gp": 75,
+                "toiPerGame": 1135.6
+              }
+            }
+          },
+          {
+            "playerId": 13,
+            "type": "skater",
+            "name": "Skater 13",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 6.67,
+                "assists": 45.61,
+                "points": 0,
+                "plusMinus": -17.7,
+                "pim": 56,
+                "ppg": 7.25,
+                "ppa": 9.33,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 1.47,
+                "sog": 45,
+                "shPct": 14.82,
+                "fw": 417,
+                "fl": 406,
+                "hits": 92,
+                "blocks": 68,
+                "defPoints": 0,
+                "shifts": 1647,
+                "toi": 68257
+              },
+              "utility": {
+                "gp": 60,
+                "toiPerGame": 689.9
+              }
+            }
+          },
+          {
+            "playerId": 14,
+            "type": "skater",
+            "name": "Skater 14",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 32.81,
+                "assists": 14.25,
+                "points": 0,
+                "plusMinus": -7.8,
+                "pim": 19,
+                "ppg": 2.83,
+                "ppa": 3.69,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 1.53,
+                "sog": 235,
+                "shPct": 13.96,
+                "fw": 362,
+                "fl": 492,
+                "hits": 81,
+                "blocks": 49,
+                "defPoints": 0,
+                "shifts": 1296,
+                "toi": 33643
+              },
+              "utility": {
+                "gp": 79,
+                "toiPerGame": 286.8
+              }
+            }
+          },
+          {
+            "playerId": 15,
+            "type": "skater",
+            "name": "Skater 15",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 15.78,
+                "assists": 7.92,
+                "points": 0,
+                "plusMinus": 15.4,
+                "pim": 7,
+                "ppg": 6.08,
+                "ppa": 13.56,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 6,
+                "hatTricks": 0.24,
+                "sog": 131,
+                "shPct": 12.05,
+                "fw": 39,
+                "fl": 59,
+                "hits": 69,
+                "blocks": 63,
+                "defPoints": 0,
+                "shifts": 1605,
+                "toi": 88894
+              },
+              "utility": {
+                "gp": 72,
+                "toiPerGame": 377.2
+              }
+            }
+          },
+          {
+            "playerId": 16,
+            "type": "skater",
+            "name": "Skater 16",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 41.64,
+                "assists": 47.98,
+                "points": 0,
+                "plusMinus": 1.8,
+                "pim": 63,
+                "ppg": 3.93,
+                "ppa": 7.7,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 8,
+                "hatTricks": 1.4,
+                "sog": 298,
+                "shPct": 13.97,
+                "fw": 143,
+                "fl": 56,
+                "hits": 111,
+                "blocks": 21,
+                "defPoints": 0,
+                "shifts": 1322,
+                "toi": 75814
+              },
+              "utility": {
+                "gp": 79,
+                "toiPerGame": 496.4
+              }
+            }
+          },
+          {
+            "playerId": 17,
+            "type": "skater",
+            "name": "Skater 17",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 35.46,
+                "assists": 24.02,
+                "points": 0,
+                "plusMinus": 1.6,
+                "pim": 39,
+                "ppg": 7.39,
+                "ppa": 11.61,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 0.21,
+                "sog": 326,
+                "shPct": 10.88,
+                "fw": 422,
+                "fl": 160,
+                "hits": 87,
+                "blocks": 74,
+                "defPoints": 0,
+                "shifts": 520,
+                "toi": 51955
+              },
+              "utility": {
+                "gp": 78,
+                "toiPerGame": 105.5
+              }
+            }
+          },
+          {
+            "playerId": 18,
+            "type": "skater",
+            "name": "Skater 18",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 3.87,
+                "assists": 49.8,
+                "points": 0,
+                "plusMinus": 11.5,
+                "pim": 18,
+                "ppg": 4.37,
+                "ppa": 3.68,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 3,
+                "hatTricks": 0.39,
+                "sog": 0,
+                "shPct": 3.12,
+                "fw": 415,
+                "fl": 260,
+                "hits": 144,
+                "blocks": 81,
+                "defPoints": 0,
+                "shifts": 1166,
+                "toi": 58908
+              },
+              "utility": {
+                "gp": 69,
+                "toiPerGame": 267.7
+              }
+            }
+          },
+          {
+            "playerId": 19,
+            "type": "skater",
+            "name": "Skater 19",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 40.26,
+                "assists": 26.02,
+                "points": 0,
+                "plusMinus": 12.7,
+                "pim": 49,
+                "ppg": 3.2,
+                "ppa": 10.72,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 1.17,
+                "sog": 333,
+                "shPct": 12.09,
+                "fw": 231,
+                "fl": 398,
+                "hits": 130,
+                "blocks": 84,
+                "defPoints": 0,
+                "shifts": 644,
+                "toi": 51222
+              },
+              "utility": {
+                "gp": 70,
+                "toiPerGame": 786.8
+              }
+            }
+          },
+          {
+            "playerId": 20,
+            "type": "skater",
+            "name": "Skater 20",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 26.38,
+                "assists": 31.44,
+                "points": 0,
+                "plusMinus": 5.6,
+                "pim": 25,
+                "ppg": 9.1,
+                "ppa": 14.56,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 1.85,
+                "sog": 310,
+                "shPct": 8.51,
+                "fw": 225,
+                "fl": 234,
+                "hits": 195,
+                "blocks": 89,
+                "defPoints": 0,
+                "shifts": 1083,
+                "toi": 15225
+              },
+              "utility": {
+                "gp": 62,
+                "toiPerGame": 847.6
+              }
+            }
+          },
+          {
+            "playerId": 21,
+            "type": "skater",
+            "name": "Skater 21",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 20.13,
+                "assists": 35.3,
+                "points": 0,
+                "plusMinus": 20,
+                "pim": 64,
+                "ppg": 0.65,
+                "ppa": 5.91,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 3,
+                "hatTricks": 1.18,
+                "sog": 181,
+                "shPct": 11.12,
+                "fw": 334,
+                "fl": 484,
+                "hits": 55,
+                "blocks": 63,
+                "defPoints": 0,
+                "shifts": 1766,
+                "toi": 57030
+              },
+              "utility": {
+                "gp": 73,
+                "toiPerGame": 567.2
+              }
+            }
+          },
+          {
+            "playerId": 22,
+            "type": "skater",
+            "name": "Skater 22",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 6.22,
+                "assists": 10.61,
+                "points": 0,
+                "plusMinus": -1,
+                "pim": 14,
+                "ppg": 9.32,
+                "ppa": 3.12,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 3,
+                "hatTricks": 1.68,
+                "sog": 44,
+                "shPct": 14.14,
+                "fw": 242,
+                "fl": 269,
+                "hits": 10,
+                "blocks": 59,
+                "defPoints": 0,
+                "shifts": 1719,
+                "toi": 17907
+              },
+              "utility": {
+                "gp": 69,
+                "toiPerGame": 909.3
+              }
+            }
+          },
+          {
+            "playerId": 23,
+            "type": "skater",
+            "name": "Skater 23",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 46.16,
+                "assists": 7.48,
+                "points": 0,
+                "plusMinus": -19.3,
+                "pim": 39,
+                "ppg": 7.28,
+                "ppa": 9.97,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 1.22,
+                "sog": 539,
+                "shPct": 8.56,
+                "fw": 237,
+                "fl": 310,
+                "hits": 89,
+                "blocks": 111,
+                "defPoints": 0,
+                "shifts": 1137,
+                "toi": 46633
+              },
+              "utility": {
+                "gp": 71,
+                "toiPerGame": 583
+              }
+            }
+          },
+          {
+            "playerId": 24,
+            "type": "skater",
+            "name": "Skater 24",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 15.94,
+                "assists": 55.37,
+                "points": 0,
+                "plusMinus": -11.4,
+                "pim": 52,
+                "ppg": 7.28,
+                "ppa": 3.03,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 0.39,
+                "sog": 120,
+                "shPct": 13.28,
+                "fw": 390,
+                "fl": 388,
+                "hits": 7,
+                "blocks": 23,
+                "defPoints": 0,
+                "shifts": 76,
+                "toi": 50640
+              },
+              "utility": {
+                "gp": 67,
+                "toiPerGame": 538.7
+              }
+            }
+          },
+          {
+            "playerId": 25,
+            "type": "skater",
+            "name": "Skater 25",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 36.22,
+                "assists": 56.96,
+                "points": 0,
+                "plusMinus": -8.2,
+                "pim": 24,
+                "ppg": 10.13,
+                "ppa": 18.21,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 1.52,
+                "sog": 423,
+                "shPct": 8.56,
+                "fw": 307,
+                "fl": 19,
+                "hits": 134,
+                "blocks": 122,
+                "defPoints": 0,
+                "shifts": 299,
+                "toi": 72109
+              },
+              "utility": {
+                "gp": 70,
+                "toiPerGame": 655.6
+              }
+            }
+          },
+          {
+            "playerId": 26,
+            "type": "skater",
+            "name": "Skater 26",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 27.16,
+                "assists": 24.96,
+                "points": 0,
+                "plusMinus": -13.5,
+                "pim": 39,
+                "ppg": 9.47,
+                "ppa": 4.33,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 6,
+                "hatTricks": 1.54,
+                "sog": 290,
+                "shPct": 9.37,
+                "fw": 238,
+                "fl": 179,
+                "hits": 108,
+                "blocks": 103,
+                "defPoints": 0,
+                "shifts": 1551,
+                "toi": 21786
+              },
+              "utility": {
+                "gp": 76,
+                "toiPerGame": 748.8
+              }
+            }
+          },
+          {
+            "playerId": 27,
+            "type": "skater",
+            "name": "Skater 27",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 5.92,
+                "assists": 45.95,
+                "points": 0,
+                "plusMinus": -16.4,
+                "pim": 34,
+                "ppg": 9.07,
+                "ppa": 9.52,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 3,
+                "hatTricks": 1.22,
+                "sog": 48,
+                "shPct": 12.33,
+                "fw": 333,
+                "fl": 56,
+                "hits": 161,
+                "blocks": 109,
+                "defPoints": 0,
+                "shifts": 1747,
+                "toi": 36987
+              },
+              "utility": {
+                "gp": 74,
+                "toiPerGame": 283.3
+              }
+            }
+          },
+          {
+            "playerId": 28,
+            "type": "skater",
+            "name": "Skater 28",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 24.61,
+                "assists": 4.23,
+                "points": 0,
+                "plusMinus": -1.5,
+                "pim": 54,
+                "ppg": 5.97,
+                "ppa": 9.09,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 1.63,
+                "sog": 277,
+                "shPct": 8.88,
+                "fw": 301,
+                "fl": 452,
+                "hits": 70,
+                "blocks": 55,
+                "defPoints": 0,
+                "shifts": 1280,
+                "toi": 12794
+              },
+              "utility": {
+                "gp": 70,
+                "toiPerGame": 1111.3
+              }
+            }
+          },
+          {
+            "playerId": 29,
+            "type": "skater",
+            "name": "Skater 29",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 35.41,
+                "assists": 44.61,
+                "points": 0,
+                "plusMinus": 6.1,
+                "pim": 55,
+                "ppg": 10.44,
+                "ppa": 1.03,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 4,
+                "hatTricks": 0.46,
+                "sog": 408,
+                "shPct": 8.68,
+                "fw": 377,
+                "fl": 389,
+                "hits": 12,
+                "blocks": 0,
+                "defPoints": 0,
+                "shifts": 472,
+                "toi": 28770
+              },
+              "utility": {
+                "gp": 77,
+                "toiPerGame": 250.3
+              }
+            }
+          },
+          {
+            "playerId": 30,
+            "type": "skater",
+            "name": "Skater 30",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 35.13,
+                "assists": 6.51,
+                "points": 0,
+                "plusMinus": -2.9,
+                "pim": 21,
+                "ppg": 6.84,
+                "ppa": 6.08,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 0.82,
+                "sog": 399,
+                "shPct": 8.8,
+                "fw": 440,
+                "fl": 154,
+                "hits": 85,
+                "blocks": 126,
+                "defPoints": 0,
+                "shifts": 1767,
+                "toi": 50978
+              },
+              "utility": {
+                "gp": 65,
+                "toiPerGame": 390.6
+              }
+            }
+          },
+          {
+            "playerId": 31,
+            "type": "skater",
+            "name": "Skater 31",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 42.64,
+                "assists": 37.95,
+                "points": 0,
+                "plusMinus": 6.9,
+                "pim": 19,
+                "ppg": 7.92,
+                "ppa": 6.06,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 4,
+                "hatTricks": 1.57,
+                "sog": 413,
+                "shPct": 10.32,
+                "fw": 297,
+                "fl": 443,
+                "hits": 195,
+                "blocks": 32,
+                "defPoints": 0,
+                "shifts": 1092,
+                "toi": 3613
+              },
+              "utility": {
+                "gp": 80,
+                "toiPerGame": 268.8
+              }
+            }
+          },
+          {
+            "playerId": 32,
+            "type": "skater",
+            "name": "Skater 32",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 35.66,
+                "assists": 26.46,
+                "points": 0,
+                "plusMinus": -5.5,
+                "pim": 57,
+                "ppg": 0.85,
+                "ppa": 1.89,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 0,
+                "hatTricks": 1.06,
+                "sog": 426,
+                "shPct": 8.37,
+                "fw": 211,
+                "fl": 292,
+                "hits": 166,
+                "blocks": 120,
+                "defPoints": 0,
+                "shifts": 718,
+                "toi": 88919
+              },
+              "utility": {
+                "gp": 66,
+                "toiPerGame": 356.5
+              }
+            }
+          },
+          {
+            "playerId": 33,
+            "type": "skater",
+            "name": "Skater 33",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 38.16,
+                "assists": 19.34,
+                "points": 0,
+                "plusMinus": 15.9,
+                "pim": 32,
+                "ppg": 12,
+                "ppa": 2.19,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 0.32,
+                "sog": 316,
+                "shPct": 12.08,
+                "fw": 408,
+                "fl": 435,
+                "hits": 104,
+                "blocks": 138,
+                "defPoints": 0,
+                "shifts": 1746,
+                "toi": 5809
+              },
+              "utility": {
+                "gp": 64,
+                "toiPerGame": 149.6
+              }
+            }
+          },
+          {
+            "playerId": 34,
+            "type": "skater",
+            "name": "Skater 34",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 9.83,
+                "assists": 26.36,
+                "points": 0,
+                "plusMinus": 14.3,
+                "pim": 20,
+                "ppg": 0.65,
+                "ppa": 15.22,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 3,
+                "hatTricks": 0.66,
+                "sog": 98,
+                "shPct": 10.03,
+                "fw": 379,
+                "fl": 140,
+                "hits": 134,
+                "blocks": 67,
+                "defPoints": 0,
+                "shifts": 363,
+                "toi": 3969
+              },
+              "utility": {
+                "gp": 64,
+                "toiPerGame": 925.8
+              }
+            }
+          },
+          {
+            "playerId": 35,
+            "type": "skater",
+            "name": "Skater 35",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 38.79,
+                "assists": 9.12,
+                "points": 0,
+                "plusMinus": 2.1,
+                "pim": 13,
+                "ppg": 4.89,
+                "ppa": 17.84,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 8,
+                "hatTricks": 1.91,
+                "sog": 0,
+                "shPct": 5.21,
+                "fw": 37,
+                "fl": 206,
+                "hits": 103,
+                "blocks": 6,
+                "defPoints": 0,
+                "shifts": 531,
+                "toi": 35603
+              },
+              "utility": {
+                "gp": 65,
+                "toiPerGame": 608.9
+              }
+            }
+          },
+          {
+            "playerId": 36,
+            "type": "skater",
+            "name": "Skater 36",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 20.2,
+                "assists": 31.11,
+                "points": 0,
+                "plusMinus": 15.4,
+                "pim": 60,
+                "ppg": 10.51,
+                "ppa": 19.36,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 1,
+                "hatTricks": 0.88,
+                "sog": 173,
+                "shPct": 11.68,
+                "fw": 69,
+                "fl": 156,
+                "hits": 71,
+                "blocks": 8,
+                "defPoints": 0,
+                "shifts": 311,
+                "toi": 4827
+              },
+              "utility": {
+                "gp": 72,
+                "toiPerGame": 14.7
+              }
+            }
+          },
+          {
+            "playerId": 37,
+            "type": "skater",
+            "name": "Skater 37",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 22.03,
+                "assists": 24.21,
+                "points": 0,
+                "plusMinus": 6.7,
+                "pim": 25,
+                "ppg": 3.19,
+                "ppa": 6,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 0.12,
+                "sog": 206,
+                "shPct": 10.69,
+                "fw": 82,
+                "fl": 121,
+                "hits": 124,
+                "blocks": 122,
+                "defPoints": 0,
+                "shifts": 1028,
+                "toi": 46621
+              },
+              "utility": {
+                "gp": 77,
+                "toiPerGame": 1092.4
+              }
+            }
+          },
+          {
+            "playerId": 38,
+            "type": "skater",
+            "name": "Skater 38",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 36.15,
+                "assists": 25.04,
+                "points": 0,
+                "plusMinus": -9,
+                "pim": 55,
+                "ppg": 0.71,
+                "ppa": 7.96,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 6,
+                "hatTricks": 1.95,
+                "sog": 432,
+                "shPct": 8.37,
+                "fw": 35,
+                "fl": 147,
+                "hits": 70,
+                "blocks": 33,
+                "defPoints": 0,
+                "shifts": 742,
+                "toi": 19623
+              },
+              "utility": {
+                "gp": 80,
+                "toiPerGame": 229.3
+              }
+            }
+          },
+          {
+            "playerId": 39,
+            "type": "skater",
+            "name": "Skater 39",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 26.83,
+                "assists": 25.29,
+                "points": 0,
+                "plusMinus": -16.3,
+                "pim": 43,
+                "ppg": 10.33,
+                "ppa": 9.61,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 1.78,
+                "sog": 293,
+                "shPct": 9.16,
+                "fw": 489,
+                "fl": 271,
+                "hits": 175,
+                "blocks": 78,
+                "defPoints": 0,
+                "shifts": 914,
+                "toi": 6489
+              },
+              "utility": {
+                "gp": 74,
+                "toiPerGame": 1090.5
+              }
+            }
+          },
+          {
+            "playerId": 40,
+            "type": "skater",
+            "name": "Skater 40",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 22.5,
+                "assists": 19.27,
+                "points": 0,
+                "plusMinus": 15.3,
+                "pim": 49,
+                "ppg": 11.29,
+                "ppa": 18.28,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 1,
+                "hatTricks": 1.66,
+                "sog": 157,
+                "shPct": 14.33,
+                "fw": 410,
+                "fl": 411,
+                "hits": 139,
+                "blocks": 53,
+                "defPoints": 0,
+                "shifts": 224,
+                "toi": 65121
+              },
+              "utility": {
+                "gp": 81,
+                "toiPerGame": 605.5
+              }
+            }
+          },
+          {
+            "playerId": 41,
+            "type": "skater",
+            "name": "Skater 41",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 19.78,
+                "assists": 34.5,
+                "points": 0,
+                "plusMinus": -13.9,
+                "pim": 18,
+                "ppg": 11.71,
+                "ppa": 17.73,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 8,
+                "hatTricks": 0.52,
+                "sog": 149,
+                "shPct": 13.28,
+                "fw": 266,
+                "fl": 273,
+                "hits": 9,
+                "blocks": 60,
+                "defPoints": 0,
+                "shifts": 1156,
+                "toi": 20187
+              },
+              "utility": {
+                "gp": 80,
+                "toiPerGame": 1177
+              }
+            }
+          },
+          {
+            "playerId": 42,
+            "type": "skater",
+            "name": "Skater 42",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 25.4,
+                "assists": 22.43,
+                "points": 0,
+                "plusMinus": 8.1,
+                "pim": 32,
+                "ppg": 4.35,
+                "ppa": 2.3,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 1.32,
+                "sog": 153,
+                "shPct": 16.6,
+                "fw": 396,
+                "fl": 471,
+                "hits": 58,
+                "blocks": 7,
+                "defPoints": 0,
+                "shifts": 25,
+                "toi": 76636
+              },
+              "utility": {
+                "gp": 61,
+                "toiPerGame": 1012.2
+              }
+            }
+          },
+          {
+            "playerId": 43,
+            "type": "skater",
+            "name": "Skater 43",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 5.74,
+                "assists": 30.58,
+                "points": 0,
+                "plusMinus": -3,
+                "pim": 33,
+                "ppg": 6.24,
+                "ppa": 11.62,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 1,
+                "hatTricks": 1.97,
+                "sog": 48,
+                "shPct": 11.96,
+                "fw": 460,
+                "fl": 260,
+                "hits": 131,
+                "blocks": 112,
+                "defPoints": 0,
+                "shifts": 77,
+                "toi": 70442
+              },
+              "utility": {
+                "gp": 66,
+                "toiPerGame": 781.7
+              }
+            }
+          },
+          {
+            "playerId": 44,
+            "type": "skater",
+            "name": "Skater 44",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 22.92,
+                "assists": 6.63,
+                "points": 0,
+                "plusMinus": 13.4,
+                "pim": 20,
+                "ppg": 0.8,
+                "ppa": 6.35,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 5,
+                "hatTricks": 1.72,
+                "sog": 182,
+                "shPct": 12.59,
+                "fw": 326,
+                "fl": 62,
+                "hits": 124,
+                "blocks": 22,
+                "defPoints": 0,
+                "shifts": 289,
+                "toi": 59959
+              },
+              "utility": {
+                "gp": 66,
+                "toiPerGame": 388.8
+              }
+            }
+          },
+          {
+            "playerId": 45,
+            "type": "skater",
+            "name": "Skater 45",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 43.31,
+                "assists": 36.45,
+                "points": 0,
+                "plusMinus": -2.4,
+                "pim": 47,
+                "ppg": 9.34,
+                "ppa": 13.53,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 4,
+                "hatTricks": 0.54,
+                "sog": 375,
+                "shPct": 11.55,
+                "fw": 83,
+                "fl": 479,
+                "hits": 198,
+                "blocks": 54,
+                "defPoints": 0,
+                "shifts": 1563,
+                "toi": 10337
+              },
+              "utility": {
+                "gp": 80,
+                "toiPerGame": 598.8
+              }
+            }
+          },
+          {
+            "playerId": 46,
+            "type": "skater",
+            "name": "Skater 46",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 2.42,
+                "assists": 55.24,
+                "points": 0,
+                "plusMinus": -14.3,
+                "pim": 42,
+                "ppg": 9.98,
+                "ppa": 10.64,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 0.44,
+                "sog": 17,
+                "shPct": 14.24,
+                "fw": 23,
+                "fl": 132,
+                "hits": 47,
+                "blocks": 100,
+                "defPoints": 0,
+                "shifts": 761,
+                "toi": 15285
+              },
+              "utility": {
+                "gp": 81,
+                "toiPerGame": 941.4
+              }
+            }
+          },
+          {
+            "playerId": 47,
+            "type": "skater",
+            "name": "Skater 47",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 18.41,
+                "assists": 34.36,
+                "points": 0,
+                "plusMinus": -4.2,
+                "pim": 11,
+                "ppg": 8.15,
+                "ppa": 6.21,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 6,
+                "hatTricks": 1.41,
+                "sog": 144,
+                "shPct": 12.78,
+                "fw": 362,
+                "fl": 65,
+                "hits": 130,
+                "blocks": 96,
+                "defPoints": 0,
+                "shifts": 1029,
+                "toi": 67835
+              },
+              "utility": {
+                "gp": 65,
+                "toiPerGame": 737.3
+              }
+            }
+          },
+          {
+            "playerId": 48,
+            "type": "skater",
+            "name": "Skater 48",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 35.76,
+                "assists": 53.38,
+                "points": 0,
+                "plusMinus": -10.7,
+                "pim": 17,
+                "ppg": 3.93,
+                "ppa": 2.09,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 0.9,
+                "sog": 229,
+                "shPct": 15.62,
+                "fw": 231,
+                "fl": 75,
+                "hits": 147,
+                "blocks": 3,
+                "defPoints": 0,
+                "shifts": 126,
+                "toi": 28920
+              },
+              "utility": {
+                "gp": 80,
+                "toiPerGame": 429.7
+              }
+            }
+          },
+          {
+            "playerId": 49,
+            "type": "skater",
+            "name": "Skater 49",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 8.07,
+                "assists": 37.67,
+                "points": 0,
+                "plusMinus": -5.8,
+                "pim": 32,
+                "ppg": 5.36,
+                "ppa": 3.72,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 1,
+                "hatTricks": 0.47,
+                "sog": 95,
+                "shPct": 8.49,
+                "fw": 315,
+                "fl": 1,
+                "hits": 113,
+                "blocks": 107,
+                "defPoints": 0,
+                "shifts": 782,
+                "toi": 13737
+              },
+              "utility": {
+                "gp": 79,
+                "toiPerGame": 870.7
+              }
+            }
+          },
+          {
+            "playerId": 50,
+            "type": "skater",
+            "name": "Skater 50",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 34.86,
+                "assists": 29.99,
+                "points": 0,
+                "plusMinus": 19.8,
+                "pim": 55,
+                "ppg": 2.34,
+                "ppa": 7.08,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 1,
+                "hatTricks": 0.44,
+                "sog": 224,
+                "shPct": 15.56,
+                "fw": 75,
+                "fl": 410,
+                "hits": 61,
+                "blocks": 28,
+                "defPoints": 0,
+                "shifts": 179,
+                "toi": 54846
+              },
+              "utility": {
+                "gp": 76,
+                "toiPerGame": 682
+              }
+            }
+          },
+          {
+            "playerId": 51,
+            "type": "skater",
+            "name": "Skater 51",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 45.59,
+                "assists": 33.2,
+                "points": 0,
+                "plusMinus": -18.4,
+                "pim": 64,
+                "ppg": 0.1,
+                "ppa": 0.52,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 4,
+                "hatTricks": 1.06,
+                "sog": 326,
+                "shPct": 13.98,
+                "fw": 199,
+                "fl": 261,
+                "hits": 22,
+                "blocks": 119,
+                "defPoints": 0,
+                "shifts": 731,
+                "toi": 82524
+              },
+              "utility": {
+                "gp": 71,
+                "toiPerGame": 1045.3
+              }
+            }
+          },
+          {
+            "playerId": 52,
+            "type": "skater",
+            "name": "Skater 52",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 7.66,
+                "assists": 30.23,
+                "points": 0,
+                "plusMinus": 12.6,
+                "pim": 60,
+                "ppg": 8.04,
+                "ppa": 9.32,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 1,
+                "hatTricks": 1.74,
+                "sog": 0,
+                "shPct": 9.82,
+                "fw": 111,
+                "fl": 128,
+                "hits": 124,
+                "blocks": 101,
+                "defPoints": 0,
+                "shifts": 595,
+                "toi": 14807
+              },
+              "utility": {
+                "gp": 70,
+                "toiPerGame": 90.5
+              }
+            }
+          },
+          {
+            "playerId": 53,
+            "type": "skater",
+            "name": "Skater 53",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 31.23,
+                "assists": 50.99,
+                "points": 0,
+                "plusMinus": 14.8,
+                "pim": 66,
+                "ppg": 8.78,
+                "ppa": 18.32,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 0,
+                "hatTricks": 1.7,
+                "sog": 208,
+                "shPct": 15.01,
+                "fw": 412,
+                "fl": 276,
+                "hits": 65,
+                "blocks": 67,
+                "defPoints": 0,
+                "shifts": 104,
+                "toi": 81939
+              },
+              "utility": {
+                "gp": 62,
+                "toiPerGame": 57.8
+              }
+            }
+          },
+          {
+            "playerId": 54,
+            "type": "skater",
+            "name": "Skater 54",
+            "positions": ["C", "LW"],
+            "stats": {
+              "scoring": {
+                "goals": 41.19,
+                "assists": 41.18,
+                "points": 0,
+                "plusMinus": 7.5,
+                "pim": 44,
+                "ppg": 5.83,
+                "ppa": 12.27,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 1.28,
+                "sog": 326,
+                "shPct": 12.63,
+                "fw": 167,
+                "fl": 146,
+                "hits": 95,
+                "blocks": 59,
+                "defPoints": 0,
+                "shifts": 297,
+                "toi": 55483
+              },
+              "utility": {
+                "gp": 69,
+                "toiPerGame": 102
+              }
+            }
+          },
+          {
+            "playerId": 55,
+            "type": "skater",
+            "name": "Skater 55",
+            "positions": ["LW", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 28.72,
+                "assists": 21.63,
+                "points": 0,
+                "plusMinus": -16.7,
+                "pim": 53,
+                "ppg": 10.39,
+                "ppa": 3.92,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 0,
+                "hatTricks": 0.95,
+                "sog": 201,
+                "shPct": 14.29,
+                "fw": 128,
+                "fl": 363,
+                "hits": 21,
+                "blocks": 142,
+                "defPoints": 0,
+                "shifts": 1478,
+                "toi": 81531
+              },
+              "utility": {
+                "gp": 72,
+                "toiPerGame": 733.5
+              }
+            }
+          },
+          {
+            "playerId": 56,
+            "type": "skater",
+            "name": "Skater 56",
+            "positions": ["C", "RW"],
+            "stats": {
+              "scoring": {
+                "goals": 3.41,
+                "assists": 17.91,
+                "points": 0,
+                "plusMinus": 0,
+                "pim": 35,
+                "ppg": 4.08,
+                "ppa": 19.48,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 0,
+                "hatTricks": 1.36,
+                "sog": 22,
+                "shPct": 15.5,
+                "fw": 452,
+                "fl": 116,
+                "hits": 12,
+                "blocks": 91,
+                "defPoints": 0,
+                "shifts": 1357,
+                "toi": 6697
+              },
+              "utility": {
+                "gp": 77,
+                "toiPerGame": 873.7
+              }
+            }
+          },
+          {
+            "playerId": 57,
+            "type": "skater",
+            "name": "Skater 57",
+            "positions": ["C"],
+            "stats": {
+              "scoring": {
+                "goals": 28.48,
+                "assists": 51.07,
+                "points": 0,
+                "plusMinus": 18.5,
+                "pim": 21,
+                "ppg": 0.74,
+                "ppa": 16.85,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 7,
+                "hatTricks": 0.03,
+                "sog": 267,
+                "shPct": 10.67,
+                "fw": 387,
+                "fl": 274,
+                "hits": 35,
+                "blocks": 84,
+                "defPoints": 0,
+                "shifts": 245,
+                "toi": 64618
+              },
+              "utility": {
+                "gp": 78,
+                "toiPerGame": 885.3
+              }
+            }
+          },
+          {
+            "playerId": 58,
+            "type": "skater",
+            "name": "Skater 58",
+            "positions": ["LW"],
+            "stats": {
+              "scoring": {
+                "goals": 46.03,
+                "assists": 6.5,
+                "points": 0,
+                "plusMinus": -5,
+                "pim": 44,
+                "ppg": 9.61,
+                "ppa": 8.21,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 2,
+                "hatTricks": 1.81,
+                "sog": 518,
+                "shPct": 8.89,
+                "fw": 9,
+                "fl": 49,
+                "hits": 117,
+                "blocks": 27,
+                "defPoints": 0,
+                "shifts": 445,
+                "toi": 75942
+              },
+              "utility": {
+                "gp": 80,
+                "toiPerGame": 735.8
+              }
+            }
+          },
+          {
+            "playerId": 59,
+            "type": "skater",
+            "name": "Skater 59",
+            "positions": ["RW"],
+            "stats": {
+              "scoring": {
+                "goals": 5.65,
+                "assists": 39.51,
+                "points": 0,
+                "plusMinus": 13.2,
+                "pim": 44,
+                "ppg": 0.24,
+                "ppa": 14.65,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 6,
+                "hatTricks": 0.33,
+                "sog": 48,
+                "shPct": 11.77,
+                "fw": 142,
+                "fl": 60,
+                "hits": 142,
+                "blocks": 24,
+                "defPoints": 0,
+                "shifts": 231,
+                "toi": 50411
+              },
+              "utility": {
+                "gp": 69,
+                "toiPerGame": 360.6
+              }
+            }
+          },
+          {
+            "playerId": 60,
+            "type": "skater",
+            "name": "Skater 60",
+            "positions": ["D"],
+            "stats": {
+              "scoring": {
+                "goals": 28.15,
+                "assists": 19.47,
+                "points": 0,
+                "plusMinus": 14.5,
+                "pim": 65,
+                "ppg": 7.59,
+                "ppa": 18.19,
+                "ppp": 0,
+                "shg": 0,
+                "sha": 0,
+                "shp": 0,
+                "stpg": 0,
+                "stpa": 0,
+                "stp": 0,
+                "gwg": 3,
+                "hatTricks": 1.46,
+                "sog": 330,
+                "shPct": 8.53,
+                "fw": 408,
+                "fl": 61,
+                "hits": 86,
+                "blocks": 100,
+                "defPoints": 0,
+                "shifts": 1527,
+                "toi": 37321
+              },
+              "utility": {
+                "gp": 82,
+                "toiPerGame": 268.6
+              }
+            }
+          },
+          {
+            "playerId": 100,
+            "type": "goalie",
+            "name": "Goalie 100",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 14,
+                "w": 9,
+                "l": 1,
+                "otl": 4,
+                "sho": 2,
+                "sa": 0,
+                "sv": 362,
+                "ga": 39.8,
+                "gaa": 2.843,
+                "svPct": 0.901,
+                "winPct": 0.643,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 14
+              }
+            }
+          },
+          {
+            "playerId": 101,
+            "type": "goalie",
+            "name": "Goalie 101",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 15,
+                "w": 6,
+                "l": 5,
+                "otl": 4,
+                "sho": 4,
+                "sa": 436,
+                "sv": 387,
+                "ga": 49.27,
+                "gaa": 3.285,
+                "svPct": 0.887,
+                "winPct": 0.4,
+                "toi": 54000
+              },
+              "utility": {
+                "gp": 15
+              }
+            }
+          },
+          {
+            "playerId": 102,
+            "type": "goalie",
+            "name": "Goalie 102",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 38,
+                "w": 17,
+                "l": 20,
+                "otl": 1,
+                "sho": 3,
+                "sa": 1116,
+                "sv": 1029,
+                "ga": 87.05,
+                "gaa": 2.291,
+                "svPct": 0.922,
+                "winPct": 0.447,
+                "toi": 136800
+              },
+              "utility": {
+                "gp": 38
+              }
+            }
+          },
+          {
+            "playerId": 103,
+            "type": "goalie",
+            "name": "Goalie 103",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 29,
+                "w": 16,
+                "l": 12,
+                "otl": 1,
+                "sho": 3,
+                "sa": 882,
+                "sv": 804,
+                "ga": 78.5,
+                "gaa": 2.707,
+                "svPct": 0.911,
+                "winPct": 0.552,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 29
+              }
+            }
+          },
+          {
+            "playerId": 104,
+            "type": "goalie",
+            "name": "Goalie 104",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 47,
+                "w": 26,
+                "l": 19,
+                "otl": 2,
+                "sho": 2,
+                "sa": 1355,
+                "sv": 1248,
+                "ga": 107.04,
+                "gaa": 2.277,
+                "svPct": 0.921,
+                "winPct": 0.553,
+                "toi": 169200
+              },
+              "utility": {
+                "gp": 47
+              }
+            }
+          },
+          {
+            "playerId": 105,
+            "type": "goalie",
+            "name": "Goalie 105",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 53,
+                "w": 35,
+                "l": 17,
+                "otl": 1,
+                "sho": 2,
+                "sa": 0,
+                "sv": 1341,
+                "ga": 134.22,
+                "gaa": 2.532,
+                "svPct": 0.909,
+                "winPct": 0.66,
+                "toi": 190800
+              },
+              "utility": {
+                "gp": 53
+              }
+            }
+          },
+          {
+            "playerId": 106,
+            "type": "goalie",
+            "name": "Goalie 106",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 54,
+                "w": 38,
+                "l": 15,
+                "otl": 1,
+                "sho": 3,
+                "sa": 1526,
+                "sv": 1389,
+                "ga": 137.34,
+                "gaa": 2.543,
+                "svPct": 0.91,
+                "winPct": 0.704,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 54
+              }
+            }
+          },
+          {
+            "playerId": 107,
+            "type": "goalie",
+            "name": "Goalie 107",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 30,
+                "w": 16,
+                "l": 14,
+                "otl": 0,
+                "sho": 2,
+                "sa": 929,
+                "sv": 853,
+                "ga": 76.18,
+                "gaa": 2.539,
+                "svPct": 0.918,
+                "winPct": 0.533,
+                "toi": 108000
+              },
+              "utility": {
+                "gp": 30
+              }
+            }
+          },
+          {
+            "playerId": 108,
+            "type": "goalie",
+            "name": "Goalie 108",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 45,
+                "w": 15,
+                "l": 29,
+                "otl": 1,
+                "sho": 4,
+                "sa": 1310,
+                "sv": 1161,
+                "ga": 149.34,
+                "gaa": 3.319,
+                "svPct": 0.886,
+                "winPct": 0.333,
+                "toi": 162000
+              },
+              "utility": {
+                "gp": 45
+              }
+            }
+          },
+          {
+            "playerId": 109,
+            "type": "goalie",
+            "name": "Goalie 109",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 48,
+                "w": 14,
+                "l": 31,
+                "otl": 3,
+                "sho": 2,
+                "sa": 1284,
+                "sv": 1176,
+                "ga": 107.86,
+                "gaa": 2.247,
+                "svPct": 0.916,
+                "winPct": 0.292,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 48
+              }
+            }
+          },
+          {
+            "playerId": 110,
+            "type": "goalie",
+            "name": "Goalie 110",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 41,
+                "w": 14,
+                "l": 24,
+                "otl": 3,
+                "sho": 4,
+                "sa": 0,
+                "sv": 948,
+                "ga": 118.33,
+                "gaa": 2.886,
+                "svPct": 0.889,
+                "winPct": 0.341,
+                "toi": 147600
+              },
+              "utility": {
+                "gp": 41
+              }
+            }
+          },
+          {
+            "playerId": 111,
+            "type": "goalie",
+            "name": "Goalie 111",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 52,
+                "w": 35,
+                "l": 16,
+                "otl": 1,
+                "sho": 1,
+                "sa": 1548,
+                "sv": 1381,
+                "ga": 167.18,
+                "gaa": 3.215,
+                "svPct": 0.892,
+                "winPct": 0.673,
+                "toi": 187200
+              },
+              "utility": {
+                "gp": 52
+              }
+            }
+          },
+          {
+            "playerId": 200,
+            "type": "goalie",
+            "name": "Idle goalie 200",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 0,
+                "w": 0,
+                "l": 0,
+                "otl": 0,
+                "sho": 0,
+                "sa": 0,
+                "sv": 0,
+                "ga": 0,
+                "gaa": 0,
+                "svPct": 0,
+                "winPct": 0,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 0
+              }
+            }
+          },
+          {
+            "playerId": 201,
+            "type": "goalie",
+            "name": "Idle goalie 201",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 0,
+                "w": 0,
+                "l": 0,
+                "otl": 0,
+                "sho": 0,
+                "sa": 0,
+                "sv": 0,
+                "ga": 0,
+                "gaa": 0,
+                "svPct": 0,
+                "winPct": 0,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 0
+              }
+            }
+          },
+          {
+            "playerId": 202,
+            "type": "goalie",
+            "name": "Idle goalie 202",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 0,
+                "w": 0,
+                "l": 0,
+                "otl": 0,
+                "sho": 0,
+                "sa": 0,
+                "sv": 0,
+                "ga": 0,
+                "gaa": 0,
+                "svPct": 0,
+                "winPct": 0,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 0
+              }
+            }
+          },
+          {
+            "playerId": 203,
+            "type": "goalie",
+            "name": "Idle goalie 203",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 0,
+                "w": 0,
+                "l": 0,
+                "otl": 0,
+                "sho": 0,
+                "sa": 0,
+                "sv": 0,
+                "ga": 0,
+                "gaa": 0,
+                "svPct": 0,
+                "winPct": 0,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 0
+              }
+            }
+          },
+          {
+            "playerId": 204,
+            "type": "goalie",
+            "name": "Idle goalie 204",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 0,
+                "w": 0,
+                "l": 0,
+                "otl": 0,
+                "sho": 0,
+                "sa": 0,
+                "sv": 0,
+                "ga": 0,
+                "gaa": 0,
+                "svPct": 0,
+                "winPct": 0,
+                "toi": 0
+              },
+              "utility": {
+                "gp": 0
+              }
+            }
+          },
+          {
+            "playerId": 205,
+            "type": "goalie",
+            "name": "Idle goalie 205",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 1,
+                "w": 1,
+                "l": 0,
+                "otl": 0,
+                "sho": 0,
+                "sa": 28,
+                "sv": 25.06,
+                "ga": 2.94,
+                "gaa": 2.94,
+                "svPct": 0.895,
+                "winPct": 1,
+                "toi": 3600
+              },
+              "utility": {
+                "gp": 1
+              }
+            }
+          },
+          {
+            "playerId": 206,
+            "type": "goalie",
+            "name": "Idle goalie 206",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 2,
+                "w": 1,
+                "l": 1,
+                "otl": 0,
+                "sho": 0,
+                "sa": 56,
+                "sv": 50.12,
+                "ga": 5.88,
+                "gaa": 2.94,
+                "svPct": 0.895,
+                "winPct": 0.5,
+                "toi": 7200
+              },
+              "utility": {
+                "gp": 2
+              }
+            }
+          },
+          {
+            "playerId": 207,
+            "type": "goalie",
+            "name": "Idle goalie 207",
+            "positions": ["G"],
+            "stats": {
+              "scoring": {
+                "gs": 3,
+                "w": 2,
+                "l": 1,
+                "otl": 0,
+                "sho": 0,
+                "sa": 84,
+                "sv": 75.18,
+                "ga": 8.82,
+                "gaa": 2.94,
+                "svPct": 0.895,
+                "winPct": 0.667,
+                "toi": 10800
+              },
+              "utility": {
+                "gp": 3
+              }
+            }
+          }
+        ],
+        "teams": [
+          {
+            "teamId": "team-1",
+            "name": "Team 1",
+            "mine": true,
+            "playerIds": [1, 8, 9, 16, 17, 103]
+          },
+          {
+            "teamId": "team-2",
+            "name": "Team 2",
+            "mine": false,
+            "playerIds": [2, 7, 10, 15, 18, 102]
+          },
+          {
+            "teamId": "team-3",
+            "name": "Team 3",
+            "mine": false,
+            "playerIds": [3, 6, 11, 14, 19, 101]
+          },
+          {
+            "teamId": "team-4",
+            "name": "Team 4",
+            "mine": false,
+            "playerIds": [4, 5, 12, 13, 20, 100]
+          }
+        ]
+      },
+      "expected": {
+        "categoryKeys": ["goals", "assists", "sog", "hits", "w", "gaa", "svPct"],
+        "positionKeys": ["LW", "C", "RW", "D", "UTIL", "G", "BN"],
+        "teams": [
+          {
+            "teamId": "team-3",
+            "total": 1.5501711626501011,
+            "values": {
+              "goals": 9.400950167745465,
+              "assists": -0.18354491611455206,
+              "sog": 2.7289958425514342,
+              "hits": -5.998928995056767,
+              "w": -1.1452742538497778,
+              "gaa": -1.2808542970615795,
+              "svPct": -1.97117238556412,
+              "LW": 3.2784786989461816,
+              "C": 2.24113185014943,
+              "RW": 3.1311011170452954,
+              "D": -0.7329425050170397,
+              "UTIL": -1.9702970619982887,
+              "G": -4.397300936475477,
+              "BN": 0
+            },
+            "roster": [
+              {
+                "name": "Skater 6",
+                "total": 3.2784786989461816,
+                "values": {
+                  "goals": 45.58,
+                  "assists": 14.34,
+                  "sog": 510,
+                  "hits": 46,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 3.4053538179887237,
+                  "assists": -0.7210693133071678,
+                  "sog": 2.780244590768363,
+                  "hits": -2.1860503965037372,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 3",
+                "total": 3.1311011170452954,
+                "values": {
+                  "goals": 45.76,
+                  "assists": 12.47,
+                  "sog": 366,
+                  "hits": 151,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 3.441580986265199,
+                  "assists": -0.8390624736665226,
+                  "sog": 0.9352896549589423,
+                  "hits": -0.40670705051232325,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 19",
+                "total": 2.24113185014943,
+                "values": {
+                  "goals": 40.26,
+                  "assists": 26.02,
+                  "sog": 333,
+                  "hits": 130,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 2.445333858662115,
+                  "assists": 0.0458862290286379,
+                  "sog": 0.5124874821692834,
+                  "hits": -0.762575719710606,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 11",
+                "total": -0.7329425050170397,
+                "values": {
+                  "goals": 21.37,
+                  "assists": 56.61,
+                  "sog": 234,
+                  "hits": 113,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -0.9781335434648466,
+                  "assists": 2.0517699551376682,
+                  "sog": -0.755919036199693,
+                  "hits": -1.0506598804901683,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 14",
+                "total": -1.9702970619982887,
+                "values": {
+                  "goals": 32.81,
+                  "assists": 14.25,
+                  "sog": 235,
+                  "hits": 81,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 1.086815048294273,
+                  "assists": -0.7210693133071678,
+                  "sog": -0.7431068491454611,
+                  "hits": -1.5929359478399328,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Goalie 101",
+                "total": -4.397300936475477,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": 6,
+                  "gaa": 3.285,
+                  "svPct": 0.887
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": -1.1452742538497778,
+                  "gaa": -1.2808542970615795,
+                  "svPct": -1.97117238556412
+                }
+              }
+            ],
+            "positionPlayers": {
+              "LW": [
+                {
+                  "name": "Skater 6",
+                  "value": 3.2784786989461816
+                }
+              ],
+              "C": [
+                {
+                  "name": "Skater 19",
+                  "value": 2.24113185014943
+                }
+              ],
+              "RW": [
+                {
+                  "name": "Skater 3",
+                  "value": 3.1311011170452954
+                }
+              ],
+              "D": [
+                {
+                  "name": "Skater 11",
+                  "value": -0.7329425050170397
+                }
+              ],
+              "UTIL": [
+                {
+                  "name": "Skater 14",
+                  "value": -1.9702970619982887
+                }
+              ],
+              "G": [
+                {
+                  "name": "Goalie 101",
+                  "value": -4.397300936475477
+                }
+              ],
+              "BN": []
+            }
+          },
+          {
+            "teamId": "team-1",
+            "total": 0.5004543804327537,
+            "values": {
+              "goals": 4.9450084697389425,
+              "assists": 1.4028075731612173,
+              "sog": 0.7687312232539246,
+              "hits": -4.6432388266823565,
+              "w": -0.10411584125907059,
+              "gaa": -0.8522380461918553,
+              "svPct": -1.0165001715880468,
+              "LW": 3.1483441086738138,
+              "C": 3.24065908957909,
+              "RW": 0.4222075251227473,
+              "D": 0,
+              "UTIL": 3.020759609389955,
+              "G": -1.9728540590389727,
+              "BN": -7.358661893293879
+            },
+            "roster": [
+              {
+                "name": "Skater 8",
+                "total": 3.24065908957909,
+                "values": {
+                  "goals": 38.06,
+                  "assists": 11.34,
+                  "sog": 434,
+                  "hits": 193,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 2.046835007620882,
+                  "assists": -0.917724580572759,
+                  "sog": 1.8065183746467242,
+                  "hits": 0.3050302878842426,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 16",
+                "total": 3.1483441086738138,
+                "values": {
+                  "goals": 41.64,
+                  "assists": 47.98,
+                  "sog": 298,
+                  "hits": 111,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 2.680810452459208,
+                  "assists": 1.4880248556429736,
+                  "sog": 0.06406093527116052,
+                  "hits": -1.0845521346995286,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 9",
+                "total": 3.020759609389955,
+                "values": {
+                  "goals": 43.75,
+                  "assists": 28.36,
+                  "sog": 467,
+                  "hits": 28,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 3.079309303500441,
+                  "assists": 0.20321044284111078,
+                  "sog": 2.229320547436383,
+                  "hits": -2.4910806843879802,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 17",
+                "total": 0.4222075251227473,
+                "values": {
+                  "goals": 35.46,
+                  "assists": 24.02,
+                  "sog": 326,
+                  "hits": 87,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 1.5758818200266966,
+                  "assists": -0.08521728248175622,
+                  "sog": 0.4228021727896588,
+                  "hits": -1.491259185211852,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Goalie 103",
+                "total": -1.9728540590389727,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": 16,
+                  "gaa": 2.707,
+                  "svPct": 0.911
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": -0.10411584125907059,
+                  "gaa": -0.8522380461918553,
+                  "svPct": -1.0165001715880468
+                }
+              },
+              {
+                "name": "Skater 1",
+                "total": -7.358661893293879,
+                "values": {
+                  "goals": 2.26,
+                  "assists": 36.22,
+                  "sog": 0,
+                  "hits": 182,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -4.437828113868285,
+                  "assists": 0.7145141377316483,
+                  "sog": -3.7539708068900017,
+                  "hits": 0.11862288973276103,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              }
+            ],
+            "positionPlayers": {
+              "LW": [
+                {
+                  "name": "Skater 16",
+                  "value": 3.1483441086738138
+                }
+              ],
+              "C": [
+                {
+                  "name": "Skater 8",
+                  "value": 3.24065908957909
+                }
+              ],
+              "RW": [
+                {
+                  "name": "Skater 17",
+                  "value": 0.4222075251227473
+                }
+              ],
+              "D": [],
+              "UTIL": [
+                {
+                  "name": "Skater 9",
+                  "value": 3.020759609389955
+                }
+              ],
+              "G": [
+                {
+                  "name": "Goalie 103",
+                  "value": -1.9728540590389727
+                }
+              ],
+              "BN": [
+                {
+                  "name": "Skater 1",
+                  "value": -7.358661893293879
+                }
+              ]
+            }
+          },
+          {
+            "teamId": "team-2",
+            "total": -14.743665444167627,
+            "values": {
+              "goals": -6.104277854586172,
+              "assists": 5.735778628579743,
+              "sog": -9.071028434396318,
+              "hits": -5.304137783764881,
+              "w": 0,
+              "gaa": 0,
+              "svPct": 0,
+              "LW": 3.442493079757979,
+              "C": -2.982901768623009,
+              "RW": -1.3770046752850726,
+              "D": -6.821293498789236,
+              "UTIL": -7.004958581228289,
+              "G": 0,
+              "BN": 0
+            },
+            "roster": [
+              {
+                "name": "Skater 2",
+                "total": 3.442493079757979,
+                "values": {
+                  "goals": 38.53,
+                  "assists": 57.82,
+                  "sog": 312,
+                  "hits": 113,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 2.119289344173833,
+                  "assists": 2.1304320620439046,
+                  "sog": 0.2434315540304096,
+                  "hits": -1.0506598804901683,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Goalie 102",
+                "total": 0,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": 17,
+                  "gaa": 2.291,
+                  "svPct": 0.922
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": 0,
+                  "gaa": 0,
+                  "svPct": 0
+                }
+              },
+              {
+                "name": "Skater 10",
+                "total": -1.3770046752850726,
+                "values": {
+                  "goals": 19.9,
+                  "assists": 49.48,
+                  "sog": 150,
+                  "hits": 182,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -1.2498373055384153,
+                  "assists": 1.5863524892757692,
+                  "sog": -1.8321427487551882,
+                  "hits": 0.11862288973276103,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 7",
+                "total": -2.982901768623009,
+                "values": {
+                  "goals": 22.17,
+                  "assists": 48.98,
+                  "sog": 164,
+                  "hits": 54,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -0.8332248703589435,
+                  "assists": 1.5535766113981706,
+                  "sog": -1.652772129995939,
+                  "hits": -2.050481379666296,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 18",
+                "total": -6.821293498789236,
+                "values": {
+                  "goals": 3.87,
+                  "assists": 49.8,
+                  "sog": 0,
+                  "hits": 144,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -4.148010767656478,
+                  "assists": 1.606018016002328,
+                  "sog": -3.7539708068900017,
+                  "hits": -0.5253299402450842,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 15",
+                "total": -7.004958581228289,
+                "values": {
+                  "goals": 15.78,
+                  "assists": 7.92,
+                  "sog": 131,
+                  "hits": 69,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -1.9924942552061689,
+                  "assists": -1.1406005501404293,
+                  "sog": -2.075574302785598,
+                  "hits": -1.7962894730960943,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              }
+            ],
+            "positionPlayers": {
+              "LW": [
+                {
+                  "name": "Skater 2",
+                  "value": 3.442493079757979
+                }
+              ],
+              "C": [
+                {
+                  "name": "Skater 7",
+                  "value": -2.982901768623009
+                }
+              ],
+              "RW": [
+                {
+                  "name": "Skater 10",
+                  "value": -1.3770046752850726
+                }
+              ],
+              "D": [
+                {
+                  "name": "Skater 18",
+                  "value": -6.821293498789236
+                }
+              ],
+              "UTIL": [
+                {
+                  "name": "Skater 15",
+                  "value": -7.004958581228289
+                }
+              ],
+              "G": [
+                {
+                  "name": "Goalie 102",
+                  "value": 0
+                }
+              ],
+              "BN": []
+            }
+          },
+          {
+            "teamId": "team-4",
+            "total": -18.12034165904109,
+            "values": {
+              "goals": -3.441580986265201,
+              "assists": 2.517187420999568,
+              "sog": -6.213910721302562,
+              "hits": -7.761326213943502,
+              "w": -0.8329267300725656,
+              "gaa": -0.8941749619796493,
+              "svPct": -1.4936094664771755,
+              "LW": -0.11811601559139318,
+              "C": 0.7944122319150528,
+              "RW": 0.8841410955692981,
+              "D": -9.56598710331133,
+              "UTIL": -6.894080709093325,
+              "G": -3.2207111585293906,
+              "BN": 0
+            },
+            "roster": [
+              {
+                "name": "Skater 20",
+                "total": 0.8841410955692981,
+                "values": {
+                  "goals": 26.38,
+                  "assists": 31.44,
+                  "sog": 310,
+                  "hits": 195,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -0.07245433655295219,
+                  "assists": 0.399865710106702,
+                  "sog": 0.21780717992194543,
+                  "hits": 0.33892254209360284,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 5",
+                "total": 0.7944122319150528,
+                "values": {
+                  "goals": 45.81,
+                  "assists": 24.34,
+                  "sog": 319,
+                  "hits": 3,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 3.441580986265199,
+                  "assists": -0.06555175575519709,
+                  "sog": 0.3331168634100342,
+                  "hits": -2.9147338620049834,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 12",
+                "total": -0.11811601559139318,
+                "values": {
+                  "goals": 29.85,
+                  "assists": 47.04,
+                  "sog": 244,
+                  "hits": 88,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": 0.5615211082853742,
+                  "assists": 1.4224730998877766,
+                  "sog": -0.6277971656573722,
+                  "hits": -1.4743130581071717,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Goalie 100",
+                "total": -3.2207111585293906,
+                "values": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": 9,
+                  "gaa": 2.843,
+                  "svPct": 0.901
+                },
+                "contributions": {
+                  "goals": null,
+                  "assists": null,
+                  "sog": null,
+                  "hits": null,
+                  "w": -0.8329267300725656,
+                  "gaa": -0.8941749619796493,
+                  "svPct": -1.4936094664771755
+                }
+              },
+              {
+                "name": "Skater 13",
+                "total": -6.894080709093325,
+                "values": {
+                  "goals": 6.67,
+                  "assists": 45.61,
+                  "sog": 45,
+                  "hits": 92,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -3.6408304117858163,
+                  "assists": 1.3307006418305007,
+                  "sog": -3.177422389449558,
+                  "hits": -1.4065285496884512,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              },
+              {
+                "name": "Skater 4",
+                "total": -9.56598710331133,
+                "values": {
+                  "goals": 6.17,
+                  "assists": 16.56,
+                  "sog": 62,
+                  "hits": 39,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                },
+                "contributions": {
+                  "goals": -3.7313983324770055,
+                  "assists": -0.5703002750702145,
+                  "sog": -2.9596152095276116,
+                  "hits": -2.3046732862364987,
+                  "w": null,
+                  "gaa": null,
+                  "svPct": null
+                }
+              }
+            ],
+            "positionPlayers": {
+              "LW": [
+                {
+                  "name": "Skater 12",
+                  "value": -0.11811601559139318
+                }
+              ],
+              "C": [
+                {
+                  "name": "Skater 5",
+                  "value": 0.7944122319150528
+                }
+              ],
+              "RW": [
+                {
+                  "name": "Skater 20",
+                  "value": 0.8841410955692981
+                }
+              ],
+              "D": [
+                {
+                  "name": "Skater 4",
+                  "value": -9.56598710331133
+                }
+              ],
+              "UTIL": [
+                {
+                  "name": "Skater 13",
+                  "value": -6.894080709093325
+                }
+              ],
+              "G": [
+                {
+                  "name": "Goalie 100",
+                  "value": -3.2207111585293906
+                }
+              ],
+              "BN": []
             }
           }
         ]
