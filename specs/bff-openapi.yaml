@@ -2169,11 +2169,10 @@ paths:
       description: "The league's available players and every team's roster, each with\
         \ the model's rest of the season today and its line for him as it stood on\
         \ `since` (the newest day kept on or before it, else the preseason line),\
-        \ rescaled to the games his club has left today, and his measured ice beside\
-        \ before: over his club's last `recentGames` when given, else since `since`,\
-        \ else the whole season so far. Both lines are in the projection's own stat\
-        \ vocabulary: score them with the league's settings. Joined on identity, so\
-        \ the answer does not depend on which platform the player pool is served from."
+        \ rescaled to the games his club has left today. Both lines are in the projection's\
+        \ own stat vocabulary: score them with the league's settings. Joined on identity,\
+        \ so the answer does not depend on which platform the player pool is served\
+        \ from."
       operationId: playerScoutPlayers
       parameters:
       - name: platform
@@ -2200,16 +2199,6 @@ paths:
         schema:
           type: string
           format: date
-      - name: recentGames
-        in: query
-        description: Read the ice over each club's last N games instead of since the
-          day
-        required: false
-        schema:
-          type: integer
-          format: int32
-          maximum: 20
-          minimum: 1
       responses:
         "200":
           description: The league's players the model projects
@@ -5565,11 +5554,6 @@ components:
           $ref: "#/components/schemas/ScoutSince"
           description: "Which earlier line the then-lines are, and what answered the\
             \ day asked for"
-        recentGames:
-          type: integer
-          format: int32
-          description: N when the ice was read over each club's last N games; absent
-            when it was read since the chosen day
         players:
           type: array
           description: "Every player the model projects whom the league has available\
@@ -5583,8 +5567,8 @@ components:
       - since
     PlayerScoutRow:
       type: object
-      description: "A player in the league: his owner, the model's view of him now\
-        \ and then, and his ice since"
+      description: "A player in the league: his owner and the model's view of him\
+        \ now and then"
       properties:
         playerId:
           type: string
@@ -5640,10 +5624,6 @@ components:
             \ to the games his club has left today: its per-game rates over the share\
             \ of those games it expected him to play. Absent when the model had no\
             \ line for him then."
-        usage:
-          $ref: "#/components/schemas/ScoutUsage"
-          description: His measured ice since the chosen day beside before it; absent
-            for a goalie or a skater with no game since
       required:
       - gamesRemaining
       - name
@@ -5696,33 +5676,6 @@ components:
             none is
       required:
       - kind
-    ScoutUsage:
-      type: object
-      description: "A skater's measured ice and power-play role since the chosen day,\
-        \ beside before it"
-      properties:
-        recent:
-          $ref: "#/components/schemas/RoleWindow"
-          description: His games on or after the chosen day
-        baseline:
-          $ref: "#/components/schemas/RoleWindow"
-          description: "His games before it this season, or his whole last season\
-            \ while this season has too few; absent for a call-up with neither"
-        baselineSource:
-          type: string
-          description: "SEASON for his earlier games this season, LAST_SEASON for\
-            \ last season"
-          enum:
-          - SEASON
-          - LAST_SEASON
-        listedNow:
-          $ref: "#/components/schemas/LineupListing"
-          description: Where the Daily Faceoff lineup page lists him now
-        listedBefore:
-          $ref: "#/components/schemas/LineupListing"
-          description: Where the page listed him the day before the chosen day
-      required:
-      - recent
     ClubGames:
       type: object
       description: The dates an NHL club still plays this season

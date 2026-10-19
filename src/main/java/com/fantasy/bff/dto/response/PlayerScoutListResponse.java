@@ -14,9 +14,6 @@ public record PlayerScoutListResponse(
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED,
                 description = "Which earlier line the then-lines are, and what answered the day asked for")
                 ScoutSince since,
-        @Schema(description = "N when the ice was read over each club's last N games; absent when it was "
-                + "read since the chosen day")
-                Integer recentGames,
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED,
                 description = "Every player the model projects whom the league has available or on a "
                         + "team, in no ranked order: score them with the league's settings")

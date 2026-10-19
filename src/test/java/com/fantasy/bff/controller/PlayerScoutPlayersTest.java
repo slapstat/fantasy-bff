@@ -20,17 +20,13 @@ import com.fantasy.bff.client.EspnServiceClient;
 import com.fantasy.bff.client.PlayerServiceClient;
 import com.fantasy.bff.client.ProjectionServiceClient;
 import com.fantasy.bff.client.YahooServiceClient;
-import com.fantasy.bff.generated.projection.model.LineupListingResponse;
 import com.fantasy.bff.generated.projection.model.PlayerResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSkaterResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSnapshotsResponse;
-import com.fantasy.bff.generated.projection.model.RoleChangesResponse;
-import com.fantasy.bff.generated.projection.model.RoleWindowResponse;
 import com.fantasy.bff.generated.projection.model.ServedRestOfSeasonGoalie;
 import com.fantasy.bff.generated.projection.model.ServedRestOfSeasonSkater;
 import com.fantasy.bff.generated.projection.model.SkaterProjectionResponse;
-import com.fantasy.bff.generated.projection.model.SkaterRoleChangeResponse;
 import com.fantasy.bff.generated.yahoo.model.LeagueRosterPlayer;
 import com.fantasy.bff.generated.yahoo.model.LeagueRosterTeam;
 import com.fantasy.bff.generated.yahoo.model.LeagueRostersResponse;
@@ -56,7 +52,7 @@ import org.springframework.test.web.servlet.MockMvc;
 /**
  * Player Scout's league read: the wire and every roster joined to the model on identity, each
  * player with today's rest of the season, the line as it stood on the chosen day rescaled to the
- * games left, and his ice since. These tests pin the join, who holds whom, which earlier line
+ * games left. These tests pin the join, who holds whom, which earlier line
  * answers a day, and the rescaling arithmetic end to end.
  */
 @SpringBootTest
@@ -110,8 +106,6 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
                 preseason(8476875, "80", "1050", "30.0"),
                 preseason(8480069, "82", "1500", "92.0")));
         when(projectionServiceClient.goalieProjections(2026, "preseason")).thenReturn(List.of());
-        when(projectionServiceClient.skaterRoleChangesSince(eq(2026), any(LocalDate.class)))
-                .thenReturn(roleChanges(8476875));
         when(scheduleService.schedule()).thenReturn(new LeagueSchedule(
                 Map.of("SEA", List.of(), "COL", List.of()), Map.of("SEA", 84, "COL", 84)));
         // The pool holds everyone, rostered or not; the league's rosters say who is taken.
@@ -157,7 +151,7 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
                 .andExpect(jsonPath("$.since.requested").value(nullValue()))
                 .andExpect(jsonPath("$.since.resolved").value(nullValue()))
                 .andExpect(jsonPath("$.since.earliestSnapshot").value("2026-10-27"))
-                .andExpect(jsonPath("$.recentGames").value(nullValue()))
+                .andExpect(jsonPath("$.recentGames").doesNotExist())
                 // Three on the wire and two rostered, most games ahead first.
                 .andExpect(jsonPath("$.players", hasSize(5)))
                 .andExpect(jsonPath("$.players[0].name").value("Cale Makar"))
@@ -191,20 +185,12 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
                 .andExpect(jsonPath("$.players[3].then.games").value(closeTo(74.2857, 0.001)))
                 .andExpect(jsonPath("$.players[3].then.stats.points").value(closeTo(27.857, 0.001)))
                 .andExpect(jsonPath("$.players[3].then.stats.toiPerGame").value(1050.0))
-                // His ice since the day, beside before it.
-                .andExpect(jsonPath("$.players[3].usage.recent.games").value(4))
-                .andExpect(jsonPath("$.players[3].usage.recent.toiPerGame").value(1380.0))
-                .andExpect(jsonPath("$.players[3].usage.recent.ppShare").value(0.85))
-                .andExpect(jsonPath("$.players[3].usage.baseline.toiPerGame").value(1050.0))
-                .andExpect(jsonPath("$.players[3].usage.baselineSource").value("SEASON"))
-                .andExpect(jsonPath("$.players[3].usage.listedNow.line").value("d1"))
-                .andExpect(jsonPath("$.players[3].usage.listedNow.powerPlayUnit").value(1))
-                .andExpect(jsonPath("$.players[3].usage.listedBefore.line").value("d3"))
-                .andExpect(jsonPath("$.players[2].usage").value(nullValue()))
+                // The measured ice is Role Changes' own page now: none of it rides on a row.
+                .andExpect(jsonPath("$.players[3].usage").doesNotExist())
                 .andExpect(jsonPath("$.players[4].name").value("Spencer Knight"))
                 .andExpect(jsonPath("$.players[4].type").value("goalie"))
-                .andExpect(jsonPath("$.players[4].now.games").value(50.0))
-                .andExpect(jsonPath("$.players[4].usage").value(nullValue()));
+                .andExpect(jsonPath("$.players[4].now.games").value(50.0));
+        verify(projectionServiceClient, never()).skaterRoleChanges(nullable(Integer.class), anyInt());
     }
 
     /**
@@ -305,28 +291,6 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
         mockMvc.perform(get(YAHOO_LEAGUE).header("Authorization", bearer))
                 // A downstream answer the BFF cannot use: a gateway fault, logged at ERROR.
                 .andExpect(status().isBadGateway());
-    }
-
-    @Test
-    void theIceIsReadOverTheClubsLastGamesWhenAskedFor() throws Exception {
-        when(projectionServiceClient.skaterRoleChanges(2026, 5)).thenReturn(roleChanges(8481611));
-
-        mockMvc.perform(get(YAHOO_LEAGUE + "&recentGames=5").header("Authorization", bearer))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.recentGames").value(5))
-                // Stankoven's ice came from the fixed window, Montour's since-the-day read was not made.
-                .andExpect(jsonPath("$.players[2].name").value("Logan Stankoven"))
-                .andExpect(jsonPath("$.players[2].usage.recent.games").value(4))
-                .andExpect(jsonPath("$.players[3].usage").value(nullValue()));
-        verify(projectionServiceClient, never()).skaterRoleChangesSince(anyInt(), any(LocalDate.class));
-    }
-
-    @Test
-    void anIceWindowOutsideItsBoundsIsRefused() throws Exception {
-        mockMvc.perform(get(YAHOO_LEAGUE + "&recentGames=0").header("Authorization", bearer))
-                .andExpect(status().isBadRequest());
-        mockMvc.perform(get(YAHOO_LEAGUE + "&recentGames=21").header("Authorization", bearer))
-                .andExpect(status().isBadRequest());
     }
 
     @Test
@@ -459,42 +423,6 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
         response.setSeason(2026);
         response.setDays(List.of(days));
         return response;
-    }
-
-    private static RoleChangesResponse roleChanges(int nhlId) {
-        SkaterRoleChangeResponse skater = new SkaterRoleChangeResponse();
-        skater.setNhlId(nhlId);
-        skater.setTeam("SEA");
-        skater.setRecent(window(4, "1380", "0.85"));
-        skater.setBaseline(window(6, "1050", "0.20"));
-        skater.setBaselineSource(SkaterRoleChangeResponse.BaselineSourceEnum.SEASON);
-        skater.setFirstRecentGameDate(LocalDate.of(2026, 10, 21));
-        skater.setLastRecentGameDate(LocalDate.of(2026, 10, 27));
-        skater.setListedNow(listing(LocalDate.of(2026, 10, 27), "d1", 1));
-        skater.setListedBefore(listing(LocalDate.of(2026, 10, 7), "d3", null));
-        RoleChangesResponse response = new RoleChangesResponse();
-        response.setSeason(2026);
-        response.setRecentGames(5);
-        response.setSkaters(List.of(skater));
-        return response;
-    }
-
-    private static RoleWindowResponse window(int games, String toi, String share) {
-        RoleWindowResponse window = new RoleWindowResponse();
-        window.setGames(games);
-        window.setToiPerGame(new BigDecimal(toi));
-        window.setPpToiPerGame(new BigDecimal("200"));
-        window.setPpShare(new BigDecimal(share));
-        return window;
-    }
-
-    private static LineupListingResponse listing(LocalDate day, String line, Integer unit) {
-        LineupListingResponse listing = new LineupListingResponse();
-        listing.setSeenOn(day);
-        listing.setLine(line);
-        listing.setPowerPlayUnit(unit);
-        listing.setOutOfLineup(false);
-        return listing;
     }
 
     private static PlayerServiceClient.RosteredPlayer pooled(

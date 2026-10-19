@@ -92,13 +92,6 @@ public interface ProjectionServiceClient {
      */
     RoleChangesResponse skaterRoleChanges(Integer season, int recentGames);
 
-    /**
-     * As {@link #skaterRoleChanges}, with the recent stretch counted from {@code since}: every
-     * game on or after it is recent, every earlier game of the season the baseline, and the lineup
-     * page is read as it stood the day before.
-     */
-    RoleChangesResponse skaterRoleChangesSince(Integer season, LocalDate since);
-
     /** The newest published season's Monday-Sunday weeks, numbered from opening night. */
     ScheduleWeeksResponse scheduleWeeks();
 

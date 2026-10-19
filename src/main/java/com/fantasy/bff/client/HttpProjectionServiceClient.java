@@ -218,20 +218,6 @@ public class HttpProjectionServiceClient implements ProjectionServiceClient {
     }
 
     @Override
-    public RoleChangesResponse skaterRoleChangesSince(Integer season, LocalDate since) {
-        return restClient.get()
-                .uri(b -> {
-                    b.path("/api/v1/role-changes/skaters").queryParam("since", since);
-                    if (season != null) {
-                        b.queryParam("season", season);
-                    }
-                    return b.build();
-                })
-                .retrieve()
-                .body(RoleChangesResponse.class);
-    }
-
-    @Override
     public RangeProjectionsResponse rangeProjections(LocalDate start, LocalDate end, int limit) {
         return restClient.get()
                 .uri(b -> b.path("/api/v1/projections/range")
