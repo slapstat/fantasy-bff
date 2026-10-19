@@ -165,6 +165,22 @@ class YahooLeagueSettingsMapperTest {
     }
 
     @Test
+    void passesTheWeeklyAddLimitThroughAndLeavesItNullWhenTheLeagueSetsNone() {
+        assertThat(mapper.toProjectionSettings(league("head", List.of(), List.of()).maxWeeklyAdds(4), null)
+                .maxWeeklyAdds()).isEqualTo(4);
+        assertThat(mapper.toProjectionSettings(league("head", List.of(), List.of()), null)
+                .maxWeeklyAdds()).isNull();
+    }
+
+    @Test
+    void readsAWeeklyAddLimitBelowOneAsNone() {
+        assertThat(mapper.toProjectionSettings(league("head", List.of(), List.of()).maxWeeklyAdds(0), null)
+                .maxWeeklyAdds()).isNull();
+        assertThat(mapper.toProjectionSettings(league("head", List.of(), List.of()).maxWeeklyAdds(-1), null)
+                .maxWeeklyAdds()).isNull();
+    }
+
+    @Test
     void clampsLeagueSizeAndLeavesItNullWhenUnknown() {
         assertThat(mapper.toProjectionSettings(league("head", List.of(), List.of()), null)
                 .leagueSize()).isNull();

@@ -4138,6 +4138,13 @@ components:
             \ (IR, IR+, IR-LT, IR-NR) and how many of each; not-active (NA) is not\
             \ one. A player in one takes no roster spot. Empty for a league without\
             \ any."
+        maxWeeklyAdds:
+          type: integer
+          format: int32
+          description: "How many players a team may add in one fantasy week, from\
+            \ the league's own setting. Null when the league sets no maximum, and\
+            \ for ESPN, whose limit espn-service does not read."
+          minimum: 1
       required:
       - activeScoringColumns
       - activeUtilityColumns
