@@ -3,32 +3,24 @@ package com.fantasy.bff.service;
 import com.fantasy.bff.client.ProjectionServiceClient;
 import com.fantasy.bff.dto.response.ClubGames;
 import com.fantasy.bff.dto.response.ClubNight;
-import com.fantasy.bff.dto.response.LineupListing;
 import com.fantasy.bff.dto.response.PlannerRosterPlayer;
 import com.fantasy.bff.dto.response.PlayerScoutListResponse;
 import com.fantasy.bff.dto.response.PlayerScoutRow;
 import com.fantasy.bff.dto.response.PlayerScoutTeamResponse;
-import com.fantasy.bff.dto.response.RoleWindow;
 import com.fantasy.bff.dto.response.ScoutLine;
 import com.fantasy.bff.dto.response.ScoutMyTeamResponse;
 import com.fantasy.bff.dto.response.ScoutOwner;
 import com.fantasy.bff.dto.response.ScoutSince;
-import com.fantasy.bff.dto.response.ScoutUsage;
 import com.fantasy.bff.generated.projection.model.GoalieProjectionResponse;
-import com.fantasy.bff.generated.projection.model.LineupListingResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSkaterResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSnapshotsResponse;
-import com.fantasy.bff.generated.projection.model.RoleChangesResponse;
-import com.fantasy.bff.generated.projection.model.RoleWindowResponse;
 import com.fantasy.bff.generated.projection.model.SkaterProjectionResponse;
-import com.fantasy.bff.generated.projection.model.SkaterRoleChangeResponse;
 import com.fantasy.bff.service.LeagueAvailablePlayers.Available;
 import com.fantasy.bff.service.LeagueOwnTeam.LeagueTeam;
 import com.fantasy.bff.service.LeagueOwnTeam.Rostered;
 import com.fantasy.bff.service.mapping.PlayerIdResolver;
 import com.fantasy.bff.service.scoring.LeagueSchedule;
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -40,16 +32,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
- * Player Scout: how the model's view of every player in a league has moved since a chosen day,
- * and what the ice says about why. The FA scout and Role Changes in one page.
+ * Player Scout: how the model's view of every player in a league has moved since a chosen day.
  *
  * <p>Each player goes out with two of the model's lines, both the served rest of the season
  * (lifted to the season line's scale, the season so far left out): today's, and the one as it
  * stood on the chosen day, re-spread over the games his club has left today
  * ({@link ScoutRescale}). The day is answered from projection-service's day-by-day history, the
  * newest day kept on or before it; before the history began, or asked for no day, the model's
- * preseason line answers instead, and {@link ScoutSince} says which. Beside the lines travels his
- * measured ice since that same day, so one date asks both questions.
+ * preseason line answers instead, and {@link ScoutSince} says which.
  *
  * <p>Nothing is scored here, as in the planner: the client ranks both lines by the league's own
  * settings, and the distance between them is what says a player has risen. Every player the
@@ -94,10 +84,10 @@ public class PlayerScoutService {
 
     /**
      * Every player in the league the model projects, with its view of him now and on {@code since}
-     * (null for the preseason line), and his ice since that day.
+     * (null for the preseason line).
      */
     public PlayerScoutListResponse players(
-            String userId, PlayerIdSpace platform, String leagueId, LocalDate since, Integer recentGames) {
+            String userId, PlayerIdSpace platform, String leagueId, LocalDate since) {
         availability.require();
         List<RestOfSeasonSkaterResponse> skaters = projectionServiceClient.restOfSeasonSkaters(season);
         List<RestOfSeasonGoalieResponse> goalies = projectionServiceClient.restOfSeasonGoalies(season);
@@ -105,12 +95,11 @@ public class PlayerScoutService {
             // Before the first game or after the last: no rest of the season, so the league is not
             // worth a call to the platform.
             return new PlayerScoutListResponse(
-                    season, null, false, new ScoutSince(since, "NONE", null, null), recentGames, List.of());
+                    season, null, false, new ScoutSince(since, "NONE", null, null), List.of());
         }
 
         Holders holders = holders(userId, platform, leagueId);
         Then then = then(since);
-        Map<Integer, ScoutUsage> usage = usage(since, recentGames);
 
         List<PlayerScoutRow> rows = new ArrayList<>();
         for (RestOfSeasonSkaterResponse row : skaters) {
@@ -118,13 +107,7 @@ public class PlayerScoutService {
             if (holder != null && !holder.goalie()) {
                 boolean defence = holder.playsDefence();
                 ScoutLine now = ScoutLineService.skaterLine(ProjectionSeedService.seasonShape(row), defence);
-                rows.add(holder.row(
-                        row.getNhlId(),
-                        "skater",
-                        row.getGamesRemaining(),
-                        now,
-                        then.skater(row, defence),
-                        usage.get(row.getNhlId())));
+                rows.add(holder.row(row.getNhlId(), "skater", row.getGamesRemaining(), now, then.skater(row, defence)));
             }
         }
         for (RestOfSeasonGoalieResponse row : goalies) {
@@ -132,7 +115,7 @@ public class PlayerScoutService {
             if (holder != null && holder.goalie()) {
                 ScoutLine now = ScoutLineService.goalieLine(ProjectionSeedService.seasonShape(row));
                 rows.add(holder.row(
-                        row.getNhlId(), "goalie", row.getGamesRemaining(), now, then.goalie(row), null));
+                        row.getNhlId(), "goalie", row.getGamesRemaining(), now, then.goalie(row)));
             }
         }
         // A default order, not a ranking: the client scores them by the league's settings.
@@ -144,7 +127,7 @@ public class PlayerScoutService {
                 ? skaters.getFirst().getModelVersion()
                 : goalies.getFirst().getModelVersion();
         return new PlayerScoutListResponse(
-                season, modelVersion, true, then.since(), recentGames, List.copyOf(rows));
+                season, modelVersion, true, then.since(), List.copyOf(rows));
     }
 
     /**
@@ -172,7 +155,7 @@ public class PlayerScoutService {
 
         boolean playsDefence();
 
-        PlayerScoutRow row(int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then, ScoutUsage usage);
+        PlayerScoutRow row(int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then);
     }
 
     private record AvailableHolder(Available player) implements Holder {
@@ -187,8 +170,7 @@ public class PlayerScoutService {
         }
 
         @Override
-        public PlayerScoutRow row(
-                int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then, ScoutUsage usage) {
+        public PlayerScoutRow row(int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then) {
             return new PlayerScoutRow(
                     player.playerId(),
                     nhlId,
@@ -202,8 +184,7 @@ public class PlayerScoutService {
                     null,
                     gamesRemaining,
                     now,
-                    then,
-                    usage);
+                    then);
         }
     }
 
@@ -219,8 +200,7 @@ public class PlayerScoutService {
         }
 
         @Override
-        public PlayerScoutRow row(
-                int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then, ScoutUsage usage) {
+        public PlayerScoutRow row(int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then) {
             return new PlayerScoutRow(
                     player.playerId(),
                     nhlId,
@@ -234,8 +214,7 @@ public class PlayerScoutService {
                     player.injuryStatus(),
                     gamesRemaining,
                     now,
-                    then,
-                    usage);
+                    then);
         }
     }
 
@@ -390,65 +369,6 @@ public class PlayerScoutService {
             return null;
         }
         return snapshots.getDays().getFirst();
-    }
-
-    // --- The ice since ----------------------------------------------------------------------------
-
-    /**
-     * Each skater's measured usage: over his club's last {@code recentGames} when asked for, else
-     * since the chosen day. Asked for the preseason line, the whole season so far is "since": a
-     * day before any season's first game makes last season the baseline, which is what the
-     * preseason comparison means on the ice.
-     */
-    private Map<Integer, ScoutUsage> usage(LocalDate since, Integer recentGames) {
-        RoleChangesResponse measured;
-        if (recentGames != null) {
-            measured = projectionServiceClient.skaterRoleChanges(season, recentGames);
-        } else {
-            LocalDate from = since != null ? since : LocalDate.of(season, 9, 1);
-            measured = projectionServiceClient.skaterRoleChangesSince(season, from);
-        }
-        Map<Integer, ScoutUsage> byNhlId = new HashMap<>();
-        if (measured == null) {
-            return byNhlId;
-        }
-        for (SkaterRoleChangeResponse skater : measured.getSkaters()) {
-            var source = skater.getBaselineSource();
-            byNhlId.put(skater.getNhlId(), new ScoutUsage(
-                    window(skater.getRecent()),
-                    window(skater.getBaseline()),
-                    source == null ? null : source.name(),
-                    listing(skater.getListedNow()),
-                    listing(skater.getListedBefore())));
-        }
-        return byNhlId;
-    }
-
-    private static RoleWindow window(RoleWindowResponse window) {
-        if (window == null) {
-            return null;
-        }
-        return new RoleWindow(
-                window.getGames(),
-                window.getToiPerGame().doubleValue(),
-                number(window.getPpToiPerGame()),
-                number(window.getPpShare()),
-                number(window.getShToiPerGame()));
-    }
-
-    private static LineupListing listing(LineupListingResponse listing) {
-        if (listing == null) {
-            return null;
-        }
-        return new LineupListing(
-                listing.getSeenOn(),
-                listing.getLine(),
-                listing.getPowerPlayUnit(),
-                Boolean.TRUE.equals(listing.getOutOfLineup()));
-    }
-
-    private static Double number(BigDecimal value) {
-        return value == null ? null : value.doubleValue();
     }
 
     private static <T> Map<Integer, T> byNhlId(List<T> rows, Function<T, Integer> nhlId) {
