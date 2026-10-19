@@ -34,5 +34,9 @@ public record FeaturesResponse(
                 description = "Whether this environment serves Player Scout, every player in a league "
                         + "with the model's view of him now and on a chosen day. False means its "
                         + "endpoints answer 404, so a client should not offer it.")
-        boolean playerScout
+        boolean playerScout,
+        @Schema(requiredMode = Schema.RequiredMode.REQUIRED,
+                description = "Whether this environment serves Role Changes. False means its endpoint "
+                        + "answers 404, so a client should not offer it.")
+        boolean roleChanges
 ) {}

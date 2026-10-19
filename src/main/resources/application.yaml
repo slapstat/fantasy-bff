@@ -174,11 +174,17 @@ rest-of-season-preset:
 
 # Player Scout (/api/v1/player-scout/**): every player in a league with the model's rest of the
 # season now and as it stood on a chosen day, rescaled to the games left, beside his measured ice
-# since that day. The page that replaced the FA scout and Role Changes. Off unless this says
+# since that day. The page that replaced the FA scout. Off unless this says
 # otherwise, since it is new; off, its endpoints answer 404 and /api/v1/features reports
 # playerScout false. It also needs the AI projection, whose lines it shows.
 player-scout:
   enabled: ${PLAYER_SCOUT_ENABLED:false}
+
+# Role Changes (GET /api/v1/role-changes): skaters whose ice or power-play role just moved, measured
+# by projection-service. Off unless this says otherwise, since it is a draft; off, the endpoint
+# answers 404 and /api/v1/features reports roleChanges false. Not a premium feature.
+role-changes:
+  enabled: ${ROLE_CHANGES_ENABLED:false}
 
 # Draft Analysis (/api/v1/draft-analysis/**): a league's draft with every pick graded against the
 # model's preseason line. Off unless this says otherwise, since it is new; off, its endpoint answers
