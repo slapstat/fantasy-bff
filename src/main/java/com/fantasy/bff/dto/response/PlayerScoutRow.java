@@ -5,11 +5,10 @@ import java.util.List;
 
 /**
  * One player in the league as Player Scout sees him: who holds him, the model's rest of the season
- * for him now and as it stood on the chosen day (rescaled to the games his club has left today),
- * and what the ice says since that day. The client scores both lines with the league's own
- * settings: the distance between them is what makes a player worth a look.
+ * for him now and as it stood on the chosen day (rescaled to the games his club has left today).
+ * The client scores both lines with the league's own settings: the distance between them is what makes a player worth a look.
  */
-@Schema(description = "A player in the league: his owner, the model's view of him now and then, and his ice since")
+@Schema(description = "A player in the league: his owner and the model's view of him now and then")
 public record PlayerScoutRow(
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED, description = "The platform's player id")
                 String playerId,
@@ -40,7 +39,4 @@ public record PlayerScoutRow(
         @Schema(description = "The model's line for him as it stood on the chosen day, rescaled to the "
                 + "games his club has left today: its per-game rates over the share of those games it "
                 + "expected him to play. Absent when the model had no line for him then.")
-                ScoutLine then,
-        @Schema(description = "His measured ice since the chosen day beside before it; absent for a goalie "
-                + "or a skater with no game since")
-                ScoutUsage usage) {}
+                ScoutLine then) {}
