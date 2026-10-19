@@ -133,23 +133,25 @@ public final class ProjectionScoring {
 
         Map<Integer, Double> totals = new HashMap<>();
         Map<Integer, Map<String, Double>> byCategory = new HashMap<>();
-        applyPool(skaters, ScoringStatKeys.SKATER_SCORING, league, league.skaterPoolSize(), totals, byCategory);
-        applyPool(goalies, ScoringStatKeys.GOALIE_SCORING, league, league.goaliePoolSize(), totals, byCategory);
+        applyPool(skaters, ScoringStatKeys.SKATER_SCORING, league, league.skaterPoolSize(), false, totals, byCategory);
+        applyPool(goalies, ScoringStatKeys.GOALIE_SCORING, league, league.goaliePoolSize(), true, totals, byCategory);
         return new ZScores(totals, byCategory);
     }
 
     /**
-     * One kind of player's z-scores. The pool is the best {@code poolSize} of them, which cannot
-     * be known before they are scored — so it is guessed as everyone, scored, and re-derived from
-     * those scores until it stops moving or ten passes are up. The mean and deviation come from
-     * the pool; every player is then scored against it, pool member or not, so a player nobody
-     * would draft still gets a comparable number.
+     * One kind of player's z-scores. The pool is the best {@code poolSize} of the candidates, which
+     * cannot be known before they are scored — so it is guessed as all of them, scored, and
+     * re-derived from those scores until it stops moving or ten passes are up. The mean and
+     * deviation come from the pool; every player is then scored against it, pool member or not, so
+     * a player nobody would draft still gets a comparable number. Goalies' candidates are the ones
+     * who play the most (see {@link #mostPlayed}).
      */
     private static void applyPool(
             List<ScoredPlayer> players,
             List<String> categoryKeys,
             LeagueScoring league,
             int poolSize,
+            boolean byGames,
             Map<Integer, Double> totals,
             Map<Integer, Map<String, Double>> byCategory) {
         if (players.isEmpty()) {
@@ -162,12 +164,13 @@ public final class ProjectionScoring {
                 .map(key -> Category.of(key, players))
                 .toList();
 
-        List<Integer> poolPositions = allPositions(players.size());
+        List<Integer> candidates = byGames ? mostPlayed(players, poolSize) : allPositions(players.size());
+        List<Integer> poolPositions = candidates;
         PoolZScores scores = poolZScores(categories, poolPositions, players.size());
 
         for (int iteration = 0; iteration < MAX_POOL_ITERATIONS; iteration++) {
             double[] running = scores.totals();
-            List<Integer> next = allPositions(players.size()).stream()
+            List<Integer> next = candidates.stream()
                     .sorted(Comparator.comparingDouble((Integer position) -> running[position]).reversed())
                     .limit(poolSize)
                     .toList();
@@ -177,7 +180,7 @@ public final class ProjectionScoring {
             poolPositions = next;
             scores = poolZScores(categories, poolPositions, players.size());
         }
-        shiftToReplacement(scores, poolPositions);
+        shiftToReplacement(scores, poolSize);
 
         for (int position = 0; position < players.size(); position++) {
             int playerId = players.get(position).playerId();
@@ -218,23 +221,52 @@ public final class ProjectionScoring {
     }
 
     /**
-     * Moves nought from the pool's average to its worst member, the replacement player, category
-     * by category so the breakdown still sums to the total. The spread is measured from the mean,
-     * but half the pool sits under it, and a rostered player reading as less than nothing says his
-     * team would be better off without him. One constant per pool, so no order and no difference
-     * moves.
+     * The goalies a league would roster are the ones who play, so only they may make up the pool:
+     * every goalie with at least as many games as the {@code poolSize}-th most-played. Picked by
+     * value alone, a goalie who never plays scores exactly the pool's average on GAA and save
+     * percentage, outscores every busy starter with ratios under the pool's, takes his seat, and
+     * drags the pool's wins down and its spread in until the next starter falls out too — a
+     * rest-of-season board ran that way into a pool of goalies with no games. A tie at the edge,
+     * or a board whose goalies all carry the same games, is still settled by value.
      */
-    private static void shiftToReplacement(PoolZScores scores, List<Integer> poolPositions) {
-        if (poolPositions.isEmpty()) {
+    private static List<Integer> mostPlayed(List<ScoredPlayer> players, int poolSize) {
+        if (poolSize <= 0) {
+            return List.of();
+        }
+        if (players.size() <= poolSize) {
+            return allPositions(players.size());
+        }
+        double[] games = players.stream().mapToDouble(ScoredPlayer::gamesPlayed).toArray();
+        double edge = java.util.Arrays.stream(games)
+                .boxed()
+                .sorted(Comparator.reverseOrder())
+                .toList()
+                .get(poolSize - 1);
+        return allPositions(players.size()).stream()
+                .filter(position -> games[position] >= edge)
+                .toList();
+    }
+
+    /**
+     * Moves nought from the pool's average to the replacement player, the {@code poolSize}-th best
+     * (the last a league of that size would roster), category by category so the breakdown still
+     * sums to the total. The spread is measured from the mean, but half the pool sits under it, and
+     * a rostered player reading as less than nothing says his team would be better off without
+     * him. One constant per pool, so no order and no difference moves. He is read off the totals
+     * rather than the pool, because the goalies' pool is chosen by games and its worst member can
+     * be a busy starter well below the last goalie anyone would roster.
+     */
+    private static void shiftToReplacement(PoolZScores scores, int poolSize) {
+        double[] totals = scores.totals();
+        if (poolSize <= 0 || totals.length == 0) {
             return;
         }
-        double[] totals = scores.totals();
-        int replacement = poolPositions.get(0);
-        for (int position : poolPositions) {
-            if (totals[position] < totals[replacement]) {
-                replacement = position;
-            }
-        }
+        List<Integer> ranked = allPositions(totals.length).stream()
+                .sorted(Comparator.comparingDouble((Integer position) -> totals[position])
+                        .reversed()
+                        .thenComparingInt(position -> position))
+                .toList();
+        int replacement = ranked.get(Math.min(poolSize, ranked.size()) - 1);
         double offset = totals[replacement];
         for (int position = 0; position < totals.length; position++) {
             totals[position] -= offset;
