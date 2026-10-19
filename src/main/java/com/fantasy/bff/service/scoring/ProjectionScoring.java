@@ -133,25 +133,32 @@ public final class ProjectionScoring {
 
         Map<Integer, Double> totals = new HashMap<>();
         Map<Integer, Map<String, Double>> byCategory = new HashMap<>();
-        applyPool(skaters, ScoringStatKeys.SKATER_SCORING, league, league.skaterPoolSize(), false, totals, byCategory);
-        applyPool(goalies, ScoringStatKeys.GOALIE_SCORING, league, league.goaliePoolSize(), true, totals, byCategory);
+        applyPool(skaters, ScoringStatKeys.SKATER_SCORING, league, league.skaterPoolSize(), 0, totals, byCategory);
+        // A goalie's GAA, save and win percentage are measured against the wire, the half a pool's
+        // worth of goalies ranked straight after it: the minutes he plays are minutes his team would
+        // otherwise fill from there. Against the pool's own rate, a goalie who never played scored
+        // exactly average on both ratios and a rest-of-season board's pool filled up with goalies
+        // who do not play. Skaters' shooting percentage stays on the pool's rate.
+        int goalieWire = (league.goaliePoolSize() + 1) / 2;
+        applyPool(goalies, ScoringStatKeys.GOALIE_SCORING, league, league.goaliePoolSize(), goalieWire, totals, byCategory);
         return new ZScores(totals, byCategory);
     }
 
     /**
-     * One kind of player's z-scores. The pool is the best {@code poolSize} of the candidates, which
-     * cannot be known before they are scored — so it is guessed as all of them, scored, and
-     * re-derived from those scores until it stops moving or ten passes are up. The mean and
-     * deviation come from the pool; every player is then scored against it, pool member or not, so
-     * a player nobody would draft still gets a comparable number. Goalies' candidates are the ones
-     * who play the most (see {@link #mostPlayed}).
+     * One kind of player's z-scores. The pool is the best {@code poolSize} of them, which cannot be
+     * known before they are scored — so it is guessed as everyone, scored, and re-derived from those
+     * scores until it stops moving or ten passes are up. The mean and deviation come from the pool;
+     * every player is then scored against it, pool member or not, so a player nobody would draft
+     * still gets a comparable number. The {@code wireSize} players ranked straight after the pool
+     * are the wire; where there is one, a ratio is measured against its rate rather than the pool's,
+     * and it is re-derived alongside the pool.
      */
     private static void applyPool(
             List<ScoredPlayer> players,
             List<String> categoryKeys,
             LeagueScoring league,
             int poolSize,
-            boolean byGames,
+            int wireSize,
             Map<Integer, Double> totals,
             Map<Integer, Map<String, Double>> byCategory) {
         if (players.isEmpty()) {
@@ -164,21 +171,24 @@ public final class ProjectionScoring {
                 .map(key -> Category.of(key, players))
                 .toList();
 
-        List<Integer> candidates = byGames ? mostPlayed(players, poolSize) : allPositions(players.size());
-        List<Integer> poolPositions = candidates;
-        PoolZScores scores = poolZScores(categories, poolPositions, players.size());
+        List<Integer> poolPositions = allPositions(players.size());
+        List<Integer> wirePositions = List.of();
+        PoolZScores scores = poolZScores(categories, poolPositions, wirePositions, players.size());
 
         for (int iteration = 0; iteration < MAX_POOL_ITERATIONS; iteration++) {
             double[] running = scores.totals();
-            List<Integer> next = candidates.stream()
+            List<Integer> ranked = allPositions(players.size()).stream()
                     .sorted(Comparator.comparingDouble((Integer position) -> running[position]).reversed())
-                    .limit(poolSize)
                     .toList();
-            if (samePositions(next, poolPositions)) {
+            int poolEnd = Math.max(0, Math.min(poolSize, ranked.size()));
+            List<Integer> next = ranked.subList(0, poolEnd);
+            List<Integer> nextWire = ranked.subList(poolEnd, Math.min(poolEnd + wireSize, ranked.size()));
+            if (samePositions(next, poolPositions) && samePositions(nextWire, wirePositions)) {
                 break;
             }
             poolPositions = next;
-            scores = poolZScores(categories, poolPositions, players.size());
+            wirePositions = nextWire;
+            scores = poolZScores(categories, poolPositions, wirePositions, players.size());
         }
         shiftToReplacement(scores, poolSize);
 
@@ -221,40 +231,13 @@ public final class ProjectionScoring {
     }
 
     /**
-     * The goalies a league would roster are the ones who play, so only they may make up the pool:
-     * every goalie with at least as many games as the {@code poolSize}-th most-played. Picked by
-     * value alone, a goalie who never plays scores exactly the pool's average on GAA and save
-     * percentage, outscores every busy starter with ratios under the pool's, takes his seat, and
-     * drags the pool's wins down and its spread in until the next starter falls out too — a
-     * rest-of-season board ran that way into a pool of goalies with no games. A tie at the edge,
-     * or a board whose goalies all carry the same games, is still settled by value.
-     */
-    private static List<Integer> mostPlayed(List<ScoredPlayer> players, int poolSize) {
-        if (poolSize <= 0) {
-            return List.of();
-        }
-        if (players.size() <= poolSize) {
-            return allPositions(players.size());
-        }
-        double[] games = players.stream().mapToDouble(ScoredPlayer::gamesPlayed).toArray();
-        double edge = java.util.Arrays.stream(games)
-                .boxed()
-                .sorted(Comparator.reverseOrder())
-                .toList()
-                .get(poolSize - 1);
-        return allPositions(players.size()).stream()
-                .filter(position -> games[position] >= edge)
-                .toList();
-    }
-
-    /**
      * Moves nought from the pool's average to the replacement player, the {@code poolSize}-th best
      * (the last a league of that size would roster), category by category so the breakdown still
      * sums to the total. The spread is measured from the mean, but half the pool sits under it, and
      * a rostered player reading as less than nothing says his team would be better off without
      * him. One constant per pool, so no order and no difference moves. He is read off the totals
-     * rather than the pool, because the goalies' pool is chosen by games and its worst member can
-     * be a busy starter well below the last goalie anyone would roster.
+     * rather than the pool, so a pool that has not settled by the last pass still puts nought at
+     * the {@code poolSize}-th best.
      */
     private static void shiftToReplacement(PoolZScores scores, int poolSize) {
         double[] totals = scores.totals();
@@ -286,7 +269,8 @@ public final class ProjectionScoring {
     private record PoolZScores(double[] totals, double[][] byCategory) {
     }
 
-    private static PoolZScores poolZScores(List<Category> categories, List<Integer> poolPositions, int size) {
+    private static PoolZScores poolZScores(
+            List<Category> categories, List<Integer> poolPositions, List<Integer> wirePositions, int size) {
         double[] totals = new double[size];
         double[][] byCategory = new double[categories.size()][];
         if (poolPositions.isEmpty()) {
@@ -298,7 +282,7 @@ public final class ProjectionScoring {
             // A ratio's contribution already carries its direction: goals prevented are good.
             Optional<double[]> ratio = category.volumes() == null
                     ? Optional.of(category.values())
-                    : ratioValues(category, poolPositions, size);
+                    : ratioValues(category, poolPositions, wirePositions, size);
             if (ratio.isEmpty()) {
                 continue;
             }
@@ -329,18 +313,19 @@ public final class ProjectionScoring {
     }
 
     /**
-     * A ratio's value for every player: {@code (rate − pool rate) × volume}, turned round where
-     * lower is better, so GAA becomes goals prevented and save percentage saves above average.
-     * The pool rate is the pool's own, volume-weighted — its summed goals against over its summed
-     * hours, not the mean of its GAAs.
+     * A ratio's value for every player: {@code (rate − reference rate) × volume}, turned round where
+     * lower is better, so GAA becomes goals prevented and save percentage saves above the reference.
+     * The reference is the wire's rate where there is a wire with volume, so the minutes of a goalie
+     * better than what a team could pick up count for him, and the pool's own rate otherwise; either
+     * is volume-weighted — summed goals against over summed hours, not the mean of the GAAs.
      *
      * <p>A line with a rate but nothing to derive a volume from is weighed at the pool's average
-     * volume, which ranks it on its bare rate; a line with neither scores exactly average. Empty
+     * volume, which ranks it on its bare rate; a line with neither scores exactly the reference. Empty
      * when the pool has no spread in the rate, or no volume at all — which is not the same as a
      * category of zeroes, and leaves the stat out of the ranking altogether.
      */
     private static Optional<double[]> ratioValues(
-            Category category, List<Integer> poolPositions, int size) {
+            Category category, List<Integer> poolPositions, List<Integer> wirePositions, int size) {
         double[] rates = category.values();
         double[] volumes = category.volumes();
 
@@ -380,11 +365,17 @@ public final class ProjectionScoring {
         if (totalWeight == 0 || lowest == highest) {
             return Optional.empty();
         }
-        double poolRate = weightedRate / totalWeight;
+        double wireRate = 0;
+        double wireWeight = 0;
+        for (int position : wirePositions) {
+            wireRate += rates[position] * weights[position];
+            wireWeight += weights[position];
+        }
+        double referenceRate = wireWeight > 0 ? wireRate / wireWeight : weightedRate / totalWeight;
 
         double[] values = new double[size];
         for (int position = 0; position < size; position++) {
-            values[position] = category.direction() * (rates[position] - poolRate) * weights[position];
+            values[position] = category.direction() * (rates[position] - referenceRate) * weights[position];
         }
         return Optional.of(values);
     }
