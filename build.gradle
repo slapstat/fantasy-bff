@@ -3,7 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '4.1.1'
 	id 'io.spring.dependency-management' version '1.1.7'
 	id 'jacoco'
-	id 'org.openapi.generator' version '7.25.0'
+	id 'org.openapi.generator' version '7.26.0'
 	id 'com.github.spotbugs' version '6.5.12'
 	id 'idea'
 }
@@ -30,7 +30,7 @@ dependencies {
 
 	// Error tracking: ERROR-level logs are forwarded to Sentry (see logback-spring.xml).
 	// Active only when SENTRY_DSN is set (prod/staging); inert locally and in CI/tests.
-	implementation 'io.sentry:sentry-logback:8.59.0'
+	implementation 'io.sentry:sentry-logback:8.60.0'
 
 	// Configuration Properties Metadata
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
