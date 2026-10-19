@@ -267,8 +267,9 @@ are not committed; every build regenerates them.
     the league, read live from the platform's rosters (never the pool): each player's club, real
     positions, today's slot and `out` (IR/NA slots, O/OUT/IR/suspension; day-to-day plays). The web
     places them per night to find the open slots.
-  - `PlayerScoutController` — **Player Scout**, the FA scout and Role Changes in one page, which
-    replaced both on 2026-10-14 (their routes and flags are gone). `GET /api/v1/player-scout/players?platform=&leagueId=
+  - `PlayerScoutController` — **Player Scout**, which replaced the FA scout on 2026-10-14 (its
+    route and flag are gone; Role Changes was folded in too, then given back its own page on
+    2026-10-19, see `RoleChangesController`). `GET /api/v1/player-scout/players?platform=&leagueId=
     [&since=]`: every player the league has available **or on a team** (`LeagueOwnTeam.readAll`,
     each row with `owner` {teamName, mine} or `availability`), joined on identity, with the served
     rest of the season `now` and the model's line as it stood on `since` as `then`: the newest day
@@ -284,6 +285,13 @@ are not committed; every build regenerates them.
     (Alexander's call, 2026-10-14). Behind `player-scout.enabled` (`PLAYER_SCOUT_ENABLED`, off by
     default) AND the AI projection (`PlayerScoutAvailability`): otherwise 404, and
     `GET /api/v1/features` reports `playerScout` false.
+  - `RoleChangesController` — `GET /api/v1/role-changes?recentGames=[&season=]`: every skater's
+    ice and power-play share over his club's last N games beside his baseline, and where the lineup
+    page lists him now and before (`RoleChangeService`, projection-service's
+    `/role-changes/skaters?recent_games=`, joined through `PlayerSplitContextProvider`). Measured,
+    not projected; unsorted. Signed in, not premium. Behind `role-changes.enabled`
+    (`ROLE_CHANGES_ENABLED`, off by default; `RoleChangesAvailability`): otherwise 404, and
+    `GET /api/v1/features` reports `roleChanges` false.
   - `StartBenchController` — `GET /api/v1/start-bench/my-team?platform=&leagueId=&date=`: the
     user's team as the platform has it **set for that day** (Yahoo's `roster;date=`, ESPN's daily
     scoring period, through each service's rosters `date`), each player with the model's line for
