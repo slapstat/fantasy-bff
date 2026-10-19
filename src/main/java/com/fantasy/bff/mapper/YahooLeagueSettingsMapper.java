@@ -114,7 +114,8 @@ public class YahooLeagueSettingsMapper {
                 clampLeagueSize(numTeams).orElse(null),
                 unsupportedStats,
                 roster.unsupported(),
-                roster.reserveSlots()
+                roster.reserveSlots(),
+                positiveOrNull(settings.getMaxWeeklyAdds())
         );
     }
 
@@ -177,6 +178,10 @@ public class YahooLeagueSettingsMapper {
             }
         }
         return weights;
+    }
+
+    private static Integer positiveOrNull(Integer limit) {
+        return limit != null && limit > 0 ? limit : null;
     }
 
     private Optional<Integer> clampLeagueSize(Integer numTeams) {

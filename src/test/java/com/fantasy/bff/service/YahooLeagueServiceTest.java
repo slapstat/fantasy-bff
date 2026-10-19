@@ -36,7 +36,7 @@ class YahooLeagueServiceTest {
 
     private final LeagueProjectionSettingsResponse mapped = new LeagueProjectionSettingsResponse(
             ScoringBasis.POINTS, List.of("goals"), List.of("gp"), Map.of("goals", 4.5), null,
-            new RosterSlots(2, 2, 2, 0, 0, 4, 2, 4, 2), 14, List.of(), List.of(), Map.of());
+            new RosterSlots(2, 2, 2, 0, 0, 4, 2, 4, 2), 14, List.of(), List.of(), Map.of(), 4);
 
     @Test
     void resolvesNumTeamsFromTheLeagueListAndDelegatesToTheMapper() {
