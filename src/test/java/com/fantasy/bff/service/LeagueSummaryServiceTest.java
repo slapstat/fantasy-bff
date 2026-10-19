@@ -144,7 +144,8 @@ class LeagueSummaryServiceTest {
                 leagueSize,
                 List.of(),
                 List.of(),
-                Map.of());
+                Map.of(),
+                null);
     }
 
     /** The totals are fantasy points or z-scores depending on the league, and the page has to say

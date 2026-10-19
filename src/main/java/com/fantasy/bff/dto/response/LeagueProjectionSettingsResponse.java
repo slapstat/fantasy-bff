@@ -23,5 +23,9 @@ public record LeagueProjectionSettingsResponse(
         @Schema(description = "The league's injured-reserve slots by the platform's code (IR, IR+, "
                 + "IR-LT, IR-NR) and how many of each; not-active (NA) is not one. A player in one "
                 + "takes no roster spot. Empty for a league without any.")
-        Map<String, Integer> reserveSlots
+        Map<String, Integer> reserveSlots,
+        @Schema(description = "How many players a team may add in one fantasy week, from the league's "
+                + "own setting. Null when the league sets no maximum, and for ESPN, whose limit "
+                + "espn-service does not read.", minimum = "1")
+        Integer maxWeeklyAdds
 ) {}

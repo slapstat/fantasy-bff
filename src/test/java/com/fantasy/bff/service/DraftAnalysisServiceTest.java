@@ -103,7 +103,8 @@ class DraftAnalysisServiceTest {
                 2,
                 List.of(),
                 List.of(),
-                Map.of()));
+                Map.of(),
+                null));
         when(entitlementService.hasPremiumAccess(anyString())).thenReturn(true);
     }
 

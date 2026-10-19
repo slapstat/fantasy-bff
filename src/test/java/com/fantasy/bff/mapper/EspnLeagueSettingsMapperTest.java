@@ -211,6 +211,12 @@ class EspnLeagueSettingsMapperTest {
         assertThat(mapped.reserveSlots()).containsExactly(entry("IR", 2));
     }
 
+    @Test
+    void leavesTheWeeklyAddLimitNullSinceEspnServiceDoesNotReadIt() {
+        assertThat(mapper.toProjectionSettings(league("H2H_POINTS", null, List.of(), List.of()))
+                .maxWeeklyAdds()).isNull();
+    }
+
     /**
      * An ESPN league of nine forwards and no centre or wing slots at all: espn-service reads
      * lineupSlotCounts {3: 9, 4: 5, 5: 2, 6: 1, 7: 5, 8: 1} as F 9, D 5, G 2, Util 1, BN 5, IR 1.

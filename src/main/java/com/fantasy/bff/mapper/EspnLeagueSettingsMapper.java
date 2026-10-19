@@ -124,7 +124,8 @@ public class EspnLeagueSettingsMapper {
                 clampLeagueSize(settings.getSize()).orElse(null),
                 unsupportedStats,
                 roster.unsupported(),
-                roster.reserveSlots()
+                roster.reserveSlots(),
+                null
         );
     }
 
