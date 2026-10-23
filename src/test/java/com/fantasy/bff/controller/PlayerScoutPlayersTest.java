@@ -20,6 +20,7 @@ import com.fantasy.bff.client.EspnServiceClient;
 import com.fantasy.bff.client.PlayerServiceClient;
 import com.fantasy.bff.client.ProjectionServiceClient;
 import com.fantasy.bff.client.YahooServiceClient;
+import com.fantasy.bff.generated.projection.model.ExpectedSkaterLine;
 import com.fantasy.bff.generated.projection.model.PlayerResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSkaterResponse;
@@ -318,6 +319,37 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
                 .andExpect(jsonPath("$.players[4].then.stats.svPct").value(0.905));
     }
 
+    /**
+     * The reported case (Kaprizov, 2026-10-23): the preseason line was lifted further than today's
+     * is, so compared as served a player fell with nothing about him changed. The earlier line is
+     * its expectation, re-spread, at today's lift.
+     */
+    @Test
+    void theEarlierLineIsItsExpectationAtTodaysLift() throws Exception {
+        // Today: expected for 66 of 78 games and 44 points, served 70 and 48.5.
+        RestOfSeasonSkaterResponse today = restOfSeason(8476875, "SEA", 78, "70", "1380", "48.5")
+                .gamesPlayed(new BigDecimal("66"))
+                .points(new BigDecimal("44.0"));
+        when(projectionServiceClient.restOfSeasonSkaters(2026)).thenReturn(List.of(today));
+        // Preseason: served 80 games and 30 points, lifted from an expectation of 72 and 27.
+        when(projectionServiceClient.skaterProjections(2026, "preseason")).thenReturn(List.of(
+                preseason(8476875, "80", "1050", "30.0").expectation(new ExpectedSkaterLine()
+                        .gamesPlayed(new BigDecimal("72"))
+                        .toiPerGameSeconds(new BigDecimal("1050"))
+                        .points(new BigDecimal("27.0")))));
+        when(projectionServiceClient.restOfSeasonGoalies(2026)).thenReturn(List.of());
+
+        mockMvc.perform(get(YAHOO_LEAGUE).header("Authorization", bearer))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.players[0].name").value("Brandon Montour"))
+                .andExpect(jsonPath("$.players[0].now.stats.points").value(48.5))
+                // 72 of 84 over the 78 left is 66.86 games and 25.07 points; lifted as today's line
+                // was, by 70/66 and 48.5/44, that is 70.91 games and 27.64 points.
+                .andExpect(jsonPath("$.players[0].then.games").value(closeTo(70.909, 0.001)))
+                .andExpect(jsonPath("$.players[0].then.stats.points").value(closeTo(27.636, 0.001)))
+                .andExpect(jsonPath("$.players[0].then.stats.toiPerGame").value(1050.0));
+    }
+
     @Test
     void aDayBeforeTheHistoryBeganIsAnsweredWithThePreseasonLine() throws Exception {
         mockMvc.perform(get(YAHOO_LEAGUE + "&since=2026-10-10").header("Authorization", bearer))
@@ -383,6 +415,10 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
         row.setTeam(team);
         row.setGamesRemaining(remaining);
         row.setGeneratedAt(OffsetDateTime.of(KEPT_DAY.atTime(4, 30), ZoneOffset.UTC));
+        // The expectation beside it, the same line unless a test lifts it: every row has both.
+        row.setGamesPlayed(new BigDecimal(games));
+        row.setToiPerGameSeconds(new BigDecimal(toi));
+        row.setPoints(new BigDecimal(points));
         ServedRestOfSeasonSkater served = new ServedRestOfSeasonSkater();
         served.setGamesPlayed(new BigDecimal(games));
         served.setToiPerGameSeconds(new BigDecimal(toi));
@@ -409,6 +445,10 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
         row.setTeam("CHI");
         row.setGamesRemaining(remaining);
         row.setGeneratedAt(OffsetDateTime.of(KEPT_DAY.atTime(4, 30), ZoneOffset.UTC));
+        row.setGamesPlayed(new BigDecimal("52"));
+        row.setGamesStarted(new BigDecimal("50"));
+        row.setWins(new BigDecimal("24"));
+        row.setSavePct(new BigDecimal("0.905"));
         ServedRestOfSeasonGoalie served = new ServedRestOfSeasonGoalie();
         served.setGamesPlayed(new BigDecimal("52"));
         served.setGamesStarted(new BigDecimal("50"));

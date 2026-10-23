@@ -34,10 +34,12 @@ import org.springframework.stereotype.Service;
 /**
  * Player Scout: how the model's view of every player in a league has moved since a chosen day.
  *
- * <p>Each player goes out with two of the model's lines, both the served rest of the season
- * (lifted to the season line's scale, the season so far left out): today's, and the one as it
- * stood on the chosen day, re-spread over the games his club has left today
- * ({@link ScoutRescale}). The day is answered from projection-service's day-by-day history, the
+ * <p>Each player goes out with two of the model's lines, both on the served rest of the season's
+ * scale (lifted to the season line's, the season so far left out): today's, and the one as it
+ * stood on the chosen day. That one is the model's expectation on the day, re-spread over the
+ * games his club has left today and lifted by what today's line was lifted by
+ * ({@link ScoutRescale#atTodaysLift}), so the distance between the two is what the model changed
+ * its mind on and not two days' lifts. The day is answered from projection-service's day-by-day history, the
  * newest day kept on or before it; before the history began, or asked for no day, the model's
  * preseason line answers instead, and {@link ScoutSince} says which.
  *
@@ -107,7 +109,8 @@ public class PlayerScoutService {
             if (holder != null && !holder.goalie()) {
                 boolean defence = holder.playsDefence();
                 ScoutLine now = ScoutLineService.skaterLine(ProjectionSeedService.seasonShape(row), defence);
-                rows.add(holder.row(row.getNhlId(), "skater", row.getGamesRemaining(), now, then.skater(row, defence)));
+                rows.add(holder.row(
+                        row.getNhlId(), "skater", row.getGamesRemaining(), now, then.skater(row, now, defence)));
             }
         }
         for (RestOfSeasonGoalieResponse row : goalies) {
@@ -115,7 +118,7 @@ public class PlayerScoutService {
             if (holder != null && holder.goalie()) {
                 ScoutLine now = ScoutLineService.goalieLine(ProjectionSeedService.seasonShape(row));
                 rows.add(holder.row(
-                        row.getNhlId(), "goalie", row.getGamesRemaining(), now, then.goalie(row)));
+                        row.getNhlId(), "goalie", row.getGamesRemaining(), now, then.goalie(row, now)));
             }
         }
         // A default order, not a ranking: the client scores them by the league's settings.
@@ -285,30 +288,60 @@ public class PlayerScoutService {
             return since;
         }
 
-        ScoutLine skater(RestOfSeasonSkaterResponse now, boolean defence) {
+        /**
+         * The skater's line on the chosen day, on today's footing and today's lift; {@code nowLine}
+         * is today's served line, which the lift is read off beside today's expectation.
+         */
+        ScoutLine skater(RestOfSeasonSkaterResponse now, ScoutLine nowLine, boolean defence) {
+            ScoutLine nowExpected =
+                    ScoutLineService.skaterLine(ProjectionSeedService.expectationShape(now), defence);
             RestOfSeasonSkaterResponse kept = keptSkaters.get(now.getNhlId());
             if (kept != null) {
-                ScoutLine line = ScoutLineService.skaterLine(ProjectionSeedService.seasonShape(kept), defence);
-                return ScoutRescale.toGamesLeft(line, kept.getGamesRemaining(), now.getGamesRemaining());
+                ScoutLine expected =
+                        ScoutLineService.skaterLine(ProjectionSeedService.expectationShape(kept), defence);
+                return ScoutRescale.atTodaysLift(
+                        expected, kept.getGamesRemaining(), now.getGamesRemaining(), nowExpected, nowLine);
             }
             SkaterProjectionResponse preseason = preseasonSkaters.get(now.getNhlId());
             if (preseason != null) {
-                ScoutLine line = ScoutLineService.skaterLine(preseason, defence);
-                return ScoutRescale.toGamesLeft(line, seasonGames(now.getTeam()), now.getGamesRemaining());
+                SkaterProjectionResponse expected = ProjectionSeedService.expectationShape(preseason);
+                if (expected == null) {
+                    // A preseason line that carries no expectation can only be compared as served.
+                    ScoutLine line = ScoutLineService.skaterLine(preseason, defence);
+                    return ScoutRescale.toGamesLeft(line, seasonGames(now.getTeam()), now.getGamesRemaining());
+                }
+                return ScoutRescale.atTodaysLift(
+                        ScoutLineService.skaterLine(expected, defence),
+                        seasonGames(now.getTeam()),
+                        now.getGamesRemaining(),
+                        nowExpected,
+                        nowLine);
             }
             return null;
         }
 
-        ScoutLine goalie(RestOfSeasonGoalieResponse now) {
+        /** The goalie's line on the chosen day: {@link #skater} for goalies. */
+        ScoutLine goalie(RestOfSeasonGoalieResponse now, ScoutLine nowLine) {
+            ScoutLine nowExpected = ScoutLineService.goalieLine(ProjectionSeedService.expectationShape(now));
             RestOfSeasonGoalieResponse kept = keptGoalies.get(now.getNhlId());
             if (kept != null) {
-                ScoutLine line = ScoutLineService.goalieLine(ProjectionSeedService.seasonShape(kept));
-                return ScoutRescale.toGamesLeft(line, kept.getGamesRemaining(), now.getGamesRemaining());
+                ScoutLine expected = ScoutLineService.goalieLine(ProjectionSeedService.expectationShape(kept));
+                return ScoutRescale.atTodaysLift(
+                        expected, kept.getGamesRemaining(), now.getGamesRemaining(), nowExpected, nowLine);
             }
             GoalieProjectionResponse preseason = preseasonGoalies.get(now.getNhlId());
             if (preseason != null) {
-                ScoutLine line = ScoutLineService.goalieLine(preseason);
-                return ScoutRescale.toGamesLeft(line, seasonGames(now.getTeam()), now.getGamesRemaining());
+                GoalieProjectionResponse expected = ProjectionSeedService.expectationShape(preseason);
+                if (expected == null) {
+                    ScoutLine line = ScoutLineService.goalieLine(preseason);
+                    return ScoutRescale.toGamesLeft(line, seasonGames(now.getTeam()), now.getGamesRemaining());
+                }
+                return ScoutRescale.atTodaysLift(
+                        ScoutLineService.goalieLine(expected),
+                        seasonGames(now.getTeam()),
+                        now.getGamesRemaining(),
+                        nowExpected,
+                        nowLine);
             }
             return null;
         }

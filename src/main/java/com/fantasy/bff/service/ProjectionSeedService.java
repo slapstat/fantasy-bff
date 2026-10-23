@@ -6,6 +6,8 @@ import com.fantasy.bff.dto.response.SkaterPosition;
 import com.fantasy.bff.dto.response.SkaterResponse;
 import com.fantasy.bff.generated.db.model.PlayerProjection;
 import com.fantasy.bff.generated.db.model.PlayerStats;
+import com.fantasy.bff.generated.projection.model.ExpectedGoalieLine;
+import com.fantasy.bff.generated.projection.model.ExpectedSkaterLine;
 import com.fantasy.bff.generated.projection.model.GoalieProjectionResponse;
 import com.fantasy.bff.generated.projection.model.PlayerResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
@@ -173,37 +175,14 @@ public class ProjectionSeedService {
      * reads. The FA scout reads it too, so its rest of the season is the one every page shows.
      */
     static SkaterProjectionResponse seasonShape(RestOfSeasonSkaterResponse r) {
-        SkaterProjectionResponse line = new SkaterProjectionResponse()
-                .nhlId(r.getNhlId())
-                .targetSeason(r.getTargetSeason())
-                .modelVersion(r.getModelVersion());
         ServedRestOfSeasonSkater s = r.getServed();
         if (s == null) {
-            return line
-                    .gamesPlayed(r.getGamesPlayed())
-                    .toiPerGameSeconds(r.getToiPerGameSeconds())
-                    .goals(r.getGoals())
-                    .assists(r.getAssists())
-                    .points(r.getPoints())
-                    .plusMinus(r.getPlusMinus())
-                    .pim(r.getPim())
-                    .ppGoals(r.getPpGoals())
-                    .ppAssists(r.getPpAssists())
-                    .ppPoints(r.getPpPoints())
-                    .shGoals(r.getShGoals())
-                    .shAssists(r.getShAssists())
-                    .shPoints(r.getShPoints())
-                    .gwGoals(r.getGwGoals())
-                    .shots(r.getShots())
-                    .shootingPct(r.getShootingPct())
-                    .faceoffsWon(r.getFaceoffsWon())
-                    .faceoffsLost(r.getFaceoffsLost())
-                    .hits(r.getHits())
-                    .blocks(r.getBlocks())
-                    .shifts(r.getShifts())
-                    .hatTricks(r.getHatTricks());
+            return expectationShape(r);
         }
-        return line
+        return new SkaterProjectionResponse()
+                .nhlId(r.getNhlId())
+                .targetSeason(r.getTargetSeason())
+                .modelVersion(r.getModelVersion())
                 .gamesPlayed(s.getGamesPlayed())
                 .toiPerGameSeconds(s.getToiPerGameSeconds())
                 .goals(s.getGoals())
@@ -228,29 +207,86 @@ public class ProjectionSeedService {
                 .hatTricks(s.getHatTricks());
     }
 
-    /** A goalie's served rest of the season in the season line's shape. */
-    static GoalieProjectionResponse seasonShape(RestOfSeasonGoalieResponse r) {
-        GoalieProjectionResponse line = new GoalieProjectionResponse()
+    /**
+     * A skater's rest of the season as the model expects it, before any lift, in the season line's
+     * shape: what Player Scout compares two days' lines on ({@link ScoutRescale#atTodaysLift}).
+     */
+    static SkaterProjectionResponse expectationShape(RestOfSeasonSkaterResponse r) {
+        return new SkaterProjectionResponse()
                 .nhlId(r.getNhlId())
                 .targetSeason(r.getTargetSeason())
-                .modelVersion(r.getModelVersion());
+                .modelVersion(r.getModelVersion())
+                .gamesPlayed(r.getGamesPlayed())
+                .toiPerGameSeconds(r.getToiPerGameSeconds())
+                .goals(r.getGoals())
+                .assists(r.getAssists())
+                .points(r.getPoints())
+                .plusMinus(r.getPlusMinus())
+                .pim(r.getPim())
+                .ppGoals(r.getPpGoals())
+                .ppAssists(r.getPpAssists())
+                .ppPoints(r.getPpPoints())
+                .shGoals(r.getShGoals())
+                .shAssists(r.getShAssists())
+                .shPoints(r.getShPoints())
+                .gwGoals(r.getGwGoals())
+                .shots(r.getShots())
+                .shootingPct(r.getShootingPct())
+                .faceoffsWon(r.getFaceoffsWon())
+                .faceoffsLost(r.getFaceoffsLost())
+                .hits(r.getHits())
+                .blocks(r.getBlocks())
+                .shifts(r.getShifts())
+                .hatTricks(r.getHatTricks());
+    }
+
+    /**
+     * The expectation a season line was lifted from, in the season line's own shape; null where
+     * the row carries none (written before the model served one).
+     */
+    static SkaterProjectionResponse expectationShape(SkaterProjectionResponse p) {
+        ExpectedSkaterLine e = p.getExpectation();
+        if (e == null) {
+            return null;
+        }
+        return new SkaterProjectionResponse()
+                .nhlId(p.getNhlId())
+                .targetSeason(p.getTargetSeason())
+                .modelVersion(p.getModelVersion())
+                .gamesPlayed(e.getGamesPlayed())
+                .toiPerGameSeconds(e.getToiPerGameSeconds())
+                .goals(e.getGoals())
+                .assists(e.getAssists())
+                .points(e.getPoints())
+                .plusMinus(e.getPlusMinus())
+                .pim(e.getPim())
+                .ppGoals(e.getPpGoals())
+                .ppAssists(e.getPpAssists())
+                .ppPoints(e.getPpPoints())
+                .shGoals(e.getShGoals())
+                .shAssists(e.getShAssists())
+                .shPoints(e.getShPoints())
+                .gwGoals(e.getGwGoals())
+                .shots(e.getShots())
+                .shootingPct(e.getShootingPct())
+                .faceoffsWon(e.getFaceoffsWon())
+                .faceoffsLost(e.getFaceoffsLost())
+                .hits(e.getHits())
+                .blocks(e.getBlocks())
+                .shifts(e.getShifts())
+                .hatTricks(e.getHatTricks());
+    }
+
+    /** A goalie's served rest of the season in the season line's shape. */
+    static GoalieProjectionResponse seasonShape(RestOfSeasonGoalieResponse r) {
         ServedRestOfSeasonGoalie s = r.getServed();
         if (s == null) {
-            return line
-                    .gamesPlayed(r.getGamesPlayed())
-                    .gamesStarted(r.getGamesStarted())
-                    .wins(r.getWins())
-                    .losses(r.getLosses())
-                    .otLosses(r.getOtLosses())
-                    .shutouts(r.getShutouts())
-                    .shotsAgainst(r.getShotsAgainst())
-                    .saves(r.getSaves())
-                    .goalsAgainst(r.getGoalsAgainst())
-                    .goalsAgainstAvg(r.getGoalsAgainstAvg())
-                    .savePct(r.getSavePct())
-                    .toiSeconds(r.getToiSeconds());
+            return expectationShape(r);
         }
-        return line
+        return new GoalieProjectionResponse()
+                .nhlId(r.getNhlId())
+                .targetSeason(r.getTargetSeason())
+                .modelVersion(r.getModelVersion())
                 .gamesPlayed(s.getGamesPlayed())
                 .gamesStarted(s.getGamesStarted())
                 .wins(s.getWins())
@@ -263,6 +299,50 @@ public class ProjectionSeedService {
                 .goalsAgainstAvg(s.getGoalsAgainstAvg())
                 .savePct(s.getSavePct())
                 .toiSeconds(s.getToiSeconds());
+    }
+
+    /** A goalie's rest of the season as the model expects it: the skater's {@code expectationShape}. */
+    static GoalieProjectionResponse expectationShape(RestOfSeasonGoalieResponse r) {
+        return new GoalieProjectionResponse()
+                .nhlId(r.getNhlId())
+                .targetSeason(r.getTargetSeason())
+                .modelVersion(r.getModelVersion())
+                .gamesPlayed(r.getGamesPlayed())
+                .gamesStarted(r.getGamesStarted())
+                .wins(r.getWins())
+                .losses(r.getLosses())
+                .otLosses(r.getOtLosses())
+                .shutouts(r.getShutouts())
+                .shotsAgainst(r.getShotsAgainst())
+                .saves(r.getSaves())
+                .goalsAgainst(r.getGoalsAgainst())
+                .goalsAgainstAvg(r.getGoalsAgainstAvg())
+                .savePct(r.getSavePct())
+                .toiSeconds(r.getToiSeconds());
+    }
+
+    /** The expectation a goalie's season line was lifted from; null where the row carries none. */
+    static GoalieProjectionResponse expectationShape(GoalieProjectionResponse p) {
+        ExpectedGoalieLine e = p.getExpectation();
+        if (e == null) {
+            return null;
+        }
+        return new GoalieProjectionResponse()
+                .nhlId(p.getNhlId())
+                .targetSeason(p.getTargetSeason())
+                .modelVersion(p.getModelVersion())
+                .gamesPlayed(e.getGamesPlayed())
+                .gamesStarted(e.getGamesStarted())
+                .wins(e.getWins())
+                .losses(e.getLosses())
+                .otLosses(e.getOtLosses())
+                .shutouts(e.getShutouts())
+                .shotsAgainst(e.getShotsAgainst())
+                .saves(e.getSaves())
+                .goalsAgainst(e.getGoalsAgainst())
+                .goalsAgainstAvg(e.getGoalsAgainstAvg())
+                .savePct(e.getSavePct())
+                .toiSeconds(e.getToiSeconds());
     }
 
     /**
