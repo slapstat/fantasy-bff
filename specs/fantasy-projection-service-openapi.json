@@ -26,8 +26,406 @@
         "title": "BacktestSummaryResponse",
         "type": "object"
       },
+      "ExpectedGoalieLine": {
+        "description": "The model's own expectation of a goalie's season: `ExpectedSkaterLine` for goalies.",
+        "properties": {
+          "games_played": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Games Played"
+          },
+          "games_started": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Games Started"
+          },
+          "goals_against": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goals Against"
+          },
+          "goals_against_avg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goals Against Avg"
+          },
+          "losses": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Losses"
+          },
+          "ot_losses": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ot Losses"
+          },
+          "save_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Save Pct"
+          },
+          "saves": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Saves"
+          },
+          "shots_against": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shots Against"
+          },
+          "shutouts": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shutouts"
+          },
+          "toi_seconds": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Toi Seconds"
+          },
+          "wins": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wins"
+          }
+        },
+        "title": "ExpectedGoalieLine",
+        "type": "object"
+      },
+      "ExpectedSkaterLine": {
+        "description": "The model's own expectation of a skater's season, which the served line beside it was\nlifted from: the same stats, on the expectation's own games. The better guess about one\nplayer, and the line to compare when two of the model's lines are set side by side; a page\nshows the served one.",
+        "properties": {
+          "assists": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assists"
+          },
+          "blocks": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Blocks"
+          },
+          "faceoffs_lost": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Faceoffs Lost"
+          },
+          "faceoffs_won": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Faceoffs Won"
+          },
+          "games_played": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Games Played"
+          },
+          "goals": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goals"
+          },
+          "gw_goals": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gw Goals"
+          },
+          "hat_tricks": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hat Tricks"
+          },
+          "hits": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hits"
+          },
+          "pim": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pim"
+          },
+          "plus_minus": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Plus Minus"
+          },
+          "points": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Points"
+          },
+          "pp_assists": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pp Assists"
+          },
+          "pp_goals": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pp Goals"
+          },
+          "pp_points": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pp Points"
+          },
+          "sh_assists": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sh Assists"
+          },
+          "sh_goals": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sh Goals"
+          },
+          "sh_points": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sh Points"
+          },
+          "shifts": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shifts"
+          },
+          "shooting_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shooting Pct"
+          },
+          "shots": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shots"
+          },
+          "toi_per_game_seconds": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Toi Per Game Seconds"
+          }
+        },
+        "title": "ExpectedSkaterLine",
+        "type": "object"
+      },
       "GoalieProjectionResponse": {
         "properties": {
+          "expectation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ExpectedGoalieLine"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "games_played": {
             "anyOf": [
               {
@@ -2163,7 +2561,7 @@
         "type": "object"
       },
       "ServedRestOfSeasonSkater": {
-        "description": "A skater's rest of the season as served: the same games as the expectation beside it, lifted\ntoward the table the whole season will end on at the season line's weights, his season so far\nranked with it and left out of it. The season line's stats and its scale.",
+        "description": "A skater's rest of the season as served: the same games as the expectation beside it, lifted\ntoward the table the whole season will end on at the season line's weights, his season so far\nranked with it on his expected pace and left out of it, so how the start went does not move\nit. The season line's stats and its scale.",
         "properties": {
           "assists": {
             "anyOf": [
@@ -2434,6 +2832,16 @@
               }
             ],
             "title": "Blocks"
+          },
+          "expectation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ExpectedSkaterLine"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "faceoffs_lost": {
             "anyOf": [

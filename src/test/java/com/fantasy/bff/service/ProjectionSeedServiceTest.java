@@ -13,6 +13,8 @@ import com.fantasy.bff.dto.response.GoalieResponse;
 import com.fantasy.bff.dto.response.SkaterPosition;
 import com.fantasy.bff.dto.response.SkaterResponse;
 import com.fantasy.bff.generated.db.model.PlayerProjection;
+import com.fantasy.bff.generated.projection.model.ExpectedGoalieLine;
+import com.fantasy.bff.generated.projection.model.ExpectedSkaterLine;
 import com.fantasy.bff.generated.projection.model.GoalieProjectionResponse;
 import com.fantasy.bff.generated.projection.model.PlayerResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
@@ -763,5 +765,44 @@ class ProjectionSeedServiceTest {
                 .thenReturn(List.of(skater(1, 30), skater(2, 90), skater(3, 60)));
         when(projectionServiceClient.goalieProjections(anyInt(), anyString()))
                 .thenReturn(List.of(goalie(4, 10), goalie(5, 40)));
+    }
+
+    @Test
+    @DisplayName("a rest of the season's expectation is its own line, whatever it was served as")
+    void restOfSeasonExpectationShape() {
+        RestOfSeasonSkaterResponse rest = new RestOfSeasonSkaterResponse()
+                .nhlId(7)
+                .gamesPlayed(BigDecimal.valueOf(69.3))
+                .goals(BigDecimal.valueOf(38.1))
+                .served(new ServedRestOfSeasonSkater()
+                        .gamesPlayed(BigDecimal.valueOf(73.1))
+                        .goals(BigDecimal.valueOf(41.6)));
+
+        assertThat(ProjectionSeedService.seasonShape(rest).getGoals()).isEqualByComparingTo("41.6");
+        assertThat(ProjectionSeedService.expectationShape(rest).getGoals()).isEqualByComparingTo("38.1");
+        assertThat(ProjectionSeedService.expectationShape(rest).getGamesPlayed()).isEqualByComparingTo("69.3");
+
+        RestOfSeasonGoalieResponse crease = new RestOfSeasonGoalieResponse()
+                .nhlId(8)
+                .savePct(BigDecimal.valueOf(0.898))
+                .served(new ServedRestOfSeasonGoalie().savePct(BigDecimal.valueOf(0.913)));
+        assertThat(ProjectionSeedService.expectationShape(crease).getSavePct()).isEqualByComparingTo("0.898");
+    }
+
+    @Test
+    @DisplayName("a season line's expectation is read off the line, and is null where it carries none")
+    void seasonLineExpectationShape() {
+        SkaterProjectionResponse line = skater(1, 49).expectation(new ExpectedSkaterLine()
+                .gamesPlayed(BigDecimal.valueOf(72.7))
+                .goals(BigDecimal.valueOf(39.9)));
+        GoalieProjectionResponse goalieLine = goalie(4, 30).expectation(new ExpectedGoalieLine()
+                .gamesStarted(BigDecimal.valueOf(55))
+                .wins(BigDecimal.valueOf(29)));
+
+        assertThat(ProjectionSeedService.expectationShape(line).getGoals()).isEqualByComparingTo("39.9");
+        assertThat(ProjectionSeedService.expectationShape(line).getNhlId()).isEqualTo(1);
+        assertThat(ProjectionSeedService.expectationShape(goalieLine).getWins()).isEqualByComparingTo("29");
+        assertThat(ProjectionSeedService.expectationShape(skater(2, 30))).isNull();
+        assertThat(ProjectionSeedService.expectationShape(goalie(5, 20))).isNull();
     }
 }
