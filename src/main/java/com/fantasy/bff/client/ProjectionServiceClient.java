@@ -3,6 +3,7 @@ package com.fantasy.bff.client;
 import com.fantasy.bff.dto.request.GameRange;
 import com.fantasy.bff.generated.projection.model.GoalieProjectionResponse;
 import com.fantasy.bff.generated.projection.model.GoalieSplitResponse;
+import com.fantasy.bff.generated.projection.model.LineupsResponse;
 import com.fantasy.bff.generated.projection.model.PlayerResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSkaterResponse;
@@ -91,6 +92,13 @@ public interface ProjectionServiceClient {
      * @param season the season to measure, or null for the newest season with a game played
      */
     RoleChangesResponse skaterRoleChanges(Integer season, int recentGames);
+
+    /**
+     * Where today's lineup pages list every player they name: line or pair, power-play and
+     * penalty-kill unit. Read through the model's own gate, so empty when no page can be read for
+     * {@code season}.
+     */
+    LineupsResponse currentLineups(int season);
 
     /** The newest published season's Monday-Sunday weeks, numbered from opening night. */
     ScheduleWeeksResponse scheduleWeeks();

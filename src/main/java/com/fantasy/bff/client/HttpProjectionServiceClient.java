@@ -3,6 +3,7 @@ package com.fantasy.bff.client;
 import com.fantasy.bff.dto.request.GameRange;
 import com.fantasy.bff.generated.projection.model.GoalieProjectionResponse;
 import com.fantasy.bff.generated.projection.model.GoalieSplitResponse;
+import com.fantasy.bff.generated.projection.model.LineupsResponse;
 import com.fantasy.bff.generated.projection.model.PlayerResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSkaterResponse;
@@ -215,6 +216,14 @@ public class HttpProjectionServiceClient implements ProjectionServiceClient {
                 })
                 .retrieve()
                 .body(RoleChangesResponse.class);
+    }
+
+    @Override
+    public LineupsResponse currentLineups(int season) {
+        return restClient.get()
+                .uri(b -> b.path("/api/v1/lineups/players").queryParam("season", season).build())
+                .retrieve()
+                .body(LineupsResponse.class);
     }
 
     @Override

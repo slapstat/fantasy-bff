@@ -5554,6 +5554,11 @@ components:
           $ref: "#/components/schemas/ScoutSince"
           description: "Which earlier line the then-lines are, and what answered the\
             \ day asked for"
+        lineupSeenOn:
+          type: string
+          format: date
+          description: "The day the lineup pages behind each row's lineup were read;\
+            \ absent when none could be, and no row then carries one"
         players:
           type: array
           description: "Every player the model projects whom the league has available\
@@ -5624,6 +5629,10 @@ components:
             \ to the games his club has left today: its per-game rates over the share\
             \ of those games it expected him to play. Absent when the model had no\
             \ line for him then."
+        lineup:
+          $ref: "#/components/schemas/ScoutLineup"
+          description: Where today's lineup page lists him; absent when no readable
+            page names him
       required:
       - gamesRemaining
       - name
@@ -5632,6 +5641,31 @@ components:
       - playerId
       - positions
       - type
+    ScoutLineup:
+      type: object
+      description: "Where today's lineup page lists a player: his line or pair and\
+        \ his special-teams units"
+      properties:
+        line:
+          type: string
+          description: "f1-f4 for the forward lines, d1-d3 for the pairs; absent when\
+            \ the page lists him only on special teams or out of the lineup"
+          enum:
+          - f1
+          - f2
+          - f3
+          - f4
+          - d1
+          - d2
+          - d3
+        powerPlayUnit:
+          type: integer
+          format: int32
+          description: 1 or 2 for the power-play unit; absent for neither
+        penaltyKillUnit:
+          type: integer
+          format: int32
+          description: 1 or 2 for the penalty-kill unit; absent for neither
     ScoutOwner:
       type: object
       description: The league team holding a player
