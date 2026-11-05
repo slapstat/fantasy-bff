@@ -39,4 +39,6 @@ public record PlayerScoutRow(
         @Schema(description = "The model's line for him as it stood on the chosen day, rescaled to the "
                 + "games his club has left today: its per-game rates over the share of those games it "
                 + "expected him to play. Absent when the model had no line for him then.")
-                ScoutLine then) {}
+                ScoutLine then,
+        @Schema(description = "Where today's lineup page lists him; absent when no readable page names him")
+                ScoutLineup lineup) {}

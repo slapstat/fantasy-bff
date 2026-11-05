@@ -249,4 +249,24 @@ class HttpProjectionServiceClientTest {
                 .withoutQueryParam("since"));
     }
 
+    @Test
+    void currentLineups_readsEachListedPlayersLineAndUnits() {
+        server.stubFor(get(urlPathEqualTo("/api/v1/lineups/players"))
+                .willReturn(okJson("{\"season\":2026,\"seen_on\":\"2026-11-06\",\"players\":[{\"nhl_id\":8478402,"
+                        + "\"team\":\"EDM\",\"line\":\"f1\",\"power_play_unit\":1,\"penalty_kill_unit\":2,"
+                        + "\"out_status\":null}]}")));
+
+        var answer = client.currentLineups(2026);
+
+        assertThat(answer.getSeenOn()).isEqualTo(java.time.LocalDate.of(2026, 11, 6));
+        assertThat(answer.getPlayers()).singleElement().satisfies(player -> {
+            assertThat(player.getNhlId()).isEqualTo(8478402);
+            assertThat(player.getLine()).isEqualTo("f1");
+            assertThat(player.getPowerPlayUnit()).isEqualTo(1);
+            assertThat(player.getPenaltyKillUnit()).isEqualTo(2);
+        });
+        server.verify(getRequestedFor(urlPathEqualTo("/api/v1/lineups/players"))
+                .withQueryParam("season", equalTo("2026")));
+    }
+
 }

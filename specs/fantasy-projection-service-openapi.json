@@ -898,6 +898,40 @@
         "title": "LineupListingResponse",
         "type": "object"
       },
+      "LineupsResponse": {
+        "properties": {
+          "players": {
+            "items": {
+              "$ref": "#/components/schemas/PlayerListingResponse"
+            },
+            "title": "Players",
+            "type": "array"
+          },
+          "season": {
+            "title": "Season",
+            "type": "integer"
+          },
+          "seen_on": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Seen On"
+          }
+        },
+        "required": [
+          "season",
+          "seen_on",
+          "players"
+        ],
+        "title": "LineupsResponse",
+        "type": "object"
+      },
       "NightResponse": {
         "properties": {
           "date": {
@@ -920,6 +954,79 @@
           "off_night"
         ],
         "title": "NightResponse",
+        "type": "object"
+      },
+      "PlayerListingResponse": {
+        "properties": {
+          "line": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Line"
+          },
+          "nhl_id": {
+            "title": "Nhl Id",
+            "type": "integer"
+          },
+          "out_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Out Status"
+          },
+          "penalty_kill_unit": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Penalty Kill Unit"
+          },
+          "power_play_unit": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Power Play Unit"
+          },
+          "team": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Team"
+          }
+        },
+        "required": [
+          "nhl_id",
+          "team",
+          "line",
+          "power_play_unit",
+          "penalty_kill_unit",
+          "out_status"
+        ],
+        "title": "PlayerListingResponse",
         "type": "object"
       },
       "PlayerResponse": {
@@ -3681,6 +3788,67 @@
         "summary": "Leaderboards",
         "tags": [
           "projections"
+        ]
+      }
+    },
+    "/api/v1/lineups/players": {
+      "get": {
+        "description": "Every player today's lineup pages name, with his line or pair and his power-play and\npenalty-kill units. Unsorted; the client filters.",
+        "operationId": "current_lineups_api_v1_lineups_players_get",
+        "parameters": [
+          {
+            "description": "Target season start year, e.g. 2026",
+            "in": "query",
+            "name": "season",
+            "required": true,
+            "schema": {
+              "description": "Target season start year, e.g. 2026",
+              "title": "Season",
+              "type": "integer"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-internal-api-key",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Internal-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LineupsResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Current Lineups",
+        "tags": [
+          "lineups"
         ]
       }
     },

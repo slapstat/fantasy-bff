@@ -8,10 +8,13 @@ import com.fantasy.bff.dto.response.PlayerScoutListResponse;
 import com.fantasy.bff.dto.response.PlayerScoutRow;
 import com.fantasy.bff.dto.response.PlayerScoutTeamResponse;
 import com.fantasy.bff.dto.response.ScoutLine;
+import com.fantasy.bff.dto.response.ScoutLineup;
 import com.fantasy.bff.dto.response.ScoutMyTeamResponse;
 import com.fantasy.bff.dto.response.ScoutOwner;
 import com.fantasy.bff.dto.response.ScoutSince;
 import com.fantasy.bff.generated.projection.model.GoalieProjectionResponse;
+import com.fantasy.bff.generated.projection.model.LineupsResponse;
+import com.fantasy.bff.generated.projection.model.PlayerListingResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSkaterResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSnapshotsResponse;
@@ -97,11 +100,13 @@ public class PlayerScoutService {
             // Before the first game or after the last: no rest of the season, so the league is not
             // worth a call to the platform.
             return new PlayerScoutListResponse(
-                    season, null, false, new ScoutSince(since, "NONE", null, null), List.of());
+                    season, null, false, new ScoutSince(since, "NONE", null, null), null, List.of());
         }
 
         Holders holders = holders(userId, platform, leagueId);
         Then then = then(since);
+        LineupsResponse lineups = projectionServiceClient.currentLineups(season);
+        Map<Integer, ScoutLineup> lineup = lineups(lineups);
 
         List<PlayerScoutRow> rows = new ArrayList<>();
         for (RestOfSeasonSkaterResponse row : skaters) {
@@ -110,7 +115,8 @@ public class PlayerScoutService {
                 boolean defence = holder.playsDefence();
                 ScoutLine now = ScoutLineService.skaterLine(ProjectionSeedService.seasonShape(row), defence);
                 rows.add(holder.row(
-                        row.getNhlId(), "skater", row.getGamesRemaining(), now, then.skater(row, now, defence)));
+                        row.getNhlId(), "skater", row.getGamesRemaining(), now, then.skater(row, now, defence),
+                        lineup.get(row.getNhlId())));
             }
         }
         for (RestOfSeasonGoalieResponse row : goalies) {
@@ -118,7 +124,7 @@ public class PlayerScoutService {
             if (holder != null && holder.goalie()) {
                 ScoutLine now = ScoutLineService.goalieLine(ProjectionSeedService.seasonShape(row));
                 rows.add(holder.row(
-                        row.getNhlId(), "goalie", row.getGamesRemaining(), now, then.goalie(row, now)));
+                        row.getNhlId(), "goalie", row.getGamesRemaining(), now, then.goalie(row, now), null));
             }
         }
         // A default order, not a ranking: the client scores them by the league's settings.
@@ -130,7 +136,26 @@ public class PlayerScoutService {
                 ? skaters.getFirst().getModelVersion()
                 : goalies.getFirst().getModelVersion();
         return new PlayerScoutListResponse(
-                season, modelVersion, true, then.since(), List.copyOf(rows));
+                season, modelVersion, true, then.since(), lineups == null ? null : lineups.getSeenOn(), List.copyOf(rows));
+    }
+
+    /**
+     * Each listed skater's line and units, by NHL id. A player listed only out of the lineup gets
+     * none: the page has written him out, not into a role.
+     */
+    private static Map<Integer, ScoutLineup> lineups(LineupsResponse lineups) {
+        Map<Integer, ScoutLineup> byNhlId = new HashMap<>();
+        if (lineups == null) {
+            return byNhlId;
+        }
+        for (PlayerListingResponse listing : lineups.getPlayers()) {
+            if (listing.getLine() != null || listing.getPowerPlayUnit() != null
+                    || listing.getPenaltyKillUnit() != null) {
+                byNhlId.put(listing.getNhlId(), new ScoutLineup(
+                        listing.getLine(), listing.getPowerPlayUnit(), listing.getPenaltyKillUnit()));
+            }
+        }
+        return byNhlId;
     }
 
     /**
@@ -158,7 +183,8 @@ public class PlayerScoutService {
 
         boolean playsDefence();
 
-        PlayerScoutRow row(int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then);
+        PlayerScoutRow row(
+                int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then, ScoutLineup lineup);
     }
 
     private record AvailableHolder(Available player) implements Holder {
@@ -173,7 +199,8 @@ public class PlayerScoutService {
         }
 
         @Override
-        public PlayerScoutRow row(int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then) {
+        public PlayerScoutRow row(
+                int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then, ScoutLineup lineup) {
             return new PlayerScoutRow(
                     player.playerId(),
                     nhlId,
@@ -187,7 +214,8 @@ public class PlayerScoutService {
                     null,
                     gamesRemaining,
                     now,
-                    then);
+                    then,
+                    lineup);
         }
     }
 
@@ -203,7 +231,8 @@ public class PlayerScoutService {
         }
 
         @Override
-        public PlayerScoutRow row(int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then) {
+        public PlayerScoutRow row(
+                int nhlId, String type, int gamesRemaining, ScoutLine now, ScoutLine then, ScoutLineup lineup) {
             return new PlayerScoutRow(
                     player.playerId(),
                     nhlId,
@@ -217,7 +246,8 @@ public class PlayerScoutService {
                     player.injuryStatus(),
                     gamesRemaining,
                     now,
-                    then);
+                    then,
+                    lineup);
         }
     }
 

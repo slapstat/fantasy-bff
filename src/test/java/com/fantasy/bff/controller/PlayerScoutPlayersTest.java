@@ -21,6 +21,8 @@ import com.fantasy.bff.client.PlayerServiceClient;
 import com.fantasy.bff.client.ProjectionServiceClient;
 import com.fantasy.bff.client.YahooServiceClient;
 import com.fantasy.bff.generated.projection.model.ExpectedSkaterLine;
+import com.fantasy.bff.generated.projection.model.LineupsResponse;
+import com.fantasy.bff.generated.projection.model.PlayerListingResponse;
 import com.fantasy.bff.generated.projection.model.PlayerResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonGoalieResponse;
 import com.fantasy.bff.generated.projection.model.RestOfSeasonSkaterResponse;
@@ -101,6 +103,7 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
                 restOfSeason(8477492, "COL", 76, "74", "1320", "110.0")));
         when(projectionServiceClient.restOfSeasonGoalies(2026)).thenReturn(List.of(knightRestOfSeason(78)));
         when(projectionServiceClient.restOfSeasonSnapshots(2026)).thenReturn(snapshots(KEPT_DAY));
+        when(projectionServiceClient.currentLineups(2026)).thenReturn(new LineupsResponse().season(2026).players(List.of()));
         when(projectionServiceClient.restOfSeasonSkaters(eq(2026), any(LocalDate.class))).thenReturn(List.of());
         when(projectionServiceClient.restOfSeasonGoalies(eq(2026), any(LocalDate.class))).thenReturn(List.of());
         when(projectionServiceClient.skaterProjections(2026, "preseason")).thenReturn(List.of(
@@ -192,6 +195,28 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
                 .andExpect(jsonPath("$.players[4].type").value("goalie"))
                 .andExpect(jsonPath("$.players[4].now.games").value(50.0));
         verify(projectionServiceClient, never()).skaterRoleChanges(nullable(Integer.class), anyInt());
+    }
+
+    @Test
+    void eachRowCarriesWhereTodaysLineupPageListsHim() throws Exception {
+        when(projectionServiceClient.currentLineups(2026)).thenReturn(new LineupsResponse()
+                .season(2026)
+                .seenOn(LocalDate.of(2026, 11, 6))
+                .players(List.of(
+                        new PlayerListingResponse().nhlId(8480069).team("COL").line("d1").powerPlayUnit(1),
+                        // Listed only out of the lineup: written out, not into a role.
+                        new PlayerListingResponse().nhlId(8477492).team("COL").outStatus("out"))));
+
+        mockMvc.perform(get(YAHOO_LEAGUE).header("Authorization", bearer))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.lineupSeenOn").value("2026-11-06"))
+                .andExpect(jsonPath("$.players[0].name").value("Cale Makar"))
+                .andExpect(jsonPath("$.players[0].lineup.line").value("d1"))
+                .andExpect(jsonPath("$.players[0].lineup.powerPlayUnit").value(1))
+                .andExpect(jsonPath("$.players[0].lineup.penaltyKillUnit").value(nullValue()))
+                .andExpect(jsonPath("$.players[1].name").value("Nathan MacKinnon"))
+                .andExpect(jsonPath("$.players[1].lineup").value(nullValue()))
+                .andExpect(jsonPath("$.players[4].lineup").value(nullValue()));
     }
 
     /**
