@@ -179,6 +179,9 @@ rest-of-season-preset:
 # playerScout false. It also needs the AI projection, whose lines it shows.
 player-scout:
   enabled: ${PLAYER_SCOUT_ENABLED:false}
+  # The page's Position-adjusted ranking, switched on its own and off unless this says otherwise;
+  # /api/v1/features reports it as playerScoutPositionAdjusted, never true while playerScout is false.
+  position-adjusted-enabled: ${PLAYER_SCOUT_POSITION_ADJUSTED_ENABLED:false}
 
 # Role Changes (GET /api/v1/role-changes): skaters whose ice or power-play role just moved, measured
 # by projection-service. Off unless this says otherwise, since it is a draft; off, the endpoint
