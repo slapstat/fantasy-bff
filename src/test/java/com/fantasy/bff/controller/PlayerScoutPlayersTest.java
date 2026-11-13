@@ -135,7 +135,8 @@ class PlayerScoutPlayersTest extends BaseIntegrationTest {
     void theFeatureIsReportedOn() throws Exception {
         mockMvc.perform(get("/api/v1/features"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.playerScout").value(true));
+                .andExpect(jsonPath("$.playerScout").value(true))
+                .andExpect(jsonPath("$.playerScoutPositionAdjusted").value(false));
     }
 
     @Test

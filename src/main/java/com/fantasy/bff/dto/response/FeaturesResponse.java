@@ -36,6 +36,10 @@ public record FeaturesResponse(
                         + "endpoints answer 404, so a client should not offer it.")
         boolean playerScout,
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED,
+                description = "Whether Player Scout may offer its Position-adjusted ranking. False "
+                        + "whenever playerScout is, so a client should not offer it.")
+        boolean playerScoutPositionAdjusted,
+        @Schema(requiredMode = Schema.RequiredMode.REQUIRED,
                 description = "Whether this environment serves Role Changes. False means its endpoint "
                         + "answers 404, so a client should not offer it.")
         boolean roleChanges

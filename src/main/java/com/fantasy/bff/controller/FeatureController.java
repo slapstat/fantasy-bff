@@ -62,6 +62,7 @@ public class FeatureController {
                 draftAnalysis.available(),
                 startBench.available(),
                 playerScout.available(),
+                playerScout.positionAdjustedAvailable(),
                 roleChanges.available());
     }
 }

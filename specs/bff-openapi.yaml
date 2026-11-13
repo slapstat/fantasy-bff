@@ -6092,6 +6092,10 @@ components:
           description: "Whether this environment serves Player Scout, every player\
             \ in a league with the model's view of him now and on a chosen day. False\
             \ means its endpoints answer 404, so a client should not offer it."
+        playerScoutPositionAdjusted:
+          type: boolean
+          description: "Whether Player Scout may offer its Position-adjusted ranking.\
+            \ False whenever playerScout is, so a client should not offer it."
         roleChanges:
           type: boolean
           description: "Whether this environment serves Role Changes. False means\
@@ -6100,6 +6104,7 @@ components:
       - aiProjection
       - draftAnalysis
       - playerScout
+      - playerScoutPositionAdjusted
       - restOfSeasonPreset
       - roleChanges
       - startBench

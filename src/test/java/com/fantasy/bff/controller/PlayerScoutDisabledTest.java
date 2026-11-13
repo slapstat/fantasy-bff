@@ -48,7 +48,8 @@ class PlayerScoutDisabledTest extends BaseIntegrationTest {
     void theFeatureIsReportedOff() throws Exception {
         mockMvc.perform(get("/api/v1/features"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.playerScout").value(false));
+                .andExpect(jsonPath("$.playerScout").value(false))
+                .andExpect(jsonPath("$.playerScoutPositionAdjusted").value(false));
     }
 
     @SpringBootTest
