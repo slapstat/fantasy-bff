@@ -14,10 +14,12 @@ public class PlayerScoutAvailability {
 
     private final boolean available;
     private final boolean positionAdjusted;
+    private final boolean trades;
 
     public PlayerScoutAvailability(PlayerScoutProperties properties, AiProjectionAvailability aiProjection) {
         this.available = properties.enabled() && aiProjection.available();
         this.positionAdjusted = available && properties.positionAdjustedEnabled();
+        this.trades = available && properties.tradesEnabled();
     }
 
     public boolean available() {
@@ -31,6 +33,15 @@ public class PlayerScoutAvailability {
      */
     public boolean positionAdjustedAvailable() {
         return positionAdjusted;
+    }
+
+    /**
+     * Whether the page's lineup column may price players other teams hold as a trade: its own
+     * switch, on a served page. Priced in the browser from the rows the page already has, so, like
+     * the ranking above, nothing here enforces it.
+     */
+    public boolean tradesAvailable() {
+        return trades;
     }
 
     /** Refuses with a 404, so an environment without Player Scout has none of its routes. */
