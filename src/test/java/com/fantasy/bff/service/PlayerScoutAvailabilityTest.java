@@ -21,7 +21,7 @@ class PlayerScoutAvailabilityTest {
             boolean scout, boolean positionAdjusted, boolean aiProjection,
             boolean expectedScout, boolean expectedPositionAdjusted) {
         PlayerScoutAvailability availability = new PlayerScoutAvailability(
-                new PlayerScoutProperties(scout, positionAdjusted),
+                new PlayerScoutProperties(scout, positionAdjusted, false),
                 new AiProjectionAvailability(new AiProjectionProperties(aiProjection)));
 
         assertThat(availability.available()).isEqualTo(expectedScout);
@@ -30,9 +30,26 @@ class PlayerScoutAvailabilityTest {
 
     @Test
     void anUnsetSwitchIsOff() {
-        PlayerScoutProperties properties = new PlayerScoutProperties(null, null);
+        PlayerScoutProperties properties = new PlayerScoutProperties(null, null, null);
 
         assertThat(properties.enabled()).isFalse();
         assertThat(properties.positionAdjustedEnabled()).isFalse();
+        assertThat(properties.tradesEnabled()).isFalse();
+    }
+
+    @ParameterizedTest(name = "player-scout={0}, trades={1}, ai-projection={2} -> {3}")
+    @CsvSource({
+        "true,  true,  true,  true",
+        "true,  false, true,  false",
+        "false, true,  true,  false",
+        "true,  true,  false, false"
+    })
+    void tradesNeedTheirOwnSwitchOnAServedPage(
+            boolean scout, boolean trades, boolean aiProjection, boolean expected) {
+        PlayerScoutAvailability availability = new PlayerScoutAvailability(
+                new PlayerScoutProperties(scout, false, trades),
+                new AiProjectionAvailability(new AiProjectionProperties(aiProjection)));
+
+        assertThat(availability.tradesAvailable()).isEqualTo(expected);
     }
 }

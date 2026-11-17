@@ -6096,6 +6096,11 @@ components:
           type: boolean
           description: "Whether Player Scout may offer its Position-adjusted ranking.\
             \ False whenever playerScout is, so a client should not offer it."
+        playerScoutTrades:
+          type: boolean
+          description: "Whether Player Scout may price players other teams hold as\
+            \ a one-for-one trade. False whenever playerScout is, so a client should\
+            \ not offer it."
         roleChanges:
           type: boolean
           description: "Whether this environment serves Role Changes. False means\
@@ -6105,6 +6110,7 @@ components:
       - draftAnalysis
       - playerScout
       - playerScoutPositionAdjusted
+      - playerScoutTrades
       - restOfSeasonPreset
       - roleChanges
       - startBench

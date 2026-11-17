@@ -40,6 +40,11 @@ public record FeaturesResponse(
                         + "whenever playerScout is, so a client should not offer it.")
         boolean playerScoutPositionAdjusted,
         @Schema(requiredMode = Schema.RequiredMode.REQUIRED,
+                description = "Whether Player Scout may price players other teams hold as a "
+                        + "one-for-one trade. False whenever playerScout is, so a client should not "
+                        + "offer it.")
+        boolean playerScoutTrades,
+        @Schema(requiredMode = Schema.RequiredMode.REQUIRED,
                 description = "Whether this environment serves Role Changes. False means its endpoint "
                         + "answers 404, so a client should not offer it.")
         boolean roleChanges
